@@ -1,0 +1,16 @@
+#Lines in this file that start with "#" are comment lines.
+#(Empty lines are also comment lines).
+
+#Format: texture_name  X   file_path
+#Here X is either "_" if the image has no alpha,
+#or "a" if it does have alpha.
+#Alpha images must be .tga files or .png files.
+#Non-alpha files must be .jpg or .png files.
+
+block_dan_house_kitchen  _  Blocks/block_dan_house_kitchen.jpg
+
+icon_rocket _ Icons/icon_rocket.jpg
+icon_brake _ Icons/icon_brake.jpg
+
+#You can add more here!!!
+

@@ -1,0 +1,45 @@
+#This file is processed when a new game is started.
+
+#Syntax:
+#type var_name_suffix init_value
+#Acceptable types: b, i, f, s, v.
+#If var_name_suffix is X, then the variable created
+#will be "game.globals.X".
+#You should put the game of your game/package somewhere
+#in each var_name_suffix (preferably at the beginning).
+
+######################################
+#                HUD
+######################################
+
+s blank.messages.slot1.msg
+f blank.messages.slot1.ttl
+s blank.messages.slot2.msg
+f blank.messages.slot2.ttl
+s blank.messages.slot3.msg
+f blank.messages.slot3.ttl
+s blank.messages.slot4.msg
+f blank.messages.slot4.ttl
+s blank.messages.slot5.msg
+f blank.messages.slot5.ttl
+
+#######################################
+#             Movement
+#######################################
+
+b blank.movement.forward  false
+b blank.movement.back     false
+b blank.movement.left     false
+b blank.movement.right    false
+b blank.movement.up       false
+b blank.movement.down     false
+b blank.movement.spin_ccw false
+b blank.movement.spin_cw  false
+b blank.movement.rocket   false
+b blank.movement.brake    false
+
+f blank.movement.spin_value 0.0
+
+v blank.movement.extra_impulse 0.0 0.0 0.0
+
+b blank.movement.rocket_mode false

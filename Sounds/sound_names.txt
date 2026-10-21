@@ -1,0 +1,7 @@
+#Lines in this file that start with "#" are comment lines.
+#(Empty lines are also comment lines).
+
+#Every non-comment line must be of the following form:
+#sound_name file_name
+#Note: Ogg Vorbis is the best file format to use here (.ogg).
+#Mp3 file can also be used (.mp3).

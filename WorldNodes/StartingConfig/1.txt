@@ -1,0 +1,21 @@
+# This will show up when the player is
+# creating a new game and must select
+# a starting position:
+description     "Default"
+
+# Which chunk description file is
+# used for the root of the chunk tree.
+root_node       block_blank_root
+
+# Where in the final chunk the player
+# should be placed.  Should be "x y z",
+# where x,y,z are each between 0.0 and 16.0
+player_offset   8.0 8.0 14.5
+
+# The starting path:
+# Can print the players path from the root
+# of the chunk tree by going into the console
+# and entering the command "path dump".
+# This prints the chunk path to "Output/path.txt".
+# The chunk_path can then be copied and pasted here:
+chunk_path EMPTY_PATH

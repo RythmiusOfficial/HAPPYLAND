@@ -1,0 +1,24 @@
+#Escape and ~ are reserved for the main menu and the console.
+
+#These should be in every package and should not change.
+PACKAGE_OPEN_MAIN_MENU          ESC.downup   "" "set menu.in_main true" ""
+PACKAGE_OPEN_CONSOLE            GRAVE.downup "" "set console.in true" ""
+PACKAGE_OPEN_PACKAGE_TOP_MENU   F1.downup    "" "set menu.in_package true" ""
+
+#Using entities and the equipped item (gun).
+#Note: "use" is a built in command.
+PACKAGE_USE                     	 F.downup   	"" "use" ""
+
+#Basic flying movement.
+PACKAGE_MOVE_FORWARD    W.downup        "" "move forward start"  "move forward stop"
+PACKAGE_MOVE_BACKWARD   S.downup        "" "move back start"     "move back stop"
+PACKAGE_MOVE_LEFT       A.downup        "" "move left start"     "move left stop"
+PACKAGE_MOVE_RIGHT      D.downup        "" "move right start"    "move right stop"
+PACKAGE_MOVE_UP         SPACE.downup    "" "move up start"       "move up stop"
+PACKAGE_MOVE_DOWN       LSHIFT.downup   "" "move down start"     "move down stop"
+PACKAGE_MOVE_TWIST_CCW  Q.downup        "" "move spin_ccw start" "move spin_ccw stop"
+PACKAGE_MOVE_TWIST_CW   E.downup        "" "move spin_cw start"  "move spin_cw stop"
+
+#Advanced flying movement.
+PACKAGE_MOVE_BRAKE              LCTRL.downup    "" "move brake start"   "move brake stop"
+PACKAGE_MOVE_ROCKETMODE_TOGGLE  TAB.downup      "" "move toggle_rocket" ""

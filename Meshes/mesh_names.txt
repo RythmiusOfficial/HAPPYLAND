@@ -1,0 +1,4 @@
+#Lines in this file that start with "#" are comment lines.
+#(Empty lines are also comment lines).
+
+# Format:   mesh_name   texture_name   wavefront_file.obj
