@@ -1,7 +1,7 @@
 # This will show up when the player is
 # creating a new game and must select
 # a starting position:
-description     "Default"
+description     "Debugging"
 
 # Which chunk description file is
 # used for the root of the chunk tree.

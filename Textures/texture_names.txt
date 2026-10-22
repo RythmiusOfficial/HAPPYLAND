@@ -7,10 +7,15 @@
 #Alpha images must be .tga files or .png files.
 #Non-alpha files must be .jpg or .png files.
 
-block_dan_house_kitchen  _  Blocks/block_dan_house_kitchen.jpg
+block_plug _ Blocks/block_stopper.jpg
+block_r_plug _ Blocks/block_yellow_black_striped.jpg
+block_anti_plug _ Blocks/block_anti_plug.jpg
+block_r_anti _ Blocks/block_red_black_striped.jpg
 
 icon_rocket _ Icons/icon_rocket.jpg
 icon_brake _ Icons/icon_brake.jpg
 
-#You can add more here!!!
+block_deco_green _ Blocks/block_deco1_green1.jpg
+block_green _ Blocks/block_dark_green_border.jpg
+block_happy_land _ Blocks/block_happy_land.jpg
 

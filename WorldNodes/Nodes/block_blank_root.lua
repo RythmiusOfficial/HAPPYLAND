@@ -13,7 +13,7 @@ function p.__main()
     -- --Solid boring block.
     -- -- set_pos(2,2,13, "s")
 
-    set_pos(7,7,5, "s")
+    set_pos(7,7,5, "happy_land_0")
     set_pos(7,7,0, "e")
     set_pos(7,7,15, "e")
     set_pos(7,0,7, "e")
@@ -26,7 +26,6 @@ function p.__main()
     add_bent_s(2,2,11, "bent_base_waypoint", "Top Of World")
     add_bent(2,2,9, "bent_base_respawn_point")
     add_bent(2,2,7, "bent_base_ring_pink_dest")
+    add_bent(7,7,6, "bent_base_ring_green_danger")
     set_blue_type_terminal(2,2,5);
-
-    add_bent_s(2,2,3,"bent_base_txt", "Test text box")
 end
