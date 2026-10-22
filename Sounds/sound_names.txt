@@ -1,7 +1,193 @@
-#Lines in this file that start with "#" are comment lines.
-#(Empty lines are also comment lines).
+###############################################################################
+#                                  Version 1
+###############################################################################
 
-#Every non-comment line must be of the following form:
-#sound_name file_name
-#Note: Ogg Vorbis is the best file format to use here (.ogg).
-#Mp3 file can also be used (.mp3).
+harp        (homemade)_zither.ogg
+
+mode_hard_1        		(homemade)_zither.ogg
+mode_hard_2            	(homemade)_zither.ogg
+mode_hard_3             (homemade)_zither.ogg
+mode_hard_4             (homemade)_zither.ogg
+
+xar_error          (homemade)_error.ogg
+
+pickup_shield      Pickup/(homemade)_pickup_shield.ogg
+pickup_health      Pickup/(homemade)_pickup_health.ogg
+pickup_health_10p  Pickup/(homemade)_pickup_health_10p.ogg
+pickup_health_25p  Pickup/(homemade)_pickup_health_25p.ogg
+pickup_health_100p Pickup/(homemade)_pickup_health_100p.ogg
+pickup_health_200p Pickup/(homemade)_pickup_health_200p.ogg
+pickup_health_mega Pickup/(homemade)_health_mega.ogg
+pickup_armor       Pickup/(homemade)_pickup_armor.ogg
+pickup_armor_small Pickup/(homemade)_pickup_armor_small.ogg
+pickup_ammo        Pickup/(homemade)_pickup_ammo_v2.ogg
+
+pickup_gold_small  Pickup/(homemade)_pickup_gold_small.ogg
+pickup_gold_medium Pickup/(homemade)_pickup_gold_medium.ogg
+pickup_gold_large  Pickup/(homemade)_pickup_gold_large.ogg
+pickup_gold        Pickup/(homemade)_pickup_gold_small.ogg
+
+pickup_upgrade     Pickup/(homemade)_pickup_upgrade.ogg
+pickup_powerup     Pickup/(homemade)_pickup_powerup.ogg
+oh_yeah            (homemade)_oh_yeah.ogg
+holy_cow           (homemade)_holy_cow.ogg
+level_up           (homemade)_level_up_down20db.ogg
+drop_level         (homemade)_drop_level.ogg
+
+#Making less annoying:
+fanfare            (homemade)_oh_yeah.ogg
+fanfare_short      (homemade)_oh_yeah.ogg
+
+#Other.
+marker_short       (homemade)_marker_short.ogg
+marker_long        (homemade)_marker_long.ogg
+buy                (homemade)_buy.ogg
+snore              (homemade)_snore.ogg
+telekinesis        (homemade)_telekinesis.ogg
+telekinesis_free   (homemade)_telekinesis_free.ogg
+
+#Guns.
+#Note shoot_1_5 is used for shoot_1_6.
+shoot_1_1               Shoot/(homemade)_shoot_1_1.ogg
+shoot_1_2               Shoot/(homemade)_shoot_1_2.ogg
+shoot_1_3               Shoot/(homemade)_shoot_1_3.ogg
+shoot_1_4               Shoot/(homemade)_shoot_1_4.ogg
+shoot_1_5               Shoot/(homemade)_shoot_1_5.ogg
+shoot_1_6               Shoot/(homemade)_shoot_1_5.ogg
+shoot_2_1               Shoot/(homemade)_shoot_2_1.ogg
+shoot_2_2               Shoot/(homemade)_shoot_2_2.ogg
+shoot_2_3               Shoot/(homemade)_shoot_2_3.ogg
+shoot_2_4               Shoot/(homemade)_shoot_2_4.ogg
+shoot_2_5               Shoot/(homemade)_shoot_2_5.ogg
+shoot_3_1               Shoot/(homemade)_shoot_3_1.ogg
+shoot_3_2               Shoot/(homemade)_shoot_3_2.ogg
+shoot_3_3               Shoot/(homemade)_shoot_3_3.ogg
+shoot_3_4               Shoot/(homemade)_shoot_3_4.ogg
+shoot_4_1               Shoot/(homemade)_shoot_4_1_distorted.ogg
+shoot_4_2               Shoot/(homemade)_shoot_4_venus_rockets.ogg
+shoot_4_3               Shoot/(homemade)_shoot_4_3.ogg
+shoot_4_4               Shoot/(homemade)_shoot_4_4_lower.ogg
+shoot_4_5               Shoot/(homemade)_shoot_4_5.ogg
+shoot_5_1               Shoot/(homemade)_shoot_5_1.ogg
+shoot_5_2               Shoot/(homemade)_shoot_5_2_softer.ogg
+shoot_6_1               Shoot/(homemade)_shoot_6_1.ogg
+shoot_6_2               Shoot/(homemade)_shoot_6_2.ogg
+shoot_7_1               Shoot/(homemade)_shoot_7_1_softer.ogg
+shoot_7_2               Shoot/(homemade)_shoot_7_1_softer.ogg
+shoot_7_3               Shoot/(homemade)_shoot_7_2_lower.ogg
+shoot_7_4               Shoot/(homemade)_shoot_7_2_lower.ogg
+shoot_8_1               Shoot/(homemade)_shoot_8_1.ogg
+shoot_8_2               Shoot/(homemade)_shoot_8_2.ogg
+shoot_9_1               Shoot/(homemade)_shoot_9_1.ogg
+shoot_9_2               Shoot/(homemade)_shoot_9_1.ogg
+shoot_9_3               Shoot/(homemade)_shoot_9_1.ogg
+shoot_0_1               Shoot/(homemade)_shoot_0_1.ogg
+shoot_0_1_loud          Shoot/(homemade)_shoot_0_1_loud.ogg
+shoot_0_2               Shoot/(homemade)_shoot_0_2.ogg
+shoot_0_charge          Shoot/(homemade)_shoot_0_charge.ogg
+shoot_0_3               Shoot/(homemade)_shoot_0_3.ogg
+shoot_0_4               Shoot/(homemade)_shoot_0_4.ogg
+
+rocket_explode          WeaponOther/(homemade)_rocket_explode_low.ogg
+rocket_secondary_hit    WeaponOther/(homemade)_rocket_secondary_hit.ogg
+nuke_hit_primary        WeaponOther/(homemade)_nuke_hit_primary.ogg
+nuke_hit_secondary      WeaponOther/(homemade)_nuke_hit_secondary.ogg
+dark_hole_hit           WeaponOther/(homemade)_dark_hole_hit_down5db.ogg
+dark_hole_die           WeaponOther/(homemade)_dark_hole_die_down20db.ogg
+
+explosion_tube_dud      WeaponOther/(homemade)_explosion_tube_dud_low.ogg
+explosion_tube_short    WeaponOther/(homemade)_explosion_tube_short_low.ogg
+explosion_tube_long     WeaponOther/(homemade)_explosion_tube_long_low.ogg
+
+toll_door       WeaponOther/(homemade)_explosion_tube_long_low.ogg
+arcade_enter    WeaponOther/(homemade)_explosion_tube_long_low.ogg
+arcade_exit     WeaponOther/(homemade)_explosion_tube_long_low.ogg
+
+#Player hurt.
+player_hurt_1      PlayerHurt/(homemade)_player_hurt_1.ogg
+player_hurt_2      PlayerHurt/(homemade)_player_hurt_2_down10db.ogg
+player_hurt_3      PlayerHurt/(homemade)_player_hurt_3_down20db.ogg
+player_hurt_4      PlayerHurt/(homemade)_player_hurt_4_down20db.ogg
+player_hurt_5      PlayerHurt/(homemade)_player_hurt_5_down20db.ogg
+player_hurt_6      PlayerHurt/(homemade)_player_hurt_6_down20db.ogg
+player_hurt_7      PlayerHurt/(homemade)_player_hurt_7_down20db.ogg
+player_death       PlayerHurt/(homemade)_player_hurt_7_down20db.ogg
+
+hurt_woop             Hurt/(homemade)_hurt_woop.ogg
+hurt_access_denied    Hurt/(homemade)_hurt_access_denied_1_down15db.ogg
+hurt_deep_rumble      Hurt/(homemade)_hurt_deep_rumble.ogg
+hurt_very_deep_ahh    Hurt/(homemade)_hurt_very_deep_ahh.ogg
+hurt_machine_on       Hurt/(homemade)_hurt_home_dryer_turn_on_down20db.ogg
+hurt_machine_on_low   Hurt/(homemade)_hurt_home_dryer_turn_on_low.ogg
+hurt_natural_deep_ahh Hurt/(homemade)_hurt_natural_deep_ahh.ogg
+hurt_deep_ahh         Hurt/(homemade)_hurt_deep_ahh.ogg
+hurt_mystic           Hurt/(homemade)_hurt_mystic_oh_dear_down10db.ogg
+hurt_spider           Hurt/(tegan)_hurt_spider_Aiiop!.ogg
+hurt_jug              Hurt/(tegan)_hurt_jug_Huh.ogg
+hurt_vulcan           Hurt/(tegan)_hurt_vulcan_Choo.ogg
+hurt_marine           Hurt/(tegan)_hurt_marine_Mopf_low.ogg
+hurt_goon             Hurt/(tegan)_hurt_goon_Herarrg.ogg
+hurt_lamprey          Hurt/(tegan)_hurt_lamprey_Hgrrrrhh.ogg
+hurt_menace           Hurt/(tegan)_hurt_menace_Ohno!.ogg
+hurt_arr              Hurt/(homemade)_hurt_arr.ogg
+hurt_overlord         Hurt/(tegan)_hurt_overlord_low.ogg
+hurt_goblin           Hurt/(tegan)_Neow_clip.ogg
+hurt_orc              Hurt/(tegan)_Murgh.ogg
+hurt_troll            Hurt/(tegan)_Murgh_low.ogg
+hurt_wobble1          Hurt/(homemade)_hurt_wobble1_down15db.ogg
+hurt_goliath          Hurt/(homemade)_hurt_ticking_down10db.ogg
+hurt_dragoon          Hurt/(homemade)_hurt_dragoon.ogg
+hurt_beholder         Hurt/(homemade)_hurt_beholder.ogg
+hurt_abomination_blue Hurt/(homemade)_hurt_abomination_blue.ogg
+hurt_abomination_anti_blue Hurt/(homemade)_hurt_abomination_anti_blue.ogg
+hurt_rat              Hurt/(homemade)_hurt_rat.ogg
+hurt_sliver           Hurt/(homemade)_hurt_sliver.ogg
+
+#Monster death.
+monster_death            Die/(homemade)_monster_death.ogg
+die_menace               Die/(tegan)_monster_menace_death.ogg
+die_i_am_no_more         Die/(homemade)_die_i_am_no_more.ogg
+die_i_am_eternal         Die/(homemade)_die_i_am_eternal.ogg
+die_club_dryer_long      Die/(homemade)_die_club_dryer_long_down15db.ogg
+die_club_dryer_short     Die/(homemade)_die_club_dryer_short_down5db.ogg
+die_home_dryer_long      Die/(homemade)_die_home_dryer_long.ogg
+die_trespasser           Die/(homemade)_die_trespasser.ogg
+die_fly                  Die/(homemade)_die_fly.ogg
+die_spider               Die/(tegan)_die_spider_Uhhraha.ogg
+die_jug                  Die/(tegan)_die_jug_Blurgh!.ogg
+die_watchman             Die/(homemade)_you_will_not_succeed_deep.ogg
+die_overseer             Die/(tegan)_Blop_blop_blop_low.ogg
+die_overlord             Die/(tegan)_Blop_blop_blop_lower.ogg
+die_goblin               Die/(tegan)_Tawwww.ogg
+die_demon                Die/(tegan)_Tawwww.ogg
+die_orc                  Die/(tegan)_Urawwwr.ogg
+die_troll                Die/(homemade)_burp1.ogg
+die_hobgoblin            Die/(homemade)_burp2.ogg
+die_ogre                 Die/(homemade)_burp2_deep.ogg
+die_tank1                Die/(homemade)_die_tank1_down20db.ogg
+die_tank2                Die/(homemade)_die_tank2.ogg
+die_tank3                Die/(homemade)_die_tank3.ogg
+die_goliath              Die/(homemade)_die_bring_muted_down10db.ogg
+die_gremlin              Die/(tegan)_Maow.ogg
+die_rat                  Die/(homemade)_die_rat.ogg
+die_sliver               Die/(homemade)_die_sliver.ogg
+die_singularity          Die/(homemade)_i_will_return.ogg
+die_mystic               Die/(homemade)_mystic_no_down15db.ogg
+die_vulcan               Die/(tegan)_die_vulcan_Eewrburt.ogg
+die_bee                  Die/(tegan)_die_bee_Donk.ogg
+die_bee_queen            Die/(tegan)_die_bee_queen_Berow.ogg
+die_marine               Die/(tegan)_die_marine_Bonkch_low.ogg
+die_goon                 Die/(tegan)_die_goon_Blurbugaft.ogg
+die_lamprey              Die/(tegan)_die_lamprey_Hergaft.ogg
+die_dragoon              Die/(homemade)_die_dragoon.ogg
+die_beholder             Die/(homemade)_die_beholder.ogg
+die_abomination_blue     Die/(homemade)_die_abomination_blue.ogg
+die_abomination_anti_blue     Die/(homemade)_die_abomination_anti_blue.ogg
+
+die_shiver_me_timbers    Die/(homemade)_die_shiver_me_timbers.ogg
+
+#Monster sight sounds.
+#more!!!
+
+#Credits.
+credits    (homemade)_credits.ogg

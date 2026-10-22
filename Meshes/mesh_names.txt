@@ -1,4 +1,383 @@
-#Lines in this file that start with "#" are comment lines.
-#(Empty lines are also comment lines).
+#Format: name          tex_name               wavefront_file
 
-# Format:   mesh_name   texture_name   wavefront_file.obj
+#Basic pickup items.
+bent_shield                 shield                 med_box.obj
+shield_large                shield                 large_box.obj
+bent_health_10p             health_10p             small_box.obj
+bent_health_25p             health_25p             small_box.obj
+bent_health_100p            health_100p            large_box.obj
+bent_health_200p            health_200p            large_box.obj
+bent_health_100p_armor_100p health_100p_armor_100p large_box.obj
+bent_health_200p_armor_100p health_200p_armor_100p large_box.obj
+bent_health_200p_armor_200p health_200p_armor_200p large_box.obj
+bent_health_mega            health_mega            large_box.obj
+bent_armor_5p               armor_5p               small_box.obj
+bent_armor_10p              armor_10p              medsmall_box.obj
+bent_armor_100p             armor_100p(bronze)     large_box.obj
+bent_armor_150p             armor_150p(silver)     large_box.obj
+bent_armor_200p             armor_200p(gold)       large_box.obj
+bent_armor_600p             armor_600p(ivory)      large_box.obj
+bent_armor_1000p            armor_1000p(jade)      large_box.obj
+
+bent_ammo_gun_1        ammo_gun1              large_box.obj
+bent_ammo_gun_2_small  ammo_gun2              small_box.obj
+bent_ammo_gun_2_large  ammo_gun2              large_box.obj
+bent_ammo_gun_2_huge   ammo_gun2              huge_box.obj
+bent_ammo_gun_3_small  ammo_gun3              small_box.obj
+bent_ammo_gun_3_large  ammo_gun3              large_box.obj
+bent_ammo_gun_4_small  ammo_gun4              small_box.obj
+bent_ammo_gun_4_large  ammo_gun4              large_box.obj
+bent_ammo_gun_4_huge   ammo_gun4              huge_box.obj
+bent_ammo_gun_5_small  ammo_gun5              small_box.obj
+bent_ammo_gun_5_large  ammo_gun5              large_box.obj
+bent_ammo_gun_5_huge   ammo_gun5              huge_box.obj
+bent_ammo_gun_6_small  ammo_gun6              small_box.obj
+bent_ammo_gun_6_large  ammo_gun6              large_box.obj
+bent_ammo_gun_6_huge   ammo_gun6              huge_box.obj
+bent_ammo_gun_7_small  ammo_gun7              small_box.obj
+bent_ammo_gun_7_large  ammo_gun7              large_box.obj
+bent_ammo_gun_8        ammo_gun8              large_box.obj
+bent_ammo_gun_9        ammo_gun9              large_box.obj
+bent_ammo_gun_9_huge   ammo_gun9              huge_box.obj
+bent_ammo_gun_0        ammo_gun0              large_box.obj
+
+bent_gold_1            gold_1                 small_box.obj
+bent_gold_2            gold_2                 small_box.obj
+bent_gold_3            gold_3                 small_box.obj
+bent_gold_5            gold_5                 small_box.obj
+bent_gold_10           gold_10                med_box.obj
+bent_gold_20           gold_20                med_box.obj
+bent_gold_30           gold_30                med_box.obj
+bent_gold_50           gold_50                large_box.obj
+bent_gold_100          gold_100               large_box.obj
+bent_gold_200          gold_200               large_box.obj
+bent_gold_300          gold_300               large_box.obj
+bent_gold_500          gold_500               large_box.obj
+bent_gold_1000         gold_1000              large_box.obj
+gold_once              striped_grey           large_box_case.obj
+bent_xp                xp                     large_box.obj
+
+bent_credits           ent_credits            large_box.obj
+
+bent_key_yellow             key_yellow             large_box.obj
+bent_key_green              key_green              large_box.obj
+bent_key_laser_genesis      key_laser_genesis      large_box.obj
+bent_key_dans_house         key_dans_house         large_box.obj
+bent_xp_5x_stacking         xp_5x_stacking         large_box.obj
+bent_damage_5x_stacking     damage_5x_stacking     large_box.obj
+bent_invun_stacking         invun_stacking         large_box.obj
+
+trophy                 trophy                 large_box.obj
+secret_trophy          secret_trophy          large_box.obj
+weapon_mode            weapon_mode            large_box.obj
+
+#Entities can use.
+bent_bookmark                   bent_bookmark                   large_box.obj
+bent_bookmark_gray              bent_bookmark_gray              large_box.obj
+bent_buy_marker_5               buy_marker_5                    large_box.obj
+bent_buy_marker_4               buy_marker_4                    large_box.obj
+bent_buy_marker_3               buy_marker_3                    large_box.obj
+bent_buy_marker_2               buy_marker_2                    large_box.obj
+bent_buy_marker_1               buy_marker_1                    large_box.obj
+bent_sell_station_common        sell_station_common             large_box.obj
+bent_sell_station_scarce        sell_station_scarce             large_box.obj
+bent_sell_station_rare          sell_station_rare               large_box.obj
+bent_buy_station                buy_station                     large_box.obj
+bent_black_market               black_market                    large_box.obj
+bent_upgrade_station            upgrade_station                 large_box.obj
+bent_upgrade_station_max_ammo   upgrade_station_max_ammo        large_box.obj
+bent_upgrade_telekinesis        upgrade_telekinesis             large_box.obj
+bent_buy_blue_key               buy_blue_key                    large_box.obj
+bent_sleep                      sleep                           large_box.obj
+bent_difficulty_change          icon_easy_1                     large_box.obj
+bent_buy_nuke_400               buy_nuke_400                    large_box.obj
+bent_buy_nuke_300               buy_nuke_300                    large_box.obj
+bent_buy_nuke_250               buy_nuke_250                    large_box.obj
+bent_buy_nuke_200               buy_nuke_200                    large_box.obj
+bent_buy_nuke_150               buy_nuke_150                    large_box.obj
+bent_buy_nuke_100               buy_nuke_100                    large_box.obj
+bent_respawn                    skull                           large_box.obj
+bent_pay_toll                   pay_toll                        large_box.obj
+bent_pay_toll_parent            pay_toll                        large_box.obj
+bent_pay_toll_parent2           pay_toll                        large_box.obj
+bent_env_var_open_door          bent_env_var_open_door          large_box.obj
+bent_unlock_stable_sing         bent_unlock_stable_sing         large_box.obj
+bent_arcade_enter               arcade_enter                    large_box.obj
+bent_arcade_exit                arcade_exit                     large_box.obj
+bent_arcade_reset_door          arcade_reset_door               large_box.obj
+bent_cheap_common_markers       cheap_common_markers            large_box.obj
+bent_open_green_door            bent_open_door_green            large_box.obj
+bent_black_hole_control_panel   bent_black_hole_control_panel   large_box.obj
+bent_quasar_control_panel       bent_quasar_control_panel       large_box.obj
+
+genesis_marker_short        genesis_marker_short   large_box.obj
+genesis_marker_long         genesis_marker_long    large_box.obj
+
+bent_spice                  spice                  large_box.obj
+
+#Upgrades.
+shield_incr_ballance   striped_blue           large_box_case.obj
+health_incr            striped_yellow         large_box_case.obj
+health_incr_regen      striped_orange         large_box_case.obj
+armor_incr_regen       striped_orange         large_box_case.obj
+gun_1_incr_capacity    striped_yellow         large_box_case.obj
+gun_1_incr_ammo_regen  striped_orange         large_box_case.obj
+gun_1_incr_fire_speed  striped_blue           large_box_case.obj
+gun_1_incr_damage      striped_red            large_box_case.obj
+gun_1_incr_proj_speed  striped_green          large_box_case.obj
+gun_2_incr_capacity    striped_yellow         large_box_case.obj
+gun_2_incr_fire_speed  striped_blue           large_box_case.obj
+gun_2_incr_damage      striped_red            large_box_case.obj
+gun_2_incr_proj_speed  striped_green          large_box_case.obj
+gun_2_incr_num_shots   striped_grey           large_box_case.obj
+gun_3_incr_capacity    striped_yellow         large_box_case.obj
+gun_3_incr_time        striped_blue           large_box_case.obj
+gun_3_incr_damage      striped_red            large_box_case.obj
+gun_3_incr_num         striped_grey           large_box_case.obj
+gun_4_incr_capacity    striped_yellow         large_box_case.obj
+gun_4_incr_fire_speed  striped_blue           large_box_case.obj
+gun_4_incr_damage      striped_red            large_box_case.obj
+gun_4_incr_proj_speed  striped_green          large_box_case.obj
+gun_4_incr_radius      striped_purple         large_box_case.obj
+gun_5_incr_capacity    striped_yellow         large_box_case.obj
+gun_5_incr_fire_speed  striped_blue           large_box_case.obj
+gun_5_incr_damage      striped_red            large_box_case.obj
+gun_5_incr_proj_speed  striped_green          large_box_case.obj
+gun_5_incr_num         striped_grey           large_box_case.obj
+gun_6_incr_capacity    striped_yellow         large_box_case.obj
+gun_6_incr_fire_speed  striped_blue           large_box_case.obj
+gun_6_incr_damage      striped_red            large_box_case.obj
+gun_6_incr_proj_speed  striped_green          large_box_case.obj
+gun_6_incr_num         striped_grey           large_box_case.obj
+gun_7_incr_capacity    striped_yellow         large_box_case.obj
+gun_7_incr_fire_speed  striped_blue           large_box_case.obj
+gun_7_incr_damage      striped_red            large_box_case.obj
+gun_8_incr_capacity    striped_yellow         large_box_case.obj
+gun_8_incr_damage      striped_red            large_box_case.obj
+gun_8_incr_num         striped_grey           large_box_case.obj
+gun_8_incr_radius      striped_purple         large_box_case.obj
+gun_9_incr_capacity    striped_yellow         large_box_case.obj
+gun_9_incr_damage      striped_red            large_box_case.obj
+gun_9_incr_proj_speed  striped_green          large_box_case.obj
+gun_9_incr_radius      striped_purple         large_box_case.obj
+gun_0_incr_capacity    striped_yellow         large_box_case.obj
+gun_0_incr_damage      striped_red            large_box_case.obj
+gun_0_incr_proj_speed  striped_green          large_box_case.obj
+gun_0_incr_radius      striped_purple         large_box_case.obj
+gun_ammo_once          black_white_border     large_box_case.obj
+
+#Can get rid of?
+blood                  pattern_diag_red           octahedron.obj
+
+MonsterGoblin              MonsterGoblin              sphere.obj
+MonsterImp                 MonsterImp                 sphere.obj
+MonsterGnoll               MonsterGnoll               sphere.obj
+MonsterDemon               MonsterDemon               sphere.obj
+MonsterOrc                 MonsterOrc                 sphere.obj
+MonsterTroll               MonsterTroll               sphere.obj
+MonsterHobgoblin           MonsterHobgoblin           sphere.obj
+MonsterOgre                MonsterOgre                sphere.obj
+MonsterMarineLight         MonsterMarineLight         sphere.obj
+MonsterMarine              MonsterMarine              sphere.obj
+MonsterMarineHeavy         MonsterMarineHeavy         sphere.obj
+MonsterMarineRebel         MonsterMarineRebel         sphere.obj
+MonsterMarineInsurgent     MonsterMarineInsurgent     sphere.obj
+MonsterMarineDissident     MonsterMarineDissident     sphere.obj
+MonsterMarineHiredGun      MonsterMarineHiredGun      sphere.obj
+MonsterMarineGuerilla      MonsterMarineGuerilla      sphere.obj
+MonsterMarineHitMan        MonsterMarineHitMan        sphere.obj
+MonsterMarineMercinary     MonsterMarineMercinary     sphere.obj
+MonsterMarineCommando      MonsterMarineCommando      sphere.obj
+MonsterMenace              MonsterMenace              sphere.obj
+MonsterArchMenaceMale      MonsterArchMenaceMale      sphere.obj
+MonsterArchMenaceFemale    MonsterArchMenaceFemale    sphere.obj
+MonsterVileMenace          MonsterVileMenace          sphere.obj
+MonsterKeyYellow           MonsterKeyYellow           sphere.obj
+MonsterKeyBlue             MonsterKeyBlue             sphere.obj
+MonsterKeyGreen            MonsterKeyGreen            sphere.obj
+MonsterKeyUniverse         MonsterKeyUniverse         sphere.obj
+MonsterKeyLaserGenesis     MonsterKeyLaserGenesis     sphere.obj
+MonsterKeyDansHouse        MonsterKeyDansHouse        sphere.obj
+#MonsterGear               MonsterGear                sphere.obj
+MonsterAbominationBlue     MonsterAbominationBlue     sphere.obj
+MonsterAbominationAntiBlue MonsterAbominationAntiBlue sphere.obj
+MonsterGoonPetite          MonsterGoonPetite          sphere.obj
+MonsterGoonSmall           MonsterGoonSmall           sphere.obj
+MonsterGoon                MonsterGoon                sphere.obj
+MonsterGoonLarge           MonsterGoonLarge           sphere.obj
+MonsterGoonMajor           MonsterGoonMajor           sphere.obj
+MonsterGoonQuestionable    MonsterGoonQuestionable    sphere.obj
+MonsterGoonImmoral         MonsterGoonImmoral         sphere.obj
+MonsterGoonUnsavory        MonsterGoonUnsavory        sphere.obj
+MonsterGoonEvil            MonsterGoonEvil            sphere.obj
+MonsterGoonDespicable      MonsterGoonDespicable      sphere.obj
+MonsterGoonManiacal        MonsterGoonManiacal        sphere.obj
+MonsterGoonUltimate        MonsterGoonUltimate        sphere.obj
+MonsterGnat                MonsterGnat                sphere.obj
+MonsterGnatStrong          MonsterGnatStrong          sphere.obj
+MonsterGnatBiblical        MonsterGnatBiblical        sphere.obj
+MonsterFly                 MonsterFly                 sphere.obj
+MonsterFlyStrong           MonsterFlyStrong           sphere.obj
+MonsterFlyBiblical         MonsterFlyBiblical         sphere.obj
+MonsterMosquito            MonsterMosquito            sphere.obj
+MonsterMosquitoStrong      MonsterMosquitoStrong      sphere.obj
+MonsterMosquitoBiblical    MonsterMosquitoBiblical    sphere.obj
+MonsterLocust              MonsterLocust              sphere.obj
+MonsterLocustStrong        MonsterLocustStrong        sphere.obj
+MonsterLocustBiblical      MonsterLocustBiblical      sphere.obj
+MonsterPlague              MonsterPlague              sphere.obj
+MonsterPlagueNonP          MonsterPlagueNonP          sphere.obj
+MonsterVirus               MonsterVirus               sphere.obj
+MonsterJug                 MonsterJug                 sphere.obj
+MonsterJugTough            MonsterJugTough            sphere.obj
+MonsterJugUnruly           MonsterJugUnruly           sphere.obj
+MonsterJugFormidable       MonsterJugFormidable       sphere.obj
+MonsterJugIAm              MonsterJugIAm              sphere.obj
+MonsterCollapsedStar       MonsterCollapsedStar       sphere.obj
+MonsterCollapsedAngel      MonsterCollapsedAngel      sphere.obj
+MonsterCollapsedArchangel  MonsterCollapsedArchangel  sphere.obj
+MonsterCollapsedSpirit     MonsterCollapsedSpirit     sphere.obj
+MonsterCollapsedSoul       MonsterCollapsedSoul       sphere.obj
+MonsterBee                 MonsterBee                 sphere.obj
+MonsterWasp                MonsterWasp                sphere.obj
+MonsterHornet              MonsterHornet              sphere.obj
+MonsterNuclearSilo              MonsterNuclearSilo              sphere.obj
+MonsterNuclearSiloCompromised   MonsterNuclearSiloCompromised   sphere.obj
+MonsterNuclearOreMiningLocation MonsterNuclearOreMiningLocation sphere.obj
+MonsterNuclearRefinery          MonsterNuclearRefinery          sphere.obj
+MonsterNuclearCyclotron         MonsterNuclearCyclotron         sphere.obj
+MonsterNuclearLaunchFacility    MonsterNuclearLaunchFacility    sphere.obj
+MonsterNuclearDoomsdayShelter   MonsterNuclearDoomsdayShelter   sphere.obj
+MonsterFanatic                  MonsterFanatic                  sphere.obj
+MonsterDisciple                 MonsterDisciple                 sphere.obj
+MonsterMystic                   MonsterMystic                   sphere.obj
+MonsterOverseer                 MonsterOverseer                 sphere.obj
+MonsterOverlord                 MonsterOverlord                 sphere.obj
+MonsterGuardian                 MonsterGuardian                 sphere.obj
+MonsterGuardianMinor            MonsterGuardianMinor            sphere.obj
+MonsterNightGuard               MonsterNightGuard               sphere.obj
+MonsterEnforcer                 MonsterEnforcer                 sphere.obj
+MonsterGoliath                  MonsterGoliath                  sphere.obj
+MonsterWolf                     MonsterWolf                     large_box.obj
+MonsterInnerCore                MonsterInnerCore                sphere_high.obj
+MonsterICCC                     MonsterICCC                     sphere_high.obj
+MonsterClockworkWatchman        MonsterClockworkWatchman        sphere.obj
+MonsterBloodBoy                 MonsterBloodBoy                 sphere.obj
+MonsterBloodBoyGreater          MonsterBloodBoyGreater          sphere.obj
+WhiteBoxDevice                  WhiteBoxDevice                  large_box.obj
+YellowBoxDevice                 YellowBoxDevice                 large_box.obj
+MonsterDragoon                  MonsterDragoon                  sphere.obj
+MonsterVulcan                   MonsterVulcan                   sphere.obj
+MonsterVulcanWar                MonsterVulcanWar                sphere.obj
+MonsterVulcanWarIron            MonsterVulcanWarIron            sphere.obj
+MonsterSpiderBaby               MonsterSpiderBaby               sphere.obj
+MonsterSpiderLesser             MonsterSpiderLesser             sphere.obj
+MonsterSpider                   MonsterSpider                   sphere.obj
+MonsterSpiderGreat              MonsterSpiderGreat              sphere.obj
+MonsterSpiderLord               MonsterSpiderLord               sphere.obj
+MonsterRocketSpiderBaby         MonsterRocketSpiderBaby         sphere.obj
+MonsterProbe                    MonsterProbe                    sphere.obj
+MonsterSentinel                 MonsterSentinel                 sphere.obj
+MonsterSentinelAnti             MonsterSentinelAnti             sphere.obj
+MonsterSatellite                MonsterSatellite                sphere.obj
+MonsterLaboratory               MonsterLaboratory               sphere.obj
+MonsterScienceCore              MonsterScienceCore              sphere.obj
+MonsterMothership               MonsterMothership               sphere.obj
+MonsterMechanizedSheath         MonsterMechanizedSheath         sphere.obj
+MonsterPirate                   MonsterPirate                   sphere.obj
+MonsterFirstMate                MonsterFirstMate                sphere.obj
+MonsterCaptain                  MonsterCaptain                  sphere.obj
+MonsterLamprey                  MonsterLamprey                  sphere.obj
+MonsterLampreyYellow            MonsterLampreyYellow            sphere.obj
+MonsterLampreyGreen             MonsterLampreyGreen             sphere.obj
+MonsterLampreyRed               MonsterLampreyRed               sphere.obj
+MonsterLampreyBlue              MonsterLampreyBlue              sphere.obj
+MonsterInnerCoreMinion          MonsterInnerCoreMinion          sphere.obj
+MonsterBeholderMinor            MonsterBeholderMinor            sphere.obj
+MonsterBeholderLesser           MonsterBeholderLesser           sphere.obj
+MonsterBeholder                 MonsterBeholder                 sphere.obj
+MonsterBeholderGreater          MonsterBeholderGreater          sphere.obj
+MonsterBeholderMajor            MonsterBeholderMajor            sphere.obj
+MonsterHexatrix                 MonsterHexatrix                 sphere.obj
+MonsterRatMinor                 MonsterRatMinor                 sphere.obj
+MonsterRatLesser                MonsterRatLesser                sphere.obj
+MonsterRat                      MonsterRat                      sphere.obj
+MonsterRatGreater               MonsterRatGreater               sphere.obj
+MonsterRatBilgeMinor            MonsterRatBilgeMinor            sphere.obj
+MonsterSliverMinor              MonsterSliverMinor              sphere.obj
+MonsterSliverLesser             MonsterSliverLesser             sphere.obj
+MonsterSliver                   MonsterSliver                   sphere.obj
+MonsterSliverGreater            MonsterSliverGreater            sphere.obj
+MonsterSliverMajor              MonsterSliverMajor              sphere.obj
+MonsterPoolBall1                MonsterPoolBall1                sphere.obj
+MonsterPoolBall2                MonsterPoolBall2                sphere.obj
+MonsterPoolBall3                MonsterPoolBall3                sphere.obj
+MonsterPoolBall4                MonsterPoolBall4                sphere.obj
+MonsterPoolBall5                MonsterPoolBall5                sphere.obj
+MonsterPoolBall6                MonsterPoolBall6                sphere.obj
+MonsterPoolBall7                MonsterPoolBall7                sphere.obj
+MonsterPoolBall8                MonsterPoolBall8                sphere.obj
+MonsterYinYangOrange            MonsterYinYangOrange            sphere_high.obj
+MonsterYinYangGreen             MonsterYinYangGreen             sphere_high.obj
+
+monster_gremlin        monster_gremlin        sphere.obj
+monster_gremlin_proj   monster_gremlin_proj   octahedron.obj
+
+#Used for the singularity monster.
+MonsterSingularityRingLarge      black          ring_large.obj
+MonsterSingularityRingMed        black          ring_med.obj
+MonsterSingularityRingSmall      black          ring_small.obj
+
+low_unit_sphere_blue   blue                       low_sphere_rad1.obj
+blue_plasma            block_concrete_blue_diag   octahedron.obj
+Drop                   Drop                       large_box.obj
+
+dummy                  block_concrete_yellow_diag octahedron.obj
+
+#BE CAREFUL REPLACING THIS ONE!!!
+plasma1                block_concrete_yellow_diag octahedron.obj
+
+plasma2                block_concrete_yellow_diag octahedron.obj
+cannon1                block_concrete_orange_diag octahedron.obj
+cannon2                block_concrete_orange_diag octahedron.obj
+cannon3                block_concrete_orange_diag octahedron.obj
+
+rocket1                rocketmodel                  Community/rocketmodel.obj
+rocket2                rocketmodel_green            Community/rocketmodel.obj
+rocket3                rocketmodel_orange_striped   Community/rocketmodel.obj
+rocket4                rocketmodel_striped          Community/rocketmodel.obj
+rocket5                rocketmodel_pink_striped     Community/rocketmodel.obj
+
+rocket1_explosion      Rocket1Explosion             sphere.obj
+rocket2_explosion      Rocket2Explosion             sphere.obj
+rocket3_explosion      Rocket3Explosion             sphere.obj
+
+rocket1_stream         block_concrete_yellow_diag octahedron.obj
+homing                 block_concrete_red_diag    octahedron.obj
+minigun2               block_concrete_white_diag  octahedron.obj
+emp_stream             block_concrete_green_diag  octahedron.obj
+
+nuke1                  rocketmodel_blue_striped    Community/rocketmodel.obj
+nuke2                  rocketmodel_teal_striped    Community/rocketmodel.obj
+
+nuke1_explosion        Nuke1Explosion               sphere.obj
+nuke2_explosion        Nuke2Explosion               sphere.obj
+
+nuke_stream            block_concrete_green_diag  octahedron.obj
+dark_hole              block_black                sphere.obj
+
+smart                  block_concrete_green_diag  octahedron.obj
+
+inner_core_proj        block_concrete_purple_x    octahedron.obj
+
+#goon_proj              block_concrete_blue_diag   octahedron.obj
+goon_proj              blue                       spike_ball_1.obj
+
+marker_short_1         pattern_diag_purple        octahedron.obj
+marker_short_2         pattern_diag_yellow        octahedron.obj
+marker_long_1          pattern_diag_red           octahedron.obj
+marker_long_2          pattern_diag_green         octahedron.obj
+
+#picture_cot_spring     picture_cot_spring          ment_picture_box.obj
+#picture_cot_ophelia     picture_cot_ophelia        ment_picture_box.obj
+#picture_card_char       picture_card_char          ment_picture_box.obj

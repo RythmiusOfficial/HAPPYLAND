@@ -9,37 +9,658 @@
 #in each var_name_suffix (preferably at the beginning).
 
 ######################################
+#       CREATING A STARTING POS
+######################################
+
+s xar.create_start_pos.state        "done"
+i xar.create_start_pos.which_try    0
+i xar.create_start_pos.next_seed    0
+f xar.create_start_pos.frac         0.0
+s xar.create_start_pos.splash       ""
+i xar.create_start_pos.cur_level    -1
+b xar.create_start_pos.fast_track   true
+
+#May want to change these.
+i xar.create_start_pos.global_tries_max 200
+i xar.create_start_pos.global_tries     200
+
+#This is only used if the first used engine version
+#of the saved game is 1.01.30 or more.
+#The top.__load game function checks that this number
+#is the same as the number of times the player has rebooted
+#the game.  If these are not the same, then the process
+#of initially placing the player in the world must have failed.
+i xar.create_start_pos.which_reboot_cleared -1
+
+######################################
+#     PASSING DATA TO WORLDGEN
+######################################
+
+#This will be the new way of dealing
+#with genesis mode.
+b worldgen.state.genesis             false
+
+b worldgen.state.one_way             false
+b worldgen.state.low_ammo            false
+b worldgen.state.low_max_ammo        false
+b worldgen.state.low_buy_upgrades    false
+b worldgen.state.no_stable_sing      false
+
+######################################
 #                HUD
 ######################################
 
-s blank.messages.slot1.msg
-f blank.messages.slot1.ttl
-s blank.messages.slot2.msg
-f blank.messages.slot2.ttl
-s blank.messages.slot3.msg
-f blank.messages.slot3.ttl
-s blank.messages.slot4.msg
-f blank.messages.slot4.ttl
-s blank.messages.slot5.msg
-f blank.messages.slot5.ttl
+s xar.messages.slot1.msg
+f xar.messages.slot1.ttl
+s xar.messages.slot2.msg
+f xar.messages.slot2.ttl
+s xar.messages.slot3.msg
+f xar.messages.slot3.ttl
+s xar.messages.slot4.msg
+f xar.messages.slot4.ttl
+s xar.messages.slot5.msg
+f xar.messages.slot5.ttl
+
+#The user can change these to customize
+#their experience.
+b xar.hud.disable_hud                    false
+
+#The next two are only in genesis.
+b xar.hud.show_game_time                 true
+b xar.hud.show_play_time                 true
+
+b xar.hud.msg.disable_msgs               false
+b xar.hud.msg.show_saved_game_msg        true
+b xar.hud.msg.show_spiral_of_death_msg   false
+#more!!!
+
+b xar.hud.show_health true
+b xar.hud.show_ammo true
+b xar.hud.show_markers true
+b xar.hud.show_gold true
+b xar.hud.show_experience true
+b xar.hud.show_icons true
+
+f xar.hud.flash.last_time -1.0
+f xar.hud.flash.duration 1.0
+f xar.hud.flash.alpha 1.0
+v xar.hud.flash.color 1.0 1.0 1.0
+
+--If the red boarder showing low health is here.
+--This is here for epilepsy saftey.
+b xar.hud.showing_border false
+-- If the stats are all below these ratios,
+-- then the red boarder around the screen will be shown.
+-- The player can configure these.
+f xar.hud.shield_danger_cutoff 0.1
+f xar.hud.health_danger_cutoff 1.1
+f xar.hud.armor_danger_cutoff  0.5
+
+--Not exactly hud, but vision related.
+f xar.visual_effect.block_blind.cur_shade 1.0
+f xar.visual_effect.block_blind.last_time -1.0
+b xar.visual_effect.block_blind.got_a_hit false
+b xar.visual_effect.block_blind.got_a_hit_old false
+
+######################################
+#                SOUND
+######################################
+
+b xar.sound.print_broken_playlist_errs_to_console false
+b xar.sound.print_broken_playlist_errs_to_stdout  true
+
+######################################
+#               Credits
+######################################
+
+b xar.credits.won_game            false
+f xar.credits.won_game_game_time    -1.0
+f xar.credits.won_game_play_time    -1.0
+
+b xar.credits.in false
+
+######################################
+#              Difficulty
+######################################
+
+b xar.difficulty.locked_in             false
+b xar.difficulty.easy_2                false
+b xar.difficulty.easy_2_once           false
+b xar.difficulty.easy_1                true
+b xar.difficulty.easy_1_once           true
+b xar.difficulty.normal                false
+b xar.difficulty.normal_once           false
+b xar.difficulty.hard_1                false
+b xar.difficulty.hard_1_once           false
+b xar.difficulty.hard_2                false
+b xar.difficulty.hard_2_once           false
+b xar.difficulty.hard_3                false
+b xar.difficulty.hard_3_once           false
+b xar.difficulty.hard_4                false
+b xar.difficulty.hard_4_once           false
+
+b xar.difficulty.custom                 false
+f xar.difficulty.custom.dmg_from_player 0.1
+f xar.difficulty.custom.dmg_to_player   2.0
+
+b xar.first_life                       true
+
+b xar.difficulty.curve.enabled         false
+
+i xar.difficulty.curve.player_in_damage.total     0
+f xar.difficulty.curve.player_in_damage.last_time 0.0
+
+b xar.difficulty.trying_to_be_pacifist false
+
+f xar.difficulty.speedrun_start     0.0
+
+######################################
+#          EXPERIENCE POINTS
+######################################
+
+i xar.experience.total 0
+i xar.experience.level 0
+
+#These next 3 should all be the same.
+i xar.experience.level_step        500
+i xar.experience.to_next_level     500
+i xar.experience.to_next_level_max 500
+
+f xar.experience.last_time   0.0
+i xar.experience.last_second 0
+i xar.experience.this_second 0
+
+# Every 10th level is a milestone level,
+# where the player gets bonus upgrades.
+# This var represents that last miltstone level
+# that the player claimed the upgrades from.
+i xar.experience.last_claimed_milestone_level
+
+######################################
+#                STATS
+######################################
+
+i xar.stats.kill_count 0
+
+######################################
+#              Cheating
+######################################
+
+b xar.cheat.free_markers false
+
+b xar.cheat.inf2.enabled        false
+s xar.cheat.inf2.primary_bt     "XAR_SOLID_BORING"
+s xar.cheat.inf2.secondary_bt   "XAR_EMPTY_BORING"
+s xar.inf2.movement.mod         ""
+
+b xar.inf2.movement.moving_in_plane false
+b xar.inf2.movement.in_air          false
+
+######################################
+#             Hurt Sounds
+######################################
+
+f xar.hurt_sound.last_time 0.0
+i xar.hurt_sound.damage    0
+
+#######################################
+#            Inventory
+#######################################
+
+s xar.player.equipped.1.primary     "item_gun_1_1"
+s xar.player.equipped.1.secondary   "item_gun_1_2"
+s xar.player.equipped.2.primary     "item_gun_2_1"
+s xar.player.equipped.2.secondary   "item_gun_2_3"
+s xar.player.equipped.3.primary     "item_gun_3_1"
+s xar.player.equipped.3.secondary   "item_gun_3_4"
+s xar.player.equipped.4.primary     "item_gun_4_1"
+s xar.player.equipped.4.secondary   "item_gun_4_4"
+s xar.player.equipped.5.primary     "item_gun_5_1"
+s xar.player.equipped.5.secondary   "item_gun_5_2"
+s xar.player.equipped.6.primary     "item_gun_6_1"
+s xar.player.equipped.6.secondary   "item_gun_6_2"
+s xar.player.equipped.7.primary     "item_gun_7_1"
+s xar.player.equipped.7.secondary   "item_gun_7_3"
+s xar.player.equipped.8.primary     "item_gun_8_1"
+s xar.player.equipped.8.secondary   "item_gun_8_2"
+s xar.player.equipped.9.primary     "item_gun_9_1"
+s xar.player.equipped.9.secondary   "item_gun_9_2"
+s xar.player.equipped.0.primary     "item_gun_0_1"
+s xar.player.equipped.0.secondary   "item_gun_0_2"
+
+#######################################
+#         Non-Weapon Inventory
+#######################################
+
+i xar.player.health.level
+i xar.player.health.amount 100
+i xar.player.health.max
+
+f xar.player.health.counter
+f xar.player.health.too_much_counter
+
+i xar.player.health.regen_level
+f xar.player.health.regen
+
+i xar.player.health.extra_regen_level
+f xar.player.health.extra_regen
+
+i xar.player.shield.amount
+i xar.player.shield.max
+f xar.player.shield.counter
+
+i xar.player.armor.amount
+i xar.player.armor.max
+
+i xar.player.armor.regen_level
+f xar.player.armor.regen
+f xar.player.armor.counter
+
+i xar.player.gold.amount 200
+i xar.player.gold.max    1000000
+
+i xar.player.markers.num_short 10
+
+f xar.key_time.yellow          0.0
+f xar.key_time.blue            0.0
+f xar.key_time.green           0.0
+s xar.key_time.green_combo     ""
+f xar.key_time.universe        0.0
+f xar.key_time.laser_genesis   0.0
+f xar.key_time.dans_house      0.0
+f xar.emp_end_time             0.0
+
+# Should probably get rid of word stacking.
+f xar.xp_5x_stacking_time      0.0
+f xar.damage_5x_stacking_time  0.0
+f xar.invun_stacking_time      0.0
+
+#######################################
+#            World state
+#######################################
+
+b xar.door_unlocked.i1          false
+b xar.door_unlocked.i2          false
+b xar.door_unlocked.i3          false
+b xar.door_unlocked.hell        false
+b xar.door_unlocked.burlington  false
+
+#######################################
+#          World positions
+#######################################
+
+s xar.world_pos.emergency_waypoint.path ""
+
+s xar.world_pos.bookmark.path  ""
+b xar.world_pos.bookmark.has   false
+i xar.world_pos.bookmark.lbp.x 7
+i xar.world_pos.bookmark.lbp.y 7
+i xar.world_pos.bookmark.lbp.z 7
+
+#######################################
+#               Input
+#######################################
+
+b xar.input.holding_drop_marker false
+f xar.input.holding_drop_marker_start 0.0
+
+#Deprecate!!!
+f xar.input.holding_telekinesis_start
+
+#These determine if left and right clicking
+#result in the use object being used.
+#Otherwise, the player needs to press F
+#to use the use object.
+b xar.input.use_primary_uses_object true
+b xar.input.use_secondary_uses_object true
+
+#######################################
+#             Telekinesis
+#######################################
+
+f xar.input.last_free_telekinesis_time 0.0
+
+b game.globals.xar.player.telekinesis.stone_corral              false
+b game.globals.xar.player.telekinesis.huntington                false
+b game.globals.xar.player.telekinesis.starksboro                false
+b game.globals.xar.player.telekinesis.desert_flower_cloud       false
+b game.globals.xar.player.telekinesis.tangerine                 false
+b game.globals.xar.player.telekinesis.super_massive_black_hole  false
+b game.globals.xar.player.telekinesis.top_of_world              false
+b game.globals.xar.player.telekinesis.main_branch_lib           false
+b game.globals.xar.player.telekinesis.mylantis_great_cavern     false
+b game.globals.xar.player.telekinesis.secret_farmhouse          false
+b game.globals.xar.player.telekinesis.beta_sponge               false
 
 #######################################
 #             Movement
 #######################################
 
-b blank.movement.forward  false
-b blank.movement.back     false
-b blank.movement.left     false
-b blank.movement.right    false
-b blank.movement.up       false
-b blank.movement.down     false
-b blank.movement.spin_ccw false
-b blank.movement.spin_cw  false
-b blank.movement.rocket   false
-b blank.movement.brake    false
+b xar.movement.forward  false
+b xar.movement.back     false
+b xar.movement.left     false
+b xar.movement.right    false
+b xar.movement.up       false
+b xar.movement.down     false
+b xar.movement.spin_ccw false
+b xar.movement.spin_cw  false
+b xar.movement.rocket   false
+b xar.movement.brake    false
 
-f blank.movement.spin_value 0.0
+f xar.movement.roll_value 0.0
 
-v blank.movement.extra_impulse 0.0 0.0 0.0
+v xar.movement.extra_impulse 0.0 0.0 0.0
 
-b blank.movement.rocket_mode false
+b xar.movement.move_on_z_axis false
+
+b xar.movement.alt_level_radius.is_using   false
+i xar.movement.alt_level_radius.old_radius 2
+
+#######################################
+#         Inventory Execution
+#######################################
+#We might want to rename xar.inv_exec.starting_shoot to
+#temp.xar.inv_exec.starting_shoot (making it temporary).
+#This way when you save and load, it does not
+#remember that you are holding shoot.
+#To do this, we would not list it in this globals.txt file.
+
+i xar.inv_exec.cur_wep -1
+b xar.inv_exec.primary
+b xar.inv_exec.starting_shoot false
+f xar.inv_exec.last_fire_time 0.0
+
+b xar.inv_exec.wep_script_in false
+i xar.inv_exec.wep_script_last_wep 1
+
+#######################################
+#             Cur Weapon
+#######################################
+
+#Should only be set by the lua game.
+i xar.player.cur_wep 1
+
+#######################################
+#             Markers
+#######################################
+
+i xar.player.tracking_marker -1
+b xar.player.tracking_marker_hide 0
+i xar.player.tracking_marker_last_id 0
+f xar.player.tracking_marker_last_time 0.0
+v xar.player.tracking_marker_dir
+f xar.player.tracking_marker_dist
+s xar.player.tracking_marker_path
+
+b xar.player.cheat_comon_markers false
+
+#######################################
+#           Moving Entities
+#######################################
+
+f xar.player.hive_attack.meter      0.0
+f xar.player.hive_attack.last_time  0.0
+
+#######################################
+#             World vars
+#######################################
+
+#When this variable is changed,
+#the game needs to be restarted for
+#the effect to occur.
+f xar.normal_bent_touch_dist 1.5
+
+#######################################
+#               Plasma
+#######################################
+i xar.player.gun1.ammo
+i xar.player.gun1.ammo_level
+i xar.player.gun1.ammo_regen_level
+f xar.player.gun1.counter
+i xar.player.gun1.speed_level
+i xar.player.gun1.fire_period_level
+i xar.player.gun1.damage_level
+#
+b xar.player.gun1.mode1.has      true
+b xar.player.gun1.mode1.equipped true
+b xar.player.gun1.mode2.has      true
+b xar.player.gun1.mode2.equipped true
+b xar.player.gun1.mode3.has      false
+b xar.player.gun1.mode3.equipped false
+b xar.player.gun1.mode4.has      false
+b xar.player.gun1.mode4.equipped false
+b xar.player.gun1.mode5.has      false
+b xar.player.gun1.mode5.equipped false
+b xar.player.gun1.mode6.has      false
+b xar.player.gun1.mode6.equipped false
+#
+i xar.player.gun1.last_mode      1
+i xar.player.gun1.last_last_mode 2
+
+#######################################
+#                Cannon
+#######################################
+i xar.player.gun2.ammo
+i xar.player.gun2.ammo_level
+i xar.player.gun2.speed_level
+i xar.player.gun2.fire_period_level
+i xar.player.gun2.damage_level
+i xar.player.gun2.num_level
+#
+b xar.player.gun2.mode1.has      true
+b xar.player.gun2.mode1.equipped true
+b xar.player.gun2.mode2.has      false
+b xar.player.gun2.mode2.equipped false
+b xar.player.gun2.mode3.has      true
+b xar.player.gun2.mode3.equipped true
+#
+i xar.player.gun2.last_mode      1
+i xar.player.gun2.last_last_mode 2
+
+#######################################
+#                Laser
+#######################################
+i xar.player.gun3.ammo
+i xar.player.gun3.ammo_level
+i xar.player.gun3.freeze_time_level
+i xar.player.gun3.damage_level
+i xar.player.gun3.num_level
+#
+b xar.player.gun3.mode1.has      true
+b xar.player.gun3.mode1.equipped true
+b xar.player.gun3.mode2.has      false
+b xar.player.gun3.mode2.equipped false
+b xar.player.gun3.mode3.has      false
+b xar.player.gun3.mode3.equipped false
+b xar.player.gun3.mode4.has      true
+b xar.player.gun3.mode4.equipped true
+#
+i xar.player.gun3.last_mode      1
+i xar.player.gun3.last_last_mode 4
+
+#######################################
+#               Rocket
+#######################################
+i xar.player.gun4.ammo
+i xar.player.gun4.ammo_level
+i xar.player.gun4.speed_level
+i xar.player.gun4.fire_period_level
+i xar.player.gun4.damage_level
+i xar.player.gun4.radius_level
+#
+b xar.player.gun4.mode1.has      true
+b xar.player.gun4.mode1.equipped true
+b xar.player.gun4.mode2.has      false
+b xar.player.gun4.mode2.equipped false
+b xar.player.gun4.mode3.has      false
+b xar.player.gun4.mode3.equipped false
+b xar.player.gun4.mode4.has      true
+b xar.player.gun4.mode4.equipped true
+b xar.player.gun4.mode5.has      false
+b xar.player.gun4.mode5.equipped false
+#
+i xar.player.gun4.last_mode      1
+i xar.player.gun4.last_last_mode 4
+
+#######################################
+#            Homing Rocket
+#######################################
+i xar.player.gun5.ammo
+i xar.player.gun5.ammo_level
+i xar.player.gun5.speed_level
+i xar.player.gun5.fire_period_level
+i xar.player.gun5.damage_level
+#
+b xar.player.gun5.mode1.has      true
+b xar.player.gun5.mode1.equipped true
+b xar.player.gun5.mode2.has      true
+b xar.player.gun5.mode2.equipped true
+#
+i xar.player.gun5.last_mode      1
+i xar.player.gun5.last_last_mode 2
+#
+#Shooting:
+f xar.player.gun5.bucket.next_release_time 0.0
+i xar.player.gun5.bucket.1  0
+i xar.player.gun5.bucket.2  0
+i xar.player.gun5.bucket.3  0
+i xar.player.gun5.bucket.4  0
+i xar.player.gun5.bucket.5  0
+i xar.player.gun5.bucket.6  0
+i xar.player.gun5.bucket.7  0
+i xar.player.gun5.bucket.8  0
+i xar.player.gun5.bucket.9  0
+i xar.player.gun5.bucket.10 0
+i xar.player.gun5.bucket.11 0
+i xar.player.gun5.bucket.12 0
+i xar.player.gun5.bucket.13 0
+i xar.player.gun5.bucket.14 0
+i xar.player.gun5.bucket.15 0
+i xar.player.gun5.bucket.16 0
+i xar.player.gun5.bucket.17 0
+i xar.player.gun5.bucket.18 0
+i xar.player.gun5.bucket.19 0
+i xar.player.gun5.bucket.20 0
+
+#######################################
+#               Minigun
+#######################################
+i xar.player.gun6.ammo
+i xar.player.gun6.ammo_level
+i xar.player.gun6.speed_level
+i xar.player.gun6.fire_period_level
+i xar.player.gun6.damage_level
+i xar.player.gun6.num_level
+#
+b xar.player.gun6.mode1.has      true
+b xar.player.gun6.mode1.equipped true
+b xar.player.gun6.mode2.has      true
+b xar.player.gun6.mode2.equipped true
+#
+i xar.player.gun6.last_mode      1
+i xar.player.gun6.last_last_mode 2
+
+#######################################
+#               Railgun
+#######################################
+i xar.player.gun7.ammo
+i xar.player.gun7.ammo_level
+i xar.player.gun7.fire_period_level
+i xar.player.gun7.damage_level
+#
+b xar.player.gun7.mode1.has      true
+b xar.player.gun7.mode1.equipped true
+b xar.player.gun7.mode2.has      false
+b xar.player.gun7.mode2.equipped false
+b xar.player.gun7.mode3.has      true
+b xar.player.gun7.mode3.equipped true
+b xar.player.gun7.mode4.has      false
+b xar.player.gun7.mode4.equipped false
+#
+i xar.player.gun7.last_mode      1
+i xar.player.gun7.last_last_mode 2
+
+#######################################
+#                 EMP
+#######################################
+i xar.player.gun8.ammo
+i xar.player.gun8.ammo_level
+i xar.player.gun8.damage_level
+i xar.player.gun8.radius_level
+i xar.player.gun8.freeze_time_level
+#
+b xar.player.gun8.mode1.has      true
+b xar.player.gun8.mode1.equipped true
+b xar.player.gun8.mode2.has      true
+b xar.player.gun8.mode2.equipped true
+#
+i xar.player.gun8.last_mode      1
+i xar.player.gun8.last_last_mode 2
+#
+#Shooting:
+f xar.player.gun8.last_sound_time 0.0
+
+#######################################
+#                Nuke
+#######################################
+i xar.player.gun9.ammo
+i xar.player.gun9.ammo_level
+i xar.player.gun9.speed_level
+i xar.player.gun9.damage_level
+i xar.player.gun9.radius_level
+#
+b xar.player.gun9.mode1.has      true
+b xar.player.gun9.mode1.equipped true
+b xar.player.gun9.mode2.has      true
+b xar.player.gun9.mode2.equipped true
+b xar.player.gun9.mode3.has      false
+b xar.player.gun9.mode3.equipped false
+#
+i xar.player.gun9.last_mode      1
+i xar.player.gun9.last_last_mode 2
+
+#######################################
+#              Dark Hole
+#######################################
+i xar.player.gun0.ammo
+i xar.player.gun0.ammo_level
+i xar.player.gun0.speed_level
+i xar.player.gun0.damage_level
+#
+b xar.player.gun0.mode1.has      true
+b xar.player.gun0.mode1.equipped true
+b xar.player.gun0.mode2.has      true
+b xar.player.gun0.mode2.equipped true
+b xar.player.gun0.mode3.has      false
+b xar.player.gun0.mode3.equipped false
+b xar.player.gun0.mode4.has      false
+b xar.player.gun0.mode4.equipped false
+#
+i xar.player.gun0.last_mode      1
+i xar.player.gun0.last_last_mode 2
+#
+#Shooting.
+f xar.player.gun0.start_shoot_time 0.0
+i xar.player.gun0.charge           0
+
+#Black hole drive.
+f xar.player.gun0.black_hole_drive_end -1.0
+f xar.player.gun0.quasar_drive_end     -1.0
+
+#######################################
+#               Arcade
+#######################################
+
+b xar.player.arcade.inside false
+i xar.player.arcade.health  0
+i xar.player.arcade.armor   0
+i xar.player.arcade.ammo.1  0
+i xar.player.arcade.ammo.2  0
+i xar.player.arcade.ammo.3  0
+i xar.player.arcade.ammo.4  0
+i xar.player.arcade.ammo.5  0
+i xar.player.arcade.ammo.6  0
+i xar.player.arcade.ammo.7  0
+i xar.player.arcade.ammo.8  0
+i xar.player.arcade.ammo.9  0
+i xar.player.arcade.ammo.0  0

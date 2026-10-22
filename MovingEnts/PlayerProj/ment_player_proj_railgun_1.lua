@@ -1,0 +1,98 @@
+-------------------------------------------------
+--            Type init function
+-------------------------------------------------
+
+function p.__type_init(id)
+    game_ment_type_init.player_proj(id)
+    ia_ment_set_builtin_var_i(id, "__extra_min_levels", 4)
+    ia_ment_set_builtin_var_f(id, "__radius", 0.001)
+    ia_ment_set_builtin_var_s(id, "__mesh", "dummy")
+    ia_ment_new_static_var_b(id, "identifies", true)
+    ia_ment_new_var_i(id, "last_hit_ment_inst_id", -1, 60.0) --Weird.
+end
+
+-------------------------------------------------
+--              Common functions
+-------------------------------------------------
+
+--The hitter ment must have a variable called
+--last_hit_ment_inst_id, otherwise the game will crash.
+--Returns true iff the hitter is hitting the hittie
+--for the first time.
+function p.multiple_hit_check(
+    hitter_inst_id,
+    hittie_inst_id)
+--
+    local var = "last_hit_ment_inst_id"
+    if( hittie_inst_id == ga_ment_get_i(hitter_inst_id, var) ) then
+        return false --The hitter already hit the hittie.
+    end
+    --Modifying the hitter.
+    ga_ment_set_i(hitter_inst_id, var, hittie_inst_id)
+    return true --The first time hitting it.
+end
+
+-------------------------------------------------
+--              Inst functions
+-------------------------------------------------
+
+function p.__on_ment_hit(
+    source_inst_id,
+    target_inst_id,
+    level, lp, normal)
+--
+    if( not ment_player_proj_railgun_1.multiple_hit_check(
+        source_inst_id, target_inst_id) )
+    then
+        --The source ment does not stop,
+        --but it also does not deal damage.
+        return false
+    end
+
+    local args = {}
+    args.source_inst_id = source_inst_id
+    args.target_inst_id = target_inst_id
+    args.level = level
+    args.lp = lp
+    args.normal = normal
+    --
+    local ret = game_ment_hit.process_hit_and_got_hit(args)
+
+    --In the new way, it always goes through.
+    local terminal_hit = false
+
+    return terminal_hit
+end
+
+function p.__on_level_travel(
+    inst_id, level,
+    start_vec,
+    end_vec)
+    --Getting level info.
+    local start_level = ga_ment_get_i(inst_id, "__start_level")
+    local factor = ga_level_scale_factor(start_level, level).value
+    local diff = start_level - level
+
+    local args = {}
+    args.level = level
+    args.pos_start = start_vec
+    args.pos_end = end_vec
+    args.ttl_min = 2.0 * factor
+    args.ttl_max = 3.0 * factor
+    local size = 1.0 * factor
+    if diff == 1 then size = size * 2.0 end
+    if diff == 2 then size = size * 5.0 end
+    args.size_min = size
+    args.size_max = size
+    args.color = std.vec(0.0, 0.0, 1.0)
+    args.fade_time_min = 1.0 * factor
+    args.fade_time_max = 1.0 * factor
+    args.speed_min = 2.0
+    args.speed_max = 2.0
+    args.tex = "particle_2"
+    args.radius_min = 0.5 * factor
+    args.radius_max = 0.5 * factor
+    args.avg_len = 1.0
+    args.use_min_dist = true --No smoke to close to player.
+    ga_particle_trail(args)
+end

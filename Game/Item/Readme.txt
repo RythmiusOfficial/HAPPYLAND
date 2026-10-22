@@ -1,0 +1,1 @@
+-- In Fractal Meltdown, have all of these scripts like this start with "game_item_".

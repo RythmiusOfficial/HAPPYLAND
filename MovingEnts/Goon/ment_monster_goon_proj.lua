@@ -1,0 +1,42 @@
+-------------------------------------------------
+--            Type Init Function
+-------------------------------------------------
+
+function p.__type_init(id)
+    game_ment_type_init.monster_proj(id)
+    ia_ment_set_builtin_var_f(id, "__radius", 1.0)
+    ia_ment_set_builtin_var_s(id, "__mesh", "goon_proj")
+    ia_ment_set_builtin_var_b(id, "__homing", true)
+    ia_ment_set_builtin_var_f(id, "__homing_speed", 10.0)
+    ia_ment_set_builtin_var_i(id, "__team_id_source", 2)
+    ia_ment_set_builtin_var_i(id, "__team_id_target", 2)
+    ia_ment_new_var_i(id, "health", 10, 60.0)
+    ia_ment_new_var_i(id, "damage", 1, 3600.0)
+    ia_ment_new_static_var_f(id, "dps", 10.0)
+    -- ia_ment_new_static_var_s(id, "die_drop_bent", "bent_ammo_gun_3_large")
+    ia_ment_new_static_var_b(id, "counts_for_pacifist", false)
+end
+
+-------------------------------------------------
+--              Inst Functions
+-------------------------------------------------
+
+function p.__on_alarm(inst_id, alarm_name)
+    game_ment_alarms.monster_proj(inst_id, alarm_name)
+end
+
+function p.__on_ment_hit(
+    source_inst_id,
+    target_inst_id,
+    level, lp, normal)
+--
+    args = {}
+    args.source_inst_id = source_inst_id
+    args.target_inst_id = target_inst_id
+    args.level = level
+    args.lp = lp
+    args.normal = normal
+    --
+    ret = game_ment_hit.process_hit_and_got_hit(args)
+    return ret.terminal_hit
+end

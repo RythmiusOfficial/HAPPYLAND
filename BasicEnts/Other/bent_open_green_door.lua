@@ -1,0 +1,55 @@
+function p.get_required_combo(level, bp)
+    return ga_bent_get_param_s(level, bp)
+end
+
+function p.__get_can_use(level, bp)
+    return true
+end
+
+function p.__get_use_msg(level, bp)
+    local combo = p.get_required_combo(level, bp)
+    return "Use Key With Combination " .. tostring(combo)
+end
+
+function p.__on_use(level, bp)
+    p.remove_door(level, bp)
+end
+
+--Could put elsewhere.
+function p.remove_door(level, bp)
+    local required_combo = p.get_required_combo(level, bp)
+    local player_combo = ga_get_s("xar.key_time.green_combo")
+    if( player_combo ~= required_combo ) then
+        ga_play_sound("error")
+        return
+    end
+    --
+    ga_play_sound("toll_door")
+    local vcp = ga_bp_to_parent_vcp(bp)
+
+    local remove_bents = {}
+    remove_bents["bent_open_green_door"] = true
+
+    local remove_bts = {}
+    remove_bts["XAR_DOOR_GREEN"] = true
+    remove_bts["XAR_DOOR_GREEN_GLASS"] = true
+
+    for xi = 0,15 do
+    for yi = 0,15 do
+    for zi = 0,15 do
+        local lbp = std.bp(xi,yi,zi)
+        local bp2 = std.lbp_to_bp(vcp, lbp)
+        --
+        local block_type = ga_block_get(level, bp2)
+        if( remove_bts[block_type] ) then
+            --Removing the block.
+            ga_block_change_perm(level, bp2, "XAR_EMPTY_BORING")
+        end
+        --
+        local bent_type = ga_bent_get_type(level, bp2)
+        if( remove_bents[bent_type] ) then
+            --Removing the bent used to open the door.
+            ga_bent_remove_perm(level, bp2)
+        end
+    end end end
+end

@@ -1,9 +1,2 @@
-This is a "stub". 
-It is a tiny example world. 
-If you want to create your own package, 
-we recommend starting by copying the blank 
-folder and then modifying that. 
-Alternatively, you can start with the 
-blank_blocks, blank_gravity, or blank_ladders 
-package that can be found on the game's 
-website. 
+It's Happy Land! :D
+...hahhahaahahhh waoahhhhahha!!!

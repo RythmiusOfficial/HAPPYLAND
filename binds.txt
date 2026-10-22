@@ -1,13 +1,32 @@
 #Escape and ~ are reserved for the main menu and the console.
 
+#This is the format of this file:
+#action_name    default_input_event    nickname    primary_cmd    secondary_cmd
+
 #These should be in every package and should not change.
-PACKAGE_OPEN_MAIN_MENU          ESC.downup   "" "set menu.in_main true" ""
-PACKAGE_OPEN_CONSOLE            GRAVE.downup "" "set console.in true" ""
+PACKAGE_OPEN_MAIN_MENU          ESC.downup   "" "set menu.in_main true"    ""
+PACKAGE_OPEN_CONSOLE            GRAVE.downup "" "set console.in true"      ""
 PACKAGE_OPEN_PACKAGE_TOP_MENU   F1.downup    "" "set menu.in_package true" ""
 
 #Using entities and the equipped item (gun).
 #Note: "use" is a built in command.
-PACKAGE_USE                     	 F.downup   	"" "use" ""
+PACKAGE_USE_EQUIPPED_PRIMARY   MOUSE1.downup  "" "use_equipped primary start"   "use_equipped primary stop"
+PACKAGE_USE_EQUIPPED_SECONDARY MOUSE2.downup  "" "use_equipped secondary start" "use_equipped secondary stop"
+PACKAGE_USE                          F.downup       "" "use" ""
+
+#Equipping an item.
+PACKAGE_EQUIP_NEXT      MOUSEWHEEL_UP.use     "" "equip_right" ""
+PACKAGE_EQUIP_PREV      MOUSEWHEEL_DOWN.use   "" "equip_left"  ""
+PACKAGE_EQUIP_1                1.downup       "" "equip 1" ""
+PACKAGE_EQUIP_2                2.downup       "" "equip 2" ""
+PACKAGE_EQUIP_3                3.downup       "" "equip 3" ""
+PACKAGE_EQUIP_4                4.downup       "" "equip 4" ""
+PACKAGE_EQUIP_5                5.downup       "" "equip 5" ""
+PACKAGE_EQUIP_6                6.downup       "" "equip 6" ""
+PACKAGE_EQUIP_7                7.downup       "" "equip 7" ""
+PACKAGE_EQUIP_8                8.downup       "" "equip 8" ""
+PACKAGE_EQUIP_9                9.downup       "" "equip 9" ""
+PACKAGE_EQUIP_0                0.downup       "" "equip 0" ""
 
 #Basic flying movement.
 PACKAGE_MOVE_FORWARD    W.downup        "" "move forward start"  "move forward stop"
@@ -21,4 +40,21 @@ PACKAGE_MOVE_TWIST_CW   E.downup        "" "move spin_cw start"  "move spin_cw s
 
 #Advanced flying movement.
 PACKAGE_MOVE_BRAKE              LCTRL.downup    "" "move brake start"   "move brake stop"
-PACKAGE_MOVE_ROCKETMODE_TOGGLE  TAB.downup      "" "move toggle_rocket" ""
+PACKAGE_MOVE_ROCKETMODE_TOGGLE  TAB.downup      "" "move rocket toggle" ""
+
+#Truly Xar specific.
+PACKAGE_OPEN_STATS_2    F2.downup    "" "open_window hud_2" ""
+PACKAGE_OPEN_STATS_3    F3.downup    "" "open_window hud_3" ""
+PACKAGE_OPEN_STATS_4    F4.downup    "" "open_window hud_4" ""
+PACKAGE_OPEN_STATS_5    F5.downup    "" "open_window hud_5" ""
+PACKAGE_OPEN_STATS_6    F6.downup    "" "open_window hud_6" ""
+PACKAGE_OPEN_STATS_7    F7.downup    "" "open_window hud_7" ""
+PACKAGE_DROP_MARKER     M.downup     "" "marker start" "marker stop"
+PACKAGE_TELEKINESIS     T.downup     "" "telekinesis" ""
+
+#Xar helper functions.
+PACKAGE_USE_WEP_3_PRIMARY   C.downup "" "wep_script_start 3 primary"   "wep_script_stop"
+PACKAGE_USE_WEP_7_SECONDARY R.downup "" "wep_script_start 7 secondary" "wep_script_stop"
+
+#Debugging
+#PACKAGE_DEBUG_1         L.downup     "" "debug1" ""

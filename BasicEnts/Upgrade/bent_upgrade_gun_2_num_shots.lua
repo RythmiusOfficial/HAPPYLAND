@@ -1,0 +1,28 @@
+function p.__get_mesh() return "bent_ammo_gun_2_large" end
+function p.__get_mesh2() return "gun_2_incr_num_shots" end
+
+function p.payload(level, bp)
+    ga_srand(ga_block_seed_pos(level, bp))
+    game_upgrades.cannon_num()
+    game_bent.remove_perm(level, bp)
+end
+
+function p.__on_touch(level, bp)
+    p.payload(level, bp)
+end
+
+function p.__get_can_use(level, bp)
+    return true
+end
+
+function p.__get_use_msg(level, bp)
+    return "Cannon Num Shots"
+end
+
+function p.__on_use(level, bp)
+    p.payload(level, bp)
+end
+
+function p.on_telekinesis(level, bp)
+    p.payload(level, bp)
+end

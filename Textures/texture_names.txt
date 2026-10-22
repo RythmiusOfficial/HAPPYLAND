@@ -7,6 +7,16 @@
 #Alpha images must be .tga files or .png files.
 #Non-alpha files must be .jpg or .png files.
 
+#Mandatory Bullet Sprites
+block_black _ Blocks/block_black.jpg
+block_concrete_purple_x _ Blocks/block_concrete_purple_x.jpg
+block_concrete_white_diag _ Blocks/block_concrete_white_diag.jpg
+block_concrete_green_diag _ Blocks/block_concrete_green_diag.jpg
+block_concrete_red_diag _ Blocks/block_concrete_red_diag.jpg
+block_concrete_orange_diag _ Blocks/block_concrete_orange_diag.jpg
+block_concrete_yellow_diag _ Blocks/block_concrete_yellow_diag.jpg
+block_concrete_blue_diag _ Blocks/block_concrete_blue_diag.jpg
+
 block_plug _ Blocks/block_stopper.jpg
 block_r_plug _ Blocks/block_yellow_black_striped.jpg
 block_anti_plug _ Blocks/block_anti_plug.jpg
@@ -18,4 +28,420 @@ icon_brake _ Icons/icon_brake.jpg
 block_deco_green _ Blocks/block_deco1_green1.jpg
 block_green _ Blocks/block_dark_green_border.jpg
 block_happy_land _ Blocks/block_happy_land.jpg
+
+###############################################################################
+#
+#                        TEXTURES THAT GO ON THE HUD
+#
+###############################################################################
+
+# Crosshair.
+crosshair                a Crosshairs/(homemade)_crosshair.tga
+
+# Icons.
+icon_shield                 _ Icons/icon_shield.jpg
+icon_shield_grey            _ Icons/icon_shield_grey.jpg
+icon_health                 _ Icons/icon_health.jpg
+icon_health_blue            _ Icons/icon_health_blue.jpg
+icon_health_dark_blue       _ Icons/icon_health_dark_blue.jpg
+icon_health_red             _ Icons/icon_health_red.jpg
+icon_armor                  _ Icons/icon_armor.jpg
+icon_armor_grey             _ Icons/icon_armor_grey.jpg
+icon_armor_two              _ Icons/icon_armor_two.jpg
+icon_armor_three            _ Icons/icon_armor_three.jpg
+icon_gold                   _ Icons/icon_gold.jpg
+icon_markers                _ Icons/icon_markers.jpg
+icon_rocket                 _ Icons/icon_rocket.jpg
+icon_brake                  _ Icons/icon_brake.jpg
+icon_xp                     _ Icons/icon_xp.jpg
+icon_xp_back                _ Icons/icon_xp_back.jpg
+icon_xp_5x                  _ Icons/icon_xp_5x.jpg
+icon_hive_attack_bar        _ Icons/icon_hive_attack_bar.jpg
+icon_hive_attack_bar_back   _ Icons/icon_hive_attack_bar_back.jpg
+icon_damage_5x              _ Icons/icon_damage_5x.jpg
+icon_invun                  _ Icons/icon_invun.jpg
+icon_hardcore               _ Icons/icon_hardcore.jpg
+icon_pacifist               _ Icons/icon_pacifist.jpg
+icon_skull                  _ Icons/skull_and_cross.jpg
+icon_beacon                 _ Icons/icon_beacon.jpg
+icon_save                   _ Icons/icon_save.jpg
+icon_arcade                 _ Icons/icon_arcade.jpg
+icon_shrink_warning         _ Icons/icon_shrink_warning.jpg
+icon_yin_yang_warning       a Icons/icon_yin_yang_small.png
+
+# Difficulty icons.
+icon_easy_2               _ Icons/Difficulty/icon_easy_2.jpg
+icon_easy_2_once          _ Icons/Difficulty/icon_easy_2_once.jpg
+icon_easy_1               _ Icons/Difficulty/icon_easy_1.jpg
+icon_easy_1_once          _ Icons/Difficulty/icon_easy_1_once.jpg
+icon_normal               _ Icons/Difficulty/icon_normal.jpg
+icon_normal_once          _ Icons/Difficulty/icon_normal_once.jpg
+icon_hard_1               _ Icons/Difficulty/icon_hard_1.jpg
+icon_hard_1_once          _ Icons/Difficulty/icon_hard_1_once.jpg
+icon_hard_2               _ Icons/Difficulty/icon_hard_2.jpg
+icon_hard_2_once          _ Icons/Difficulty/icon_hard_2_once.jpg
+icon_hard_3               _ Icons/Difficulty/icon_hard_3.jpg
+icon_hard_3_once          _ Icons/Difficulty/icon_hard_3_once.jpg
+icon_hard_4               _ Icons/Difficulty/icon_hard_4.jpg
+icon_hard_4_once          _ Icons/Difficulty/icon_hard_4_once.jpg
+icon_custom               _ Icons/Difficulty/icon_custom.jpg
+
+icon_quasar_drive         _ Icons/icon_quasar_drive.jpg
+
+# Engine related icons.
+icon_db_1                 _ Icons/Engine/db_1.jpg
+icon_db_2                 _ Icons/Engine/db_2.jpg
+icon_db_1_and_2           _ Icons/Engine/db_1_and_2.jpg
+
+###############################################################################
+#
+#                TEXTURES FOR BOTH THE HUD AND BASIC ENTITIES
+#
+###############################################################################
+
+# Ammo.
+# (The grey ones are only used in the HUD).
+ammo_gun0           _ Ammo/gun0.jpg
+ammo_gun0_grey      _ Ammo/gun0_grey.jpg
+ammo_gun1           _ Ammo/gun1.jpg
+ammo_gun1_grey      _ Ammo/gun1_grey.jpg
+ammo_gun2           _ Ammo/gun2.jpg
+ammo_gun2_grey      _ Ammo/gun2_grey.jpg
+ammo_gun3           _ Ammo/gun3.jpg
+ammo_gun3_grey      _ Ammo/gun3_grey.jpg
+ammo_gun4           _ Ammo/gun4.jpg
+ammo_gun4_grey      _ Ammo/gun4_grey.jpg
+ammo_gun5           _ Ammo/gun5.jpg
+ammo_gun5_grey      _ Ammo/gun5_grey.jpg
+ammo_gun6           _ Ammo/gun6.jpg
+ammo_gun6_grey      _ Ammo/gun6_grey.jpg
+ammo_gun7           _ Ammo/gun7.jpg
+ammo_gun7_grey      _ Ammo/gun7_grey.jpg
+ammo_gun8           _ Ammo/gun8.jpg
+ammo_gun8_grey      _ Ammo/gun8_grey.jpg
+ammo_gun9           _ Ammo/gun9.jpg
+ammo_gun9_grey      _ Ammo/gun9_grey.jpg
+
+# Entity + Icon.
+ent_credits            _ BEnts/ent_credits.jpg
+key_yellow             _ BEnts/key_yellow.jpg
+key_green              _ BEnts/key_green.jpg
+key_blue               _ BEnts/key_blue.jpg
+key_green              _ BEnts/key_green.jpg
+key_laser_genesis      _ BEnts/key_laser_genesis.jpg
+key_dans_house         _ BEnts/key_dans_house.jpg
+
+###############################################################################
+#
+#                       TEXSTURES FOR BASIC ENTITIES
+#
+###############################################################################
+
+# Basic entities.
+shield                 _ BEnts/ent_shield.jpg
+health_10p             _ BEnts/ent_health10%.jpg
+health_25p             _ BEnts/ent_health25%.jpg
+health_100p            _ BEnts/ent_health100%.jpg
+health_200p            _ BEnts/ent_health200%.jpg
+health_100p_armor_100p _ BEnts/ent_health100%armor100%.jpg
+health_200p_armor_100p _ BEnts/ent_health200%armor100%.jpg
+health_200p_armor_200p _ BEnts/ent_health200%armor200%.jpg
+health_mega            _ BEnts/ent_health_mega.jpg
+armor_5p               _ BEnts/ent_armor5%.jpg
+armor_10p              _ BEnts/ent_armor10%.jpg
+armor_100p(bronze)     _ BEnts/ent_armor100%(bronze).jpg
+armor_150p(silver)     _ BEnts/ent_armor150%(silver).jpg
+armor_200p(gold)       _ BEnts/ent_armor200%(gold).jpg
+armor_600p(ivory)      _ BEnts/ent_armor600%(ivory).jpg
+armor_1000p(jade)      _ BEnts/ent_armor1000%(jade).jpg
+spice                  _ BEnts/ent_spice.jpg
+gold_1                 _ BEnts/ent_gold1.jpg
+gold_2                 _ BEnts/ent_gold2.jpg
+gold_3                 _ BEnts/ent_gold3.jpg
+gold_5                 _ BEnts/ent_gold5.jpg
+gold_10                _ BEnts/ent_gold10.jpg
+gold_20                _ BEnts/ent_gold20.jpg
+gold_30                _ BEnts/ent_gold30.jpg
+gold_50                _ BEnts/ent_gold50.jpg
+gold_100               _ BEnts/ent_gold100.jpg
+gold_200               _ BEnts/ent_gold200.jpg
+gold_300               _ BEnts/ent_gold300.jpg
+gold_500               _ BEnts/ent_gold500.jpg
+gold_1000              _ BEnts/ent_gold1000.jpg
+xp                     _ BEnts/xp.jpg
+
+weapon_mode            _ Blocks/block_weapon_mode.jpg
+
+trophy                      _ BEnts/ent_trophy.jpg
+trophy_do_not_have          _ Trophies/trophy_do_not_have.jpg
+secret_trophy               _ Trophies/secret_trophy.jpg
+
+xp_5x_stacking              _ BEnts/ent_xp_5x_stacking.jpg
+damage_5x_stacking          _ BEnts/ent_damage_5x_stacking.jpg
+invun_stacking              _ BEnts/ent_invun_stacking.jpg
+
+bent_bookmark                   _ BEnts/ent_bookmark.png
+bent_bookmark_gray              _ BEnts/ent_bookmark_gray.png
+buy_marker_5                    _ BEnts/ent_buy_marker_5.jpg
+buy_marker_4                    _ BEnts/ent_buy_marker_4.jpg
+buy_marker_3                    _ BEnts/ent_buy_marker_3.jpg
+buy_marker_2                    _ BEnts/ent_buy_marker_2.jpg
+buy_marker_1                    _ BEnts/ent_buy_marker_1.jpg
+sell_station_common             _ BEnts/ent_sell_common.jpg
+sell_station_scarce             _ BEnts/ent_sell_scarce.jpg
+sell_station_rare               _ BEnts/ent_sell_rare.jpg
+buy_station                     _ BEnts/ent_buy.jpg
+black_market                    _ BEnts/ent_black_market.jpg
+upgrade_telekinesis             _ BEnts/ent_telekinesis_upgrade.jpg
+upgrade_station                 _ BEnts/ent_upgrade_station.jpg
+upgrade_station_max_ammo        _ BEnts/ent_upgrade_station_max_ammo.jpg
+buy_blue_key                    _ BEnts/ent_buy_blue_key.jpg
+pay_toll                        _ BEnts/ent_pay_toll.jpg
+bent_env_var_open_door          _ BEnts/ent_open_door.jpg
+bent_open_door_green            _ BEnts/ent_open_green_door.jpg
+sleep                           _ BEnts/ent_sleep.jpg
+buy_nuke_400                    _ BEnts/buy_nuke_400.jpg
+buy_nuke_300                    _ BEnts/buy_nuke_300.jpg
+buy_nuke_250                    _ BEnts/buy_nuke_250.jpg
+buy_nuke_200                    _ BEnts/buy_nuke_200.jpg
+buy_nuke_150                    _ BEnts/buy_nuke_150.jpg
+buy_nuke_100                    _ BEnts/buy_nuke_100.jpg
+skull                           _ Icons/skull_and_cross.jpg
+crossbones                      _ Icons/crossbones.jpg
+arcade_enter                    _ BEnts/ent_arcade_enter.jpg
+arcade_exit                     _ BEnts/ent_arcade_exit.jpg
+arcade_reset_door               _ BEnts/ent_arcade_reset_door.jpg
+cheap_common_markers            _ BEnts/ent_cheap_common_markers.jpg
+bent_unlock_stable_sing         _ BEnts/ent_unlock_stable_sing.jpg
+bent_black_hole_control_panel   _ BEnts/ent_black_hole_control_panel.png
+bent_quasar_control_panel       _ BEnts/ent_quasar_control_panel.png
+
+genesis_marker_short        _ BEnts/ent_genesis_marker_short.jpg
+genesis_marker_long         _ BEnts/ent_genesis_marker_long.jpg
+
+#################################################
+#    Other (may be used for moving entities)
+#################################################
+
+# Patterns.
+black                  _ Patterns/black.jpg
+black_white_border     _ Patterns/black_white_border.jpg
+green                  _ Patterns/green.jpg
+red                    _ Patterns/red.jpg
+dark_grey              _ Patterns/dark_grey.jpg
+striped_yellow         _ Patterns/striped_yellow.jpg
+striped_orange         _ Patterns/striped_orange.jpg
+striped_blue           _ Patterns/striped_blue.jpg
+striped_red            _ Patterns/striped_red.jpg
+striped_green          _ Patterns/striped_green.jpg
+striped_purple         _ Patterns/striped_purple.jpg
+striped_grey           _ Patterns/striped_grey.jpg
+pattern_diag_red       _ Patterns/pattern_diag_red.jpg
+pattern_diag_green     _ Patterns/pattern_diag_green.jpg
+pattern_diag_purple    _ Patterns/pattern_diag_purple.jpg
+pattern_diag_yellow    _ Patterns/pattern_diag_yellow.jpg
+blue                   _ Patterns/color_blue.jpg
+ice                    _ Patterns/ice.jpg
+emp                    _ Patterns/emp.jpg
+ment_poison            _ Patterns/ment_poison.jpg
+
+###############################################################################
+#
+#                         TEXTURES FOR PARTICLES
+#
+###############################################################################
+
+#Particles.
+particle_1   a   Particles/particle_1.tga
+particle_2   a   Particles/particle_2.tga
+
+###############################################################################
+#
+#                         TEXSTURES FOR MOVING ENTITIES
+#
+###############################################################################
+
+# I should really change the capitalization convention for the monsters.
+
+# Monsters.
+
+MonsterGoblin                      _ MEnts/Monster/Gold/monster_goblin.jpg
+MonsterImp                         _ MEnts/Monster/Gold/monster_imp.jpg
+MonsterGnoll                       _ MEnts/Monster/Gold/monster_gnoll.jpg
+MonsterDemon                       _ MEnts/Monster/Gold/monster_demon.jpg
+MonsterOrc                         _ MEnts/Monster/Gold/monster_orc.jpg
+MonsterTroll                       _ MEnts/Monster/Gold/monster_troll.jpg
+MonsterHobgoblin                   _ MEnts/Monster/Gold/monster_hobgoblin.jpg
+MonsterOgre                        _ MEnts/Monster/Gold/monster_ogre.jpg
+MonsterMarineLight                 _ MEnts/Monster/Marine/monster_marine_light.jpg
+MonsterMarine                      _ MEnts/Monster/Marine/monster_marine.jpg
+MonsterMarineHeavy                 _ MEnts/Monster/Marine/monster_marine_heavy.jpg
+MonsterMarineRebel                 _ MEnts/Monster/Marine/monster_marine_rebel.jpg
+MonsterMarineInsurgent             _ MEnts/Monster/Marine/monster_marine_insurgent.jpg
+MonsterMarineDissident             _ MEnts/Monster/Marine/monster_marine_dissident.jpg
+MonsterMarineHiredGun              _ MEnts/Monster/Marine/monster_marine_hired_gun.jpg
+MonsterMarineGuerilla              _ MEnts/Monster/Marine/monster_marine_guerilla.jpg
+MonsterMarineHitMan                _ MEnts/Monster/Marine/monster_marine_hit_man.jpg
+MonsterMarineMercinary             _ MEnts/Monster/Marine/monster_marine_mercinary.jpg
+MonsterMarineCommando              _ MEnts/Monster/Marine/monster_marine_commando.jpg
+MonsterMenace                      _ MEnts/Monster/Menace/monster_menace.jpg
+MonsterArchMenaceMale              _ MEnts/Monster/Menace/monster_menace_green.jpg
+MonsterArchMenaceFemale            _ MEnts/Monster/Menace/monster_menace_pink.jpg
+MonsterVileMenace                  _ MEnts/Monster/Menace/monster_menace_red.jpg
+MonsterGnat                        _ MEnts/Monster/Fly/monster_gnat.jpg
+MonsterGnatStrong                  _ MEnts/Monster/Fly/monster_gnat_strong.jpg
+MonsterGnatBiblical                _ MEnts/Monster/Fly/monster_gnat_biblical.jpg
+MonsterFly                         _ MEnts/Monster/Fly/monster_fly.jpg
+MonsterFlyStrong                   _ MEnts/Monster/Fly/monster_fly_strong.jpg
+MonsterFlyBiblical                 _ MEnts/Monster/Fly/monster_fly_biblical.jpg
+MonsterMosquito                    _ MEnts/Monster/Fly/monster_mosquito.jpg
+MonsterMosquitoStrong              _ MEnts/Monster/Fly/monster_mosquito_strong.jpg
+MonsterMosquitoBiblical            _ MEnts/Monster/Fly/monster_mosquito_biblical.jpg
+MonsterLocust                      _ MEnts/Monster/Fly/monster_locust.jpg
+MonsterLocustStrong                _ MEnts/Monster/Fly/monster_locust_strong.jpg
+MonsterLocustBiblical              _ MEnts/Monster/Fly/monster_locust_biblical.jpg
+MonsterPlague                      _ MEnts/Monster/Fly/monster_plague.jpg
+MonsterPlagueNonP                  _ MEnts/Monster/Fly/monster_plague_nonp.jpg
+MonsterVirus                       _ MEnts/Monster/Fly/monster_virus.jpg
+MonsterJug                         _ MEnts/Monster/Jug/monster_jug.jpg
+MonsterJugTough                    _ MEnts/Monster/Jug/monster_jug_tough.jpg
+MonsterJugUnruly                   _ MEnts/Monster/Jug/monster_jug_unruly.jpg
+MonsterJugFormidable               _ MEnts/Monster/Jug/monster_jug_formidable.jpg
+MonsterJugIAm                      _ MEnts/Monster/Jug/monster_jug_i_am.jpg
+MonsterCollapsedStar               _ MEnts/Monster/Collapsed/monster_collapsed_star.jpg
+MonsterCollapsedAngel              _ MEnts/Monster/Collapsed/monster_collapsed_angel.jpg
+MonsterCollapsedArchangel          _ MEnts/Monster/Collapsed/monster_collapsed_archangel.jpg
+MonsterCollapsedSpirit             _ MEnts/Monster/Collapsed/monster_collapsed_spirit.jpg
+MonsterCollapsedSoul               _ MEnts/Monster/Collapsed/monster_collapsed_soul.jpg
+MonsterAbominationBlue             _ MEnts/monster_abomination_blue.jpg
+MonsterAbominationAntiBlue         _ MEnts/monster_abomination_antiblue.jpg
+MonsterGoonPetite                  _ MEnts/Monster/Goon/monster_goon_petite.jpg
+MonsterGoonSmall                   _ MEnts/Monster/Goon/monster_goon_small.jpg
+MonsterGoon                        _ MEnts/Monster/Goon/monster_goon.jpg
+MonsterGoonLarge                   _ MEnts/Monster/Goon/monster_goon_large.jpg
+MonsterGoonMajor                   _ Ments/Monster/Goon/monster_goon_major.jpg
+MonsterGoonQuestionable            _ MEnts/Monster/Goon/monster_goon_questionable.jpg
+MonsterGoonImmoral                 _ MEnts/Monster/Goon/monster_goon_immoral.jpg
+MonsterGoonUnsavory                _ MEnts/Monster/Goon/monster_goon_unsavory.jpg
+MonsterGoonEvil                    _ MEnts/Monster/Goon/monster_goon_evil.jpg
+MonsterGoonDespicable              _ Ments/Monster/Goon/monster_goon_despicable.jpg
+MonsterGoonManiacal                _ Ments/Monster/Goon/monster_goon_maniacal.jpg
+MonsterGoonUltimate                _ MEnts/Monster/Goon/monster_goon_ultimate.jpg
+MonsterHexatrix                    _ MEnts/Monster/Goon/monster_hexatrix.jpg
+MonsterSpiderBaby                  _ MEnts/Monster/Spider/monster_spider_baby.jpg
+MonsterSpiderLesser                _ MEnts/Monster/Spider/monster_spider_lesser.jpg
+MonsterSpider                      _ MEnts/Monster/Spider/monster_spider.jpg
+MonsterSpiderGreat                 _ MEnts/Monster/Spider/monster_spider_great.jpg
+MonsterSpiderLord                  _ MEnts/Monster/Spider/monster_spider_lord.jpg
+MonsterRocketSpiderBaby            _ MEnts/Monster/Spider/monster_rocket_spider_baby.jpg
+MonsterDragoon                     _ MEnts/monster_dragoon.jpg
+MonsterBee                         _ MEnts/Monster/Bee/monster_bee.jpg
+MonsterWasp                        _ MEnts/Monster/Bee/monster_wasp.jpg
+MonsterHornet                      _ MEnts/Monster/Bee/monster_hornet.jpg
+MonsterVulcan                      _ MEnts/Monster/Vulcan/monster_vulcan.jpg
+MonsterVulcanWar                   _ MEnts/Monster/Vulcan/monster_vulcan_war.jpg
+MonsterVulcanWarIron               _ MEnts/Monster/Vulcan/monster_vulcan_war_iron.jpg
+MonsterNuclearSilo                 _ MEnts/Monster/Nuclear/monster_nuclear_silo.jpg
+MonsterNuclearSiloCompromised      _ MEnts/Monster/Nuclear/monster_nuclear_silo_compromised.jpg
+MonsterNuclearOreMiningLocation    _ MEnts/Monster/Nuclear/monster_nuclear_ore_mining_location.jpg
+MonsterNuclearRefinery             _ MEnts/Monster/Nuclear/monster_nuclear_refinery.jpg
+MonsterNuclearCyclotron            _ MEnts/Monster/Nuclear/monster_nuclear_cyclotron.jpg
+MonsterNuclearLaunchFacility       _ MEnts/Monster/Nuclear/monster_nuclear_launch_facility.jpg
+MonsterNuclearDoomsdayShelter      _ MEnts/Monster/Nuclear/monster_nuclear_doomsday_shelter.jpg
+MonsterFanatic                     _ MEnts/Monster/Mystical/monster_fanatic.jpg
+MonsterDisciple                    _ MEnts/Monster/Mystical/monster_disciple.jpg
+MonsterMystic                      _ MEnts/Monster/Mystical/monster_mystic.jpg
+MonsterOverseer                    _ MEnts/monster_overseer.jpg
+MonsterOverlord                    _ MEnts/monster_overlord.jpg
+MonsterGuardian                    _ MEnts/Monster/Guardian/monster_guardian.jpg
+MonsterGuardianMinor               _ MEnts/Monster/Guardian/monster_guardian_minor.jpg
+MonsterNightGuard                  _ MEnts/Monster/Guardian/monster_night_guard.jpg
+MonsterEnforcer                    _ MEnts/Monster/Guardian/monster_enforcer.jpg
+MonsterGoliath                     _ MEnts/monster_goliath.jpg
+MonsterProbe                       _ MEnts/Monster/Science/monster_probe.jpg
+MonsterSentinel                    _ MEnts/Monster/Science/monster_sentinel.jpg
+MonsterSentinelAnti                _ MEnts/Monster/Science/monster_sentinel_anti.jpg
+MonsterSatellite                   _ MEnts/Monster/Science/monster_satellite.jpg
+MonsterLaboratory                  _ MEnts/Monster/Science/monster_laboratory.jpg
+MonsterScienceCore                 _ MEnts/Monster/Science/monster_science_core.jpg
+MonsterMothership                  _ MEnts/Monster/Science/monster_mothership.jpg
+MonsterMechanizedSheath            _ MEnts/Monster/Science/monster_mechanized_sheath.jpg
+MonsterWolf                        _ MEnts/monster_wolf.jpg
+MonsterInnerCore                   _ MEnts/monster_inner_core.jpg
+MonsterICCC                        _ MEnts/monster_iccc.jpg
+MonsterClockworkWatchman           _ MEnts/monster_clockwork_watchman.jpg
+MonsterPirate                      _ MEnts/Monster/Pirate/monster_pirate.jpg
+MonsterFirstMate                   _ MEnts/Monster/Pirate/monster_first_mate.jpg
+MonsterCaptain                     _ MEnts/Monster/Pirate/monster_captain.jpg
+MonsterBloodBoy                    _ MEnts/monster_blood_boy.jpg
+MonsterBloodBoyGreater             _ MEnts/monster_blood_boy_greater.jpg
+MonsterLamprey                     _ MEnts/Monster/Lamprey/monster_lamprey.jpg
+MonsterLampreyYellow               _ MEnts/Monster/Lamprey/monster_lamprey_yellow.jpg
+MonsterLampreyGreen                _ MEnts/Monster/Lamprey/monster_lamprey_green.jpg
+MonsterLampreyRed                  _ MEnts/Monster/Lamprey/monster_lamprey_red.jpg
+MonsterLampreyBlue                 _ MEnts/Monster/Lamprey/monster_lamprey_blue.jpg
+MonsterInnerCoreMinion             _ MEnts/monster_inner_core_minion.jpg
+MonsterBeholderMinor               _ MEnts/Monster/Beholder/monster_beholder_minor.jpg
+MonsterBeholderLesser              _ MEnts/Monster/Beholder/monster_beholder_lesser.jpg
+MonsterBeholder                    _ MEnts/Monster/Beholder/monster_beholder.jpg
+MonsterBeholderGreater             _ MEnts/Monster/Beholder/monster_beholder_greater.jpg
+MonsterBeholderMajor               _ MEnts/Monster/Beholder/monster_beholder_major.jpg
+MonsterSliverMinor                 _ MEnts/Monster/Sliver/monster_sliver_minor.jpg
+MonsterSliverLesser                _ MEnts/Monster/Sliver/monster_sliver_lesser.jpg
+MonsterSliver                      _ MEnts/Monster/Sliver/monster_sliver.jpg
+MonsterSliverGreater               _ MEnts/Monster/Sliver/monster_sliver_greater.jpg
+MonsterSliverMajor                 _ MEnts/Monster/Sliver/monster_sliver_major.jpg
+MonsterRatMinor                    _ MEnts/Monster/Rat/monster_rat_minor.jpg
+MonsterRatLesser                   _ MEnts/Monster/Rat/monster_rat_lesser.jpg
+MonsterRat                         _ MEnts/Monster/Rat/monster_rat.jpg
+MonsterRatGreater                  _ MEnts/Monster/Rat/monster_rat_greater.jpg
+MonsterRatBilgeMinor               _ MEnts/Monster/Rat/monster_rat_bilge_minor.jpg
+MonsterPoolBall1                   _ MEnts/Monster/PoolBall/monster_pool_ball_1.jpg
+MonsterPoolBall2                   _ MEnts/Monster/PoolBall/monster_pool_ball_2.jpg
+MonsterPoolBall3                   _ MEnts/Monster/PoolBall/monster_pool_ball_3.jpg
+MonsterPoolBall4                   _ MEnts/Monster/PoolBall/monster_pool_ball_4.jpg
+MonsterPoolBall5                   _ MEnts/Monster/PoolBall/monster_pool_ball_5.jpg
+MonsterPoolBall6                   _ MEnts/Monster/PoolBall/monster_pool_ball_6.jpg
+MonsterPoolBall7                   _ MEnts/Monster/PoolBall/monster_pool_ball_7.jpg
+MonsterPoolBall8                   _ MEnts/Monster/PoolBall/monster_pool_ball_8.jpg
+MonsterYinYangOrange               _ MEnts/monster_yinyang_orange.jpg
+MonsterYinYangGreen                _ MEnts/monster_yinyang_green.jpg
+
+#Not exactly monsters:
+MonsterKeyYellow                   _ MEnts/Key/monster_key_yellow.jpg
+MonsterKeyBlue                     _ MEnts/Key/monster_key_blue.jpg
+MonsterKeyGreen                    _ MEnts/Key/monster_key_green.jpg
+MonsterKeyUniverse                 _ MEnts/Key/monster_key_universe.jpg
+MonsterKeyLaserGenesis             _ MEnts/Key/monster_key_laser_genesis.jpg
+MonsterKeyDansHouse                _ MEnts/Key/monster_key_dans_house.jpg
+WhiteBoxDevice                     _ MEnts/white_box_device.jpg
+YellowBoxDevice                    _ MEnts/yellow_box_device.jpg
+Drop                               _ MEnts/drop.jpg
+
+Rocket1Explosion                   _ MEnts/Explosion/rocket_1_explosion.jpg
+Rocket2Explosion                   _ MEnts/Explosion/rocket_2_explosion.jpg
+Rocket3Explosion                   _ MEnts/Explosion/rocket_3_explosion.jpg
+
+Nuke1Explosion                     _ MEnts/Explosion/nuke_1_explosion.jpg
+Nuke2Explosion                     _ MEnts/Explosion/nuke_2_explosion.jpg
+
+#################################################
+#          Content made by community members
+#################################################
+
+rocketmodel                         _ MEnts/Community/rocketmodel.png
+rocketmodel_green                   _ MEnts/Community/rocketmodel_green.png
+rocketmodel_striped                 _ MEnts/Community/rocketmodel_striped.png
+rocketmodel_blue_striped            _ MEnts/Community/rocketmodel_blue_striped.png
+rocketmodel_teal_striped            _ MEnts/Community/rocketmodel_teal_striped.png
+rocketmodel_orange_striped          _ MEnts/Community/rocketmodel_orange_striped.png
+rocketmodel_pink_striped            _ MEnts/Community/rocketmodel_pink_striped.png
+
+#################################################
+#           "Picture" Moving Entities
+#################################################
+
+#picture_cot_ophelia                 _ MEnts/Pictures/pic_cot_ophelia.jpg
+#picture_card_char                   _ MEnts/Pictures/pic_card_char.jpg
+picture_m_to_omega                  _ MEnts/Pictures/pic_m_to_omega.jpg
 
