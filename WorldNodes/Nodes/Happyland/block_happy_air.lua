@@ -15,7 +15,7 @@ function p.__main()
     t_cube = false
     s_cube = false
     
-    amount_chance = 24
+    amount_chance = 40
 
 	-- Create up to four random blocks in the sky from the list: green, gray, plasma, text, shrink
     for i = 1,4 do
@@ -53,21 +53,21 @@ function p.__main()
         end
 
         -- Plasma ammo
-        if randi(1,amount_chance) == 1 then
+        if randi(1,amount_chance+20) == 1 then
             if p_cube == false then
                 add_bent(x,y,z, "bent_ammo_gun_1")
                 x = randi(0,15)
                 y = randi(0,15)
                 z = randi(0,15)
                 -- Set to 'used'
-                e_cube = true
+                p_cube = true
             end
         end
 
         -- Text box
-        if randi(1,amount_chance) == 1 then
+        if randi(1,amount_chance+30) == 1 then
             if t_cube == false then
-                local msg = "Lost?\n"
+                local msg = "Lost?\n\n"
                          .. "The gray cubes turn into teleportation sta-\n\n"
                          .. "No. No they don't.\n"
                          .. "^xff0000Not anymore...^!"
@@ -83,7 +83,7 @@ function p.__main()
                 y = randi(0,15)
                 z = randi(0,15)
                 -- Set to 'used'
-                t_cube = true
+                s_cube = true
             end
         end
     end

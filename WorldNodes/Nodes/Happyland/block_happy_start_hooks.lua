@@ -41,6 +41,8 @@ function p.__main()
             if bend_chance <= 0.1 then
                 for x = (len-bend_amt)+1,len do
                     set_pos(x,y,z+1, "r_green")
+                end
+                for x = (len-bend_amt)+1,len-1 do
                     set_pos(x,y,z+2, "happy_medium_grass")
                 end
 
@@ -50,8 +52,6 @@ function p.__main()
                     set_pos(x,y,z, "r_green")
                 end
             end
-            -- Set the leftmost spot back to a start hook
-            set_pos(0,y,z+1, "happy_start_hooks")
         end
 
         -- Check to place shrink rings

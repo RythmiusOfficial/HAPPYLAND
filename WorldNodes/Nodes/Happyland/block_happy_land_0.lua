@@ -23,4 +23,9 @@ function p.__main()
 
     -- antiplug
     set_pos(7,7,15, "anti_plug")
+
+    -- medium hollow grass testing
+    set_pos(0,0,15, "happy_medium_grass")
+    set_pos(0,1,15, "happy_air")
+    add_bent(0,1,15, "bent_base_ring_green_danger")
 end

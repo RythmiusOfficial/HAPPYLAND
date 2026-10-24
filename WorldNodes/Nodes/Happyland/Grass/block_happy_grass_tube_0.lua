@@ -11,9 +11,12 @@ function p.__main()
     
     -- Create grass tubing
     for i = 1,15 do
-        y = randi(0,15)
-        z = randi(0,14)
+        local y = randi(1,15)
+        local z = randi(0,14)
+
+        shrink_chance = randf()
         len = randi(3,15)
+
         for x = 0,(len-1) do
             set_pos(x,y,z, "happy_grass_tube_1")
         end

@@ -8,7 +8,7 @@ end
 
 function p.__main()
     set_default_block("s")
-    create_rect("e", 1,1,1, 14,14,14)
+    create_rect("happy_air", 1,1,1, 14,14,14)
 
     -- --Solid boring block.
     -- -- set_pos(2,2,13, "s")

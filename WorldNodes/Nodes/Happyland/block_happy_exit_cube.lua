@@ -11,8 +11,9 @@ function p.__main()
     std.create_edges("s")
 
     local msg = "Message from TON 618:\n\n"
-             .. "^x0000ffHahahhaaahhhahah!!\n"
-             .. "Don't tell me you thought there would be a blue ring device here!!!^!"
-    add_bent_s(7,7,8, "bent_base_txt", msg)
+             .. "^x0000ffDon't tell me you thought there would ACTUALLY be a blue ring device here!!! "
+             .. "Did you also happen to fall for the 'gullible on the ceiling' trick as well?!\n"
+             .. "Hehhehahahhaaahhhahah!!^!"
+    add_bent_s(7,7,9, "bent_base_txt", msg)
     add_bent(7,7,7, "bent_base_ring_green_danger")
 end
