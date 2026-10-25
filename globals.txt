@@ -664,3 +664,9 @@ i xar.player.arcade.ammo.7  0
 i xar.player.arcade.ammo.8  0
 i xar.player.arcade.ammo.9  0
 i xar.player.arcade.ammo.0  0
+
+#######################################
+#              Trophies
+#######################################
+
+b game.trophy.treasure_flower_orange false

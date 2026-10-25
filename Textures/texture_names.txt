@@ -175,9 +175,10 @@ xp                     _ BEnts/xp.jpg
 
 weapon_mode            _ Blocks/block_weapon_mode.jpg
 
-trophy                      _ BEnts/ent_trophy.jpg
-trophy_do_not_have          _ Trophies/trophy_do_not_have.jpg
-secret_trophy               _ Trophies/secret_trophy.jpg
+trophy                            _ BEnts/ent_trophy.jpg
+trophy_do_not_have                _ Trophies/trophy_do_not_have.jpg
+secret_trophy                     _ Trophies/secret_trophy.jpg
+trophy_treasure_flower_orange     _ Trophies/HAPPY/treasure_flower_orange.jpg
 
 xp_5x_stacking              _ BEnts/ent_xp_5x_stacking.jpg
 damage_5x_stacking          _ BEnts/ent_damage_5x_stacking.jpg

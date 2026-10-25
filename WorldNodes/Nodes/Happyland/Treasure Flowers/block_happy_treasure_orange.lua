@@ -20,4 +20,7 @@ function p.__main()
     -- Create text box
     local msg = "Here are two (permanent) upgrades!"
     add_bent_s(7,7,9, "bent_base_txt", msg)
+
+    -- Create trophy
+    add_bent(13,13,13, "bent_trophy_treasure_flower_orange")
 end

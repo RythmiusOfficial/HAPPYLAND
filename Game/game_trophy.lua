@@ -14,145 +14,9 @@ function p.init_maybe()
     if( initialized ) then return end
     initialized = true
     --
-    local type_yw = "Ying World"
-    local type_mid = "Midway"
-    local type_i1 = "I1"
-    local type_i2 = "I2"
-    local type_i3 = "I3"
-    local type_bur = "Burlington"
-    local type_space = "Space"
-    local type_bulk = "Bulk"
-    local type_mylantis = "Mylantis"
-    local type_hell = "Hell"
-    local type_nwp = "No Waypoint"
-    --Ying world.
-    p.add("library_ying",           type_yw)
-    p.add("noob_flower",            type_yw)
-    p.add("small_yellow_flower",    type_yw)
-    p.add("jumbo_yellow_flower",    type_yw)
-    p.add("small_cannon_pyramid",   type_yw)
-    p.add("large_cannon_pyramid",   type_yw)
-    p.add("ying_island_1",          type_yw)
-    p.add("ying_island_2",          type_yw)
-    p.add("ying_island_3",          type_yw)
-    p.add("ying_island_4",          type_yw)
-    p.add("ying_exit_maze",         type_yw)
-    p.add("ying_flower",            type_yw)
-    p.add("ying_tower",             type_yw)
-    p.add("sponge_pure",            type_yw)
-    --Midway.
-    p.add("richmond",           type_mid)
-    p.add("richmond_sewers",    type_mid)
-    p.add("tau_caves_map",      type_mid)
-    p.add("richmond_caves",     type_mid)
-    p.add("stoney_cave_1",      type_mid)
-    p.add("stoney_cave_2",      type_mid)
-    p.add("stoney_cave_3",      type_mid)
-    p.add("stoney_church",      type_mid)
-    p.add("blackberry",         type_mid)
-    p.add("black_cube",         type_mid)
-    p.add("jericho",            type_mid)
-    p.add("catacombs",          type_mid)
-    p.add("orange",             type_mid)
-    p.add("tweed_cave",         type_mid)
-    p.add("ice_cube",           type_mid)
-    p.add("blue_bubble",        type_mid)
-    --I1.
-    p.add("blue_bubble_breach", type_i1)
-    p.add("botany_lab_1",       type_i1)
-    p.add("botany_lab_2",       type_i1)
-    p.add("botany_lab_3",       type_i1)
-    p.add("botany_lab_4",       type_i1)
-    p.add("botany_lab_5",       type_i1)
-    p.add("botany_lab_6",       type_i1)
-    p.add("library_i1",         type_i1)
-    p.add("lighthouse",         type_i1)
-    p.add("infinity_flower",    type_i1)
-    p.add("williston",          type_i1)
-    p.add("williston_caves",    type_i1)
-    p.add("bristol",            type_i1)
-    p.add("emp_castle",         type_i1)
-    p.add("zube_castle",        type_i1)
-    --I2.
-    p.add("library_i2",             type_i2)
-    p.add("wig_prison",             type_i2)
-    p.add("montreal",               type_i2)
-    p.add("toronto",                type_i2)
-    p.add("toronto_underground",    type_i2)
-    p.add("danville",               type_i2)
-    p.add("small_blue_flower_1",    type_i2)
-    p.add("small_blue_flower_2",    type_i2)
-    p.add("willow_tree",            type_i2)
-    p.add("willow_tree_dark",       type_i2)
-    p.add("mystic_vine",            type_i2)
-    p.add("raspberry",              type_i2)
-    p.add("weed_rings",             type_i2)
-    p.add("blue_mushroom",          type_i2)
-    p.add("fanatic_spire",          type_i2)
-    p.add("creeping_jeni",          type_i2)
-    p.add("violets",                type_i2)
-    --I3.
-    p.add("library_i3",             type_i3)
-    p.add("colchester",             type_i3)
-    p.add("red_maze_flower",        type_i3)
-    p.add("jackfruit",              type_i3)
-    p.add("large_white_flower",     type_i3)
-    p.add("cactus",                 type_i3)
-    p.add("aladdin_cave",           type_i3)
-    p.add("desert_cave",            type_i3)
-    p.add("desert_flower",          type_i3)
-    p.add("salmon_mushroom",        type_i3)
-    p.add("black_mushroom",         type_i3)
-    p.add("yellow_mushroom",        type_i3)
-    p.add("red_mushroom",           type_i3)
-    p.add("river",                  type_i3)
-    p.add("tangerine",              type_i3)
-    p.add("st_i3_treetop",          type_i3) --Used to be a secret trophy.
-    p.add("inner_tree",             type_i3)
-    p.add("deep_sliver_maze",       type_i3)
-    --Burlington.
-    p.add("burlington",             type_bur)
-    p.add("burlington_cols",        type_bur)
-    p.add("tegan_garden",           type_bur)
-    p.add("green_apple_club",       type_bur)
-    --Space.
-    p.add("library_space",          type_space)
-    p.add("moon_alpha",             type_space)
-    p.add("moon_beta",              type_space)
-    p.add("moon_gamma",             type_space)
-    p.add("moon_tau",               type_space)
-    p.add("moon_ice",               type_space)
-    p.add("moon_fire_rate",         type_space)
-    p.add("planet_small_minigun",   type_space)
-    p.add("planet_clay",            type_space)
-    p.add("sun",                    type_space)
-    p.add("sponge_alpha",           type_space)
-    --The Bulk.
-    p.add("ice_castle",     type_bulk)
-    --Mylantis.
-    p.add("mylantis",               type_mylantis)
-    p.add("farmhouse",              type_mylantis)
-    p.add("laser_genesis",          type_mylantis)
-    p.add("sapphire_maze",          type_mylantis)
-    p.add("sponge_beta",            type_mylantis)
-    p.add("topaz",                  type_mylantis)
-    p.add("iolite",                 type_mylantis)
-    p.add("emerald",                type_mylantis)
-    p.add("denver",                 type_mylantis)
-    p.add("amethyst_maze",          type_mylantis)
-    p.add("edge_of_world",          type_mylantis)
-    --Hell.
-    p.add("hell_flower",    type_hell)
-    p.add("inner_core",     type_hell)
-    p.add("credits",        type_hell)
-    --No Waypoint.
-    p.add("small_white_flower",     type_nwp)
-    p.add("small_black_flower",     type_nwp)
-    p.add("apple_tree",             type_nwp)
-    p.add("health_tower",           type_nwp)
-    p.add("alpha_cube",             type_nwp)
-    --Can add to this function when more
-    --trophies are created.
+    local type_hl = "Happy Land"
+    -- Happy Land
+    p.add("treasure_flower_orange", type_hl)
 end
 
 function p.trophy_type(name)
@@ -182,7 +46,7 @@ function p.get_all_achievements_for_aquired_trophies()
     --
     for k, v in pairs(trophy_to_type) do
         local trophy_name = k
-        local var_name = "xar.player.trophy." .. trophy_name
+        local var_name = "game.trophy." .. trophy_name
         if ga_get_b(var_name) then
             local achievement_name = "trophy_" .. trophy_name
             ga_get_steam_achievement(achievement_name)
@@ -224,7 +88,7 @@ end
 
 function p.pickup_with_no_achievement(name)
     genesis = game_genesis.enabled()
-    var_name = "xar.player.trophy." .. name
+    var_name = "game.trophy." .. name
     trophy_type = p.trophy_type(name)
     if p.starts_with_vowell(trophy_type) then
         ga_hud_msg("You Got An " .. trophy_type .. " Trophy", 5.0)
