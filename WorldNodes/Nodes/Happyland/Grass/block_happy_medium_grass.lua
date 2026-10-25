@@ -13,7 +13,7 @@ function p.__main()
     create_rect("happy_small_grass", 0,0,0, 15,15,0)
     
     -- Create grass and Treasure Flowers (only if the grass is hollow)
-    for i = 1,20 do
+    for i = 1,12 do
         local x = randi(0,14)
         local y = randi(0,15)
 

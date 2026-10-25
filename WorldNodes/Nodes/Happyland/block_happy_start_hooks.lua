@@ -13,7 +13,7 @@ function p.__main()
     create_rect("happy_start_hooks", 0,0,0, 0,15,15)
     
     -- Create hooks with random bend and shrink spawn chances
-    for i = 1,20 do
+    for i = 1,10 do
         -- Initializing variables
         local y = randi(0,15)
         local z = randi(0,13)
@@ -36,6 +36,8 @@ function p.__main()
                 set_pos(x,y,z+1, "happy_treasure_flower")
             else
                 set_pos(x,y,z+1, "happy_medium_grass")
+                -- Set end to be air instead of Medium Grass
+                set_pos(len,y,z+1, "e")
             end
             -- Bend, or else continue to generate a straight hook
             if bend_chance <= 0.1 then
@@ -55,7 +57,7 @@ function p.__main()
         end
 
         -- Check to place shrink rings
-        if shrink_chance <= 0.07 then -- 7% chance!
+        if shrink_chance <= 0.12 then -- 12% chance!
             if bend_chance > 0.1 then
                 add_bent(len,y,z+1, "bent_base_ring_green_danger")
             end
