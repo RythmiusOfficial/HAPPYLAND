@@ -11,6 +11,7 @@ function p.__main()
 
     local g_cube = false
     local s_cube = false
+    local marine = false
 
     amount_chance = 25
 
@@ -35,6 +36,7 @@ function p.__main()
                 g_cube = true
             end
         end
+
         -- Shrink ring
         if randi(1,amount_chance) == 1 then
             if s_cube == false then
@@ -44,6 +46,20 @@ function p.__main()
                 z = randi(0,15)
                 -- Set to 'used'
                 s_cube = true
+            end
+        end
+
+        -- Light Marines
+        if randi(1,(amount_chance*3)) == 1 then
+            if marine == false then
+                ment_start(x,y,z, "ment_monster_marine_light")
+                ment_set_offset(x,y,z)
+                ment_end()
+                x = randi(0,15)
+                y = randi(0,15)
+                z = randi(0,15)
+                -- Set to 'used'
+                marine = true
             end
         end
     end

@@ -14,6 +14,7 @@ function p.__main()
     p_cube = false
     t_cube = false
     s_cube = false
+    goblin = false
     
     amount_chance = 40
 
@@ -84,6 +85,20 @@ function p.__main()
                 z = randi(0,15)
                 -- Set to 'used'
                 s_cube = true
+            end
+        end
+
+        -- Goblins
+        if randi(1,(amount_chance*3)) == 1 then
+            if goblin == false then
+                ment_start(x,y,z, "ment_monster_goblin")
+                ment_set_offset(x,y,z)
+                ment_end()
+                x = randi(0,15)
+                y = randi(0,15)
+                z = randi(0,15)
+                -- Set to 'used'
+                goblin = true
             end
         end
     end

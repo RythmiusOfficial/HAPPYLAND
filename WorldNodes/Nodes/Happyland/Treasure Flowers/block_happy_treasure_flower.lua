@@ -31,6 +31,9 @@ function p.__main()
     end
     if treasure == 2 then
         set_pos(7,7,(len+2), "happy_treasure_orange")
+        ment_start(7,7,len+3, "ment_monster_goblin")
+        ment_set_offset(7.5,7.5,(len+3)+1.5)
+        ment_end()
     end
     if treasure == 3 then
         set_pos(7,7,(len+2), "happy_exit_cube")

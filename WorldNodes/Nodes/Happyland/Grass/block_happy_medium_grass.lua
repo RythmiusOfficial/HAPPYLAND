@@ -20,7 +20,7 @@ function p.__main()
         local hollow_chance = randf()
         len = randi(3,11)
         for z = 0,(len-1) do
-            if hollow_chance <= 0.05 then -- 5% chance!
+            if hollow_chance <= 0.08 then -- 8% chance!
                 set_pos(x,y,z, "happy_med_grass_hollow")
                 set_pos(x,y,len, "happy_treasure_flower")
             else
