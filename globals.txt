@@ -670,3 +670,4 @@ i xar.player.arcade.ammo.0  0
 #######################################
 
 b game.trophy.treasure_flower_orange false
+b game.trophy.platters               false

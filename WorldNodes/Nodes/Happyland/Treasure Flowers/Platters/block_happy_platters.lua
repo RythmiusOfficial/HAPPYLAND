@@ -29,5 +29,11 @@ function p.__main()
     end
 
     -- Create pillar
-    create_rect("r_green", 7,7,0, 7,7,13)
+    create_rect("happy_platters_stem", 7,7,0, 7,7,13)
+    set_pos(7,7,0, "happy_platters_entrance")
+    set_pos(7,7,13, "happy_platters_treasure")
+
+    -- Pink Ring Destination
+    set_pos(6,6,0, "e")
+    add_bent(6,6,0, "bent_base_ring_pink_dest")
 end

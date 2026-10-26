@@ -7,30 +7,31 @@
 #Alpha images must be .tga files or .png files.
 #Non-alpha files must be .jpg or .png files.
 
-block_plug _ Blocks/block_stopper.jpg
-block_r_plug _ Blocks/block_yellow_black_striped.jpg
+block_plug      _ Blocks/block_stopper.jpg
+block_r_plug    _ Blocks/block_yellow_black_striped.jpg
 block_anti_plug _ Blocks/block_anti_plug.jpg
-block_r_anti _ Blocks/block_red_black_striped.jpg
+block_r_anti    _ Blocks/block_red_black_striped.jpg
 
 icon_rocket _ Icons/icon_rocket.jpg
-icon_brake _ Icons/icon_brake.jpg
+icon_brake  _ Icons/icon_brake.jpg
 
-block_deco_green _ Blocks/block_deco1_green1.jpg
-block_green _ Blocks/block_dark_green_border.jpg
+block_deco_green      _ Blocks/block_deco1_green1.jpg
+block_green           _ Blocks/block_dark_green_border.jpg
 block_yellow_concrete _ Blocks/block_concrete_yellow_border.jpg
 block_orange_concrete _ Blocks/block_concrete_orange_border.jpg
-block_concrete _ Blocks/block_concrete_border.jpg
-block_happy_land _ Blocks/block_happy_land.jpg
+block_concrete        _ Blocks/block_concrete_border.jpg
+block_happy_land      _ Blocks/block_happy_land.jpg
+block_glass           a Blocks/block_glass.tga
 
 #Mandatory Bullet Sprites
-block_black _ Blocks/block_black.jpg
-block_concrete_purple_x _ Blocks/block_concrete_purple_x.jpg
-block_concrete_white_diag _ Blocks/block_concrete_white_diag.jpg
-block_concrete_green_diag _ Blocks/block_concrete_green_diag.jpg
-block_concrete_red_diag _ Blocks/block_concrete_red_diag.jpg
+block_black                _ Blocks/block_black.jpg
+block_concrete_purple_x    _ Blocks/block_concrete_purple_x.jpg
+block_concrete_white_diag  _ Blocks/block_concrete_white_diag.jpg
+block_concrete_green_diag  _ Blocks/block_concrete_green_diag.jpg
+block_concrete_red_diag    _ Blocks/block_concrete_red_diag.jpg
 block_concrete_orange_diag _ Blocks/block_concrete_orange_diag.jpg
 block_concrete_yellow_diag _ Blocks/block_concrete_yellow_diag.jpg
-block_concrete_blue_diag _ Blocks/block_concrete_blue_diag.jpg
+block_concrete_blue_diag   _ Blocks/block_concrete_blue_diag.jpg
 
 ###############################################################################
 #
@@ -179,6 +180,7 @@ trophy                            _ BEnts/ent_trophy.jpg
 trophy_do_not_have                _ Trophies/trophy_do_not_have.jpg
 secret_trophy                     _ Trophies/secret_trophy.jpg
 trophy_treasure_flower_orange     _ Trophies/HAPPY/treasure_flower_orange.jpg
+trophy_platters                   _ Trophies/HAPPY/platters.jpg
 
 xp_5x_stacking              _ BEnts/ent_xp_5x_stacking.jpg
 damage_5x_stacking          _ BEnts/ent_damage_5x_stacking.jpg

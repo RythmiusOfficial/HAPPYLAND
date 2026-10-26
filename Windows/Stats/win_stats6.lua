@@ -88,6 +88,7 @@ function p.__render(wid)
     if win_num == 1 then
         ga_win_txt_center(wid, type_y, "HAPPY LAND TROPHIES")
         p.draw_trophy(wid, grid, 0,0, "treasure_flower_orange")
+        p.draw_trophy(wid, grid, 0,1, "platters")
     end
 end
 
