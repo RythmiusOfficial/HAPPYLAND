@@ -81,10 +81,10 @@ end
 
 function p.init_maybe_helper()
     -------------------------------------------
-    --Top of world.
-    --It is intended that these playlists are all within "xar_top_of_world".
+    -- Happy Land
 
-    p.add("block_happy_land_0",		"hl_happy_land")
+    p.add("block_happy_land_0",				"hl_happy_land")
+    p.add("block_happy_exit_cube_air_part",		"hl_exit_cube_part_dungeon")
 end
 
 -------------------------------------------------------------------------------

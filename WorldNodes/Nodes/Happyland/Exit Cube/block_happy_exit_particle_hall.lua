@@ -18,25 +18,25 @@ function p.__main()
 
     -- Create tubes - x
     if xpos == "block_happy_exit_particle_room" or xpos == "block_happy_exit_particle_entrance" or xpos == "block_happy_exit_particle_treasure" then
-        std.create_half_tube(1,"x_pos", "happy_exit_cube_air")
+        std.create_half_tube(2,"x_pos", "happy_tube_air")
     end
     if xneg == "block_happy_exit_particle_room" or xneg == "block_happy_exit_particle_entrance" or xneg == "block_happy_exit_particle_treasure" then
-        std.create_half_tube(1,"x_neg", "happy_exit_cube_air")
+        std.create_half_tube(2,"x_neg", "happy_tube_air")
     end
 
     -- Create tubes - y
     if ypos == "block_happy_exit_particle_room" or ypos == "block_happy_exit_particle_entrance" or ypos == "block_happy_exit_particle_treasure" then
-        std.create_half_tube(1,"y_pos", "happy_exit_cube_air")
+        std.create_half_tube(2,"y_pos", "happy_tube_air")
     end
     if yneg == "block_happy_exit_particle_room" or yneg == "block_happy_exit_particle_entrance" or yneg == "block_happy_exit_particle_treasure" then
-        std.create_half_tube(1,"y_neg", "happy_exit_cube_air")
+        std.create_half_tube(2,"y_neg", "happy_tube_air")
     end
 
     -- Create tubes - z
     if zpos == "block_happy_exit_particle_room" or zpos == "block_happy_exit_particle_entrance" or zpos == "block_happy_exit_particle_treasure" then
-        std.create_half_tube(1,"z_pos", "happy_exit_cube_air")
+        std.create_half_tube(2,"z_pos", "happy_tube_air")
     end
     if zneg == "block_happy_exit_particle_room" or zneg == "block_happy_exit_particle_entrance" or zneg == "block_happy_exit_particle_treasure" then
-        std.create_half_tube(1,"z_neg", "happy_exit_cube_air")
+        std.create_half_tube(2,"z_neg", "happy_tube_air")
     end
 end

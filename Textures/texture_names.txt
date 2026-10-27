@@ -11,6 +11,7 @@ block_plug      _ Blocks/block_stopper.jpg
 block_r_plug    _ Blocks/block_yellow_black_striped.jpg
 block_anti_plug _ Blocks/block_anti_plug.jpg
 block_r_anti    _ Blocks/block_red_black_striped.jpg
+block_expander  _ Blocks/block_expander.jpg
 
 icon_rocket _ Icons/icon_rocket.jpg
 icon_brake  _ Icons/icon_brake.jpg

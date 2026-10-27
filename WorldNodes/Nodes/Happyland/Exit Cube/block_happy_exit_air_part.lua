@@ -61,9 +61,11 @@ function p.__main()
     end end end
 
     -- Create entrance
-    set_pos(5,5,10, "plug")
-    set_pos(5,5,11, "plug")
     set_pos(5,5,9, "happy_exit_particle_entrance")
+    set_pos(5,5,10, "plug")
+    set_pos(6,5,10, "r_concrete")
+    set_pos(5,6,10, "r_concrete")
+    set_pos(5,5,11, "plug")
 
     -- Create treasure rooms (any dead end on the bottom floor will be a treasure room)
     for x = 5,10,2 do
@@ -73,9 +75,7 @@ function p.__main()
         end
     end end
 
-    -- Create pink sphere and shrink ring
-    set_pos(10,10,12, "e")
-    add_bent(10,10,12, "bent_base_ring_pink_dest")
+    -- Create shrink ring
     set_pos(5,5,12, "e")
     add_bent(5,5,12, "bent_base_ring_green")
 end
