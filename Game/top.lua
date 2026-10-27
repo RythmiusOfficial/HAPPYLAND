@@ -51,7 +51,7 @@ function p.__load_game()
 
     ga_command("cheat hodisclosetov nosound")
     ga_command("cheat on nosound")
-    ga_command("cheat chpasswd bluering") -- you spoiled it.
+    ga_command("cheat chpasswd rythmius") -- you spoiled it.
     ga_command("cheat off")
     ga_command("clear")
 

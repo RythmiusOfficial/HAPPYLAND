@@ -7,8 +7,8 @@ function p.__get_tex()
 end
 
 function p.__main()
-    set_default_block("happy_air")
-    std.create_edges("s")
+    set_default_block("happy_exit_cube_air")
+    std.create_edges("r_concrete")
 
     local msg = "Message from TON 618:\n\n"
              .. "^x0000ffDon't tell me you thought there would ACTUALLY be a blue ring device here!!! "
