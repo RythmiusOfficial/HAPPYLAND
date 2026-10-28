@@ -18,6 +18,7 @@ function p.init_maybe()
     -- Happy Land
     p.add("treasure_flower_orange", type_hl)
     p.add("platters", type_hl)
+    p.add("st_exit_cube_part_dungeon", type_hl)
 end
 
 function p.trophy_type(name)

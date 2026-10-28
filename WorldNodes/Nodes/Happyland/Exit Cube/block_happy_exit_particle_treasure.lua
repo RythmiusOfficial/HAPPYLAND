@@ -63,6 +63,8 @@ function p.__main()
         .."Creationary power that is... If only there was some way to harness this power? This could redefine how we explore the Fractal Block World and how we live our lives.^!"
     add_bent_s(2,2,11, "bent_base_txt", msg)
 
+    add_bent(2,2,9, "bent_trophy_st_exit_cube_part_dungeon")
+
     add_bent_s(2,13,13, "bent_base_waypoint", "Exit Cube Particle Dungeon - Treasure")
 
     -- Upgrades (rail and cannon)

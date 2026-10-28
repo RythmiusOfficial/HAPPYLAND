@@ -28,14 +28,18 @@ function p.create_tab_buttons(wid)
     end
 end
 
-function p.draw_trophy(wid, grid, row, col, name)
+function p.draw_trophy(wid, grid, row, col, name, secret)
     have_trophy = ga_get_b("game.trophy." .. name)
     debug = false
     --debug = true --DEBUGGING!!!
     if have_trophy or debug then
         tex_name = "trophy_" .. name
     else
-        tex_name = "trophy_do_not_have"
+        if secret ~= 1 then
+            tex_name = "trophy_do_not_have"
+        else
+            tex_name = "trophy_do_not_have_secret"
+        end
     end
     --
     big_width = grid.max_x - grid.min_x
@@ -87,8 +91,9 @@ function p.__render(wid)
     win_num = ga_get_i("temp.xar.stats5.win_num")
     if win_num == 1 then
         ga_win_txt_center(wid, type_y, "HAPPY LAND TROPHIES")
-        p.draw_trophy(wid, grid, 0,0, "treasure_flower_orange")
-        p.draw_trophy(wid, grid, 0,1, "platters")
+        p.draw_trophy(wid, grid, 0,0, "treasure_flower_orange", 0)
+        p.draw_trophy(wid, grid, 0,1, "platters", 0)
+        p.draw_trophy(wid, grid, 0,2, "st_exit_cube_part_dungeon", 1)
     end
 end
 

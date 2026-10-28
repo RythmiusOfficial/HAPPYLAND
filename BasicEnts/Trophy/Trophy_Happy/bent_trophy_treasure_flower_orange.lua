@@ -1,5 +1,5 @@
 function p.__get_mesh()
-    return "trophy"
+    return "trophy_treasure_flower_orange"
 end
 
 function p.payload(level, bp)

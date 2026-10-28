@@ -381,3 +381,8 @@ marker_long_2          pattern_diag_green         octahedron.obj
 #picture_cot_spring     picture_cot_spring          ment_picture_box.obj
 #picture_cot_ophelia     picture_cot_ophelia        ment_picture_box.obj
 #picture_card_char       picture_card_char          ment_picture_box.obj
+
+# Custom Trophy Meshes
+trophy_treasure_flower_orange    trophy_treasure_flower_orange    large_box.obj
+trophy_platters                  trophy_platters                  large_box.obj
+trophy_st_exit_cube_part_dungeon trophy_st_exit_cube_part_dungeon large_box.obj

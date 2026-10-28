@@ -1,5 +1,5 @@
 function p.__get_mesh()
-    return "trophy"
+    return "trophy_platters"
 end
 
 function p.payload(level, bp)
