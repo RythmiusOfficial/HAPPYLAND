@@ -93,7 +93,8 @@ function p.__render(wid)
         ga_win_txt_center(wid, type_y, "HAPPY LAND TROPHIES")
         p.draw_trophy(wid, grid, 0,0, "treasure_flower_orange", 0)
         p.draw_trophy(wid, grid, 0,1, "platters", 0)
-        p.draw_trophy(wid, grid, 0,2, "st_exit_cube_part_dungeon", 1)
+        p.draw_trophy(wid, grid, 0,2, "st_hollow_medium_grass", 1)
+        p.draw_trophy(wid, grid, 0,3, "st_exit_cube_part_dungeon", 1)
     end
 end
 

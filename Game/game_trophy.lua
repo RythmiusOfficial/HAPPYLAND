@@ -19,6 +19,7 @@ function p.init_maybe()
     p.add("treasure_flower_orange", type_hl)
     p.add("platters", type_hl)
     p.add("st_exit_cube_part_dungeon", type_hl)
+    p.add("st_hollow_medium_grass", type_hl)
 end
 
 function p.trophy_type(name)

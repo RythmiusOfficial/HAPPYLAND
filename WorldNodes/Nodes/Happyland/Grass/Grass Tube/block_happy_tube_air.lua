@@ -9,6 +9,8 @@ end
 function p.__main()
     set_default_block("happy_tube_air")
 
+    local right_bt = get_input_adj_bt(-1,0,0)
+
     local g_cube = false
     local s_cube = false
     local marine = false
@@ -50,7 +52,7 @@ function p.__main()
         end
 
         -- Light Marines
-        if randi(1,(amount_chance*3)) == 1 then
+        if randi(1,(amount_chance*4)) == 1 then
             if marine == false then
                 ment_start(x,y,z, "ment_monster_marine_light")
                 ment_set_offset(x,y,z)

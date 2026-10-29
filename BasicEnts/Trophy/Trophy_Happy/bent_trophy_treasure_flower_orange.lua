@@ -18,7 +18,7 @@ function p.__get_can_use(level, bp)
 end
 
 function p.__get_use_msg(level, bp)
-    return "Trophy"
+    return "Trophy - Orange Treasure Flower"
 end
 
 function p.__on_use(level, bp)

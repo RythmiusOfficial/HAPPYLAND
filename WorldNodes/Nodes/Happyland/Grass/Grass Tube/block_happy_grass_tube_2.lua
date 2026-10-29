@@ -9,6 +9,6 @@ end
 function p.__main()
     set_default_block("r_orange")
 
-    -- Carve out the tunnel
-    create_rect("happy_tube_air", 0,5,5, 15,10,10)
+    -- Carve out the tunnel for like really bad emergencies lol
+    create_rect("expander", 0,5,5, 15,10,10)
 end

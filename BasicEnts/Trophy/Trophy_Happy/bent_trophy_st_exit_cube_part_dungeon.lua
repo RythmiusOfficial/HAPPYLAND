@@ -18,7 +18,7 @@ function p.__get_can_use(level, bp)
 end
 
 function p.__get_use_msg(level, bp)
-    return "Secret Trophy"
+    return "Secret Trophy - Exit Cube Particle Dungeon"
 end
 
 function p.__on_use(level, bp)

@@ -20,6 +20,7 @@ block_deco_green      _ Blocks/block_deco1_green1.jpg
 block_green           _ Blocks/block_dark_green_border.jpg
 block_yellow_concrete _ Blocks/block_concrete_yellow_border.jpg
 block_orange_concrete _ Blocks/block_concrete_orange_border.jpg
+block_white_concrete  _ Blocks/block_concrete_white_border.jpg
 block_concrete        _ Blocks/block_concrete_border.jpg
 block_happy_land      _ Blocks/block_happy_land.jpg
 block_glass           a Blocks/block_glass.tga
@@ -187,6 +188,7 @@ trophy_platters                   _ Trophies/HAPPY/platters.jpg
 
 # SECRET TROPHIES
 trophy_st_exit_cube_part_dungeon  _ Trophies/HAPPY/exit_cube_particle_dungeon.jpg
+trophy_st_hollow_medium_grass     _ Trophies/HAPPY/hollow_medium_grass.jpg
 
 xp_5x_stacking              _ BEnts/ent_xp_5x_stacking.jpg
 damage_5x_stacking          _ BEnts/ent_damage_5x_stacking.jpg
