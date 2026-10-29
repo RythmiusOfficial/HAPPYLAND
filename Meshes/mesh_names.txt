@@ -387,3 +387,4 @@ trophy_treasure_flower_orange    trophy_treasure_flower_orange    large_box.obj
 trophy_platters                  trophy_platters                  large_box.obj
 trophy_st_exit_cube_part_dungeon trophy_st_exit_cube_part_dungeon large_box.obj
 trophy_st_hollow_medium_grass    trophy_st_hollow_medium_grass    large_box.obj
+trophy_tall_grass_apartment      trophy_tall_grass_apartment      large_box.obj

@@ -16,10 +16,11 @@ function p.init_maybe()
     --
     local type_hl = "Happy Land"
     -- Happy Land
-    p.add("treasure_flower_orange", type_hl)
-    p.add("platters", type_hl)
+    p.add("tall_grass_apartment",      type_hl)
+    p.add("treasure_flower_orange",    type_hl)
+    p.add("platters",                  type_hl)
     p.add("st_exit_cube_part_dungeon", type_hl)
-    p.add("st_hollow_medium_grass", type_hl)
+    p.add("st_hollow_medium_grass",    type_hl)
 end
 
 function p.trophy_type(name)

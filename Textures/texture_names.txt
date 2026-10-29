@@ -7,6 +7,8 @@
 #Alpha images must be .tga files or .png files.
 #Non-alpha files must be .jpg or .png files.
 
+block_blank     a Blocks/blank.png
+
 block_plug      _ Blocks/block_stopper.jpg
 block_r_plug    _ Blocks/block_yellow_black_striped.jpg
 block_anti_plug _ Blocks/block_anti_plug.jpg
@@ -16,14 +18,20 @@ block_expander  _ Blocks/block_expander.jpg
 icon_rocket _ Icons/icon_rocket.jpg
 icon_brake  _ Icons/icon_brake.jpg
 
-block_deco_green      _ Blocks/block_deco1_green1.jpg
-block_green           _ Blocks/block_dark_green_border.jpg
-block_yellow_concrete _ Blocks/block_concrete_yellow_border.jpg
-block_orange_concrete _ Blocks/block_concrete_orange_border.jpg
-block_white_concrete  _ Blocks/block_concrete_white_border.jpg
-block_concrete        _ Blocks/block_concrete_border.jpg
-block_happy_land      _ Blocks/block_happy_land.jpg
-block_glass           a Blocks/block_glass.tga
+block_deco_green        _ Blocks/block_deco1_green1.jpg
+block_green             _ Blocks/block_dark_green_border.jpg
+block_green_x           _ Blocks/block_dark_green_x.jpg
+block_yellow_concrete   _ Blocks/block_concrete_yellow_border.jpg
+block_orange_concrete   _ Blocks/block_concrete_orange_border.jpg
+block_white_concrete    _ Blocks/block_concrete_white_border.jpg
+block_purple_borderless _ Blocks/block_purple_borderless.jpg
+block_white_borderless  _ Blocks/block_white_borderless.jpg
+block_brown_borderless  _ Blocks/block_brown_borderless.jpg
+block_concrete          _ Blocks/block_concrete_border.jpg
+block_happy_land        _ Blocks/block_happy_land.jpg
+block_metal             _ Blocks/block_metal.jpg
+block_glass             a Blocks/block_glass.tga
+block_chain             a Blocks/block_chain.png
 
 #Mandatory Bullet Sprites
 block_black                _ Blocks/block_black.jpg
@@ -185,6 +193,7 @@ trophy_do_not_have_secret	  _ Trophies/trophy_do_not_have_secret.jpg
 secret_trophy                     _ Trophies/secret_trophy.jpg
 trophy_treasure_flower_orange     _ Trophies/HAPPY/treasure_flower_orange.jpg
 trophy_platters                   _ Trophies/HAPPY/platters.jpg
+trophy_tall_grass_apartment       _ Trophies/HAPPY/tall_grass_apartment.jpg
 
 # SECRET TROPHIES
 trophy_st_exit_cube_part_dungeon  _ Trophies/HAPPY/exit_cube_particle_dungeon.jpg

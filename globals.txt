@@ -669,6 +669,7 @@ i xar.player.arcade.ammo.0  0
 #              Trophies
 #######################################
 
+b game.trophy.tall_grass_apartment      false
 b game.trophy.treasure_flower_orange    false
 b game.trophy.platters                  false
 b game.trophy.st_exit_cube_part_dungeon false
