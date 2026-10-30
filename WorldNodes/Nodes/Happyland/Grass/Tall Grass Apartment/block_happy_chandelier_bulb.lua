@@ -10,8 +10,8 @@ function p.__main()
     set_default_block("e")
     std.create_edges("r_yellow")
     
-    -- Create monsters
-    ment_start(7,7,7, "ment_monster_pool_ball_3")
+    -- Create pool ball
+    ment_start(7,7,7, "ment_monster_pool_ball_4")
     ment_set_offset(7.5,7.5,7.5)
     ment_end()
 

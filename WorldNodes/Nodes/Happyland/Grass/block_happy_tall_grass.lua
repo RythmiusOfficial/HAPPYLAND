@@ -8,14 +8,16 @@ end
 
 function p.__main()
     set_default_block("happy_air")
-
-    local apmt_chance = randf()
+    
+    -- Create tall grass floor
+    create_rect("happy_tall_grass", 0,0,0, 15,15,0)
     
     -- Create grass and start hooks, and maybe the Apartment
     for i = 1,15 do
         local x = randi(0,14)
         local y = randi(0,15)
         len = randi(3,16)
+        local apmt_chance = randf()
         if apmt_chance <= 0.05 then -- 5% chance!
             set_pos(x,y,0, "happy_tall_grass_apartment")
         else

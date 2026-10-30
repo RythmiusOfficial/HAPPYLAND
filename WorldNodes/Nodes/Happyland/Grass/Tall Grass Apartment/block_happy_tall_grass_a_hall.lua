@@ -17,6 +17,7 @@ function p.__main()
     -- Create tubes - x
     if xpos == "block_happy_tall_grass_a_room" or xpos == "block_happy_tall_grass_a_treasure" then
         std.create_half_tube(2,"x_pos", "happy_air")
+        
     end
     if xneg == "block_happy_tall_grass_a_room" or xneg == "block_happy_tall_grass_a_treasure" then
         std.create_half_tube(2,"x_neg", "happy_air")

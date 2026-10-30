@@ -33,6 +33,9 @@ function p.__main()
     else
         o_al = al + 1
     end
+
+    -- Create tall grass floor
+    create_rect("happy_tall_grass", 0,0,0, 15,15,0)
     
     -- Create an airless region that will get carved out
     create_rect("r_green", (0+aw),(0+al),0, (15-o_aw),(15-o_al),2)

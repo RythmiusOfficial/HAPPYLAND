@@ -3,9 +3,9 @@ function p.__get_is_solid()
 end
 
 function p.__get_tex()
-    return "block_brown_borderless"
+    return "block_brown_concrete"
 end
 
 function p.__main()
-    set_default_block("r_brown_bdless")
+    set_default_block("r_brown_concrete")
 end

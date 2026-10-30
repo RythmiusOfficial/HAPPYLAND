@@ -16,6 +16,17 @@ end
 function p.default(inst_id)
     local ment_type = ga_ment_get_type(inst_id)
 
+    -- Resident checking
+    if (ga_ment_type_var_exists(ment_type, "residency")) then
+        local resident = ga_ment_get_b(inst_id, "residency")
+        if resident then
+            game_msg.add("You killed a ^xff0000RESIDENT...^!", 5)
+            local r_kills = ga_get_i("resident_kills")
+            local r_new_kills = r_kills + 1
+            ga_set_i("resident_kills", r_new_kills)
+        end
+    end
+
     --Adding experience points.
     game_xp.ment_add(inst_id)
 

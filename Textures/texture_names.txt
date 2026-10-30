@@ -26,10 +26,11 @@ block_orange_concrete   _ Blocks/block_concrete_orange_border.jpg
 block_white_concrete    _ Blocks/block_concrete_white_border.jpg
 block_purple_borderless _ Blocks/block_purple_borderless.jpg
 block_white_borderless  _ Blocks/block_white_borderless.jpg
-block_brown_borderless  _ Blocks/block_brown_borderless.jpg
+block_brown_concrete    _ Blocks/block_brown_concrete.jpg
 block_concrete          _ Blocks/block_concrete_border.jpg
 block_happy_land        _ Blocks/block_happy_land.jpg
 block_metal             _ Blocks/block_metal.jpg
+block_to_apt            _ Blocks/block_to_apt.jpg
 block_glass             a Blocks/block_glass.tga
 block_chain             a Blocks/block_chain.png
 

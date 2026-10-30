@@ -181,6 +181,7 @@ i xar.experience.last_claimed_milestone_level
 ######################################
 
 i xar.stats.kill_count 0
+i resident_kills       0
 
 ######################################
 #              Cheating
