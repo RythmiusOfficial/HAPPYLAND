@@ -186,6 +186,8 @@ die_abomination_anti_blue     Die/(homemade)_die_abomination_anti_blue.ogg
 
 die_shiver_me_timbers    Die/(homemade)_die_shiver_me_timbers.ogg
 
+die_resident             Die/you_killed_a_resident.ogg
+
 #Monster sight sounds.
 #more!!!
 

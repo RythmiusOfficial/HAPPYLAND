@@ -21,6 +21,7 @@ function p.default(inst_id)
         local resident = ga_ment_get_b(inst_id, "residency")
         if resident then
             game_msg.add("You killed a ^xff0000RESIDENT...^!", 5)
+            ga_play_sound_with_volume("die_resident", 0.5)
             local r_kills = ga_get_i("resident_kills")
             local r_new_kills = r_kills + 1
             ga_set_i("resident_kills", r_new_kills)
