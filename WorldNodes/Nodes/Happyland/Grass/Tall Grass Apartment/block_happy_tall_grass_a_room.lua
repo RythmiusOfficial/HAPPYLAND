@@ -22,8 +22,8 @@ function p.__main()
     local table_l = randi(3,7) -- y
     local t_leg_w = math.floor(table_w/2) -- x leg offset amt
     local t_leg_l = math.floor(table_l/2) -- y leg offset amt
-    local t_off_x = randi(0+t_leg_w,15-t_leg_w) -- origin offset x
-    local t_off_y = randi(0+t_leg_l,15-t_leg_l) -- origin offset y
+    local t_off_x = randi(1+t_leg_w,14-t_leg_w) -- origin offset x
+    local t_off_y = randi(1+t_leg_l,14-t_leg_l) -- origin offset y
 
     local rug_w = randi(3,7)
     local rug_l = randi(3,7)
@@ -36,12 +36,13 @@ function p.__main()
     local xneg = get_input_adj_bt(-1,0,0)
     local ypos = get_input_adj_bt(0,1,0)
     local yneg = get_input_adj_bt(0,-1,0)
+    local zneg = get_input_adj_bt(0,0,-1)
 
     -- Create room
     std.create_shell("r_green_x")
     
     -- Create holes - x
-    if xpos == "block_happy_tall_grass_a_hall" or xpos == "block_happy_air" then
+    if xpos == "block_happy_tall_grass_a_hall" or (xpos == "block_happy_air" and zneg ~= "block_happy_tall_grass_a_room") then
         create_rect("r_black", 15,5,5, 15,10,10)
         if xpos == "block_happy_air" then
             create_rect("anti_plug", 15,6,6, 15,9,9)
@@ -49,7 +50,7 @@ function p.__main()
             create_rect("happy_air", 15,6,6, 15,9,9)
         end
     end
-    if xneg == "block_happy_tall_grass_a_hall" or xneg == "block_happy_air" then
+    if xneg == "block_happy_tall_grass_a_hall" or (xneg == "block_happy_air" and zneg ~= "block_happy_tall_grass_a_room") then
         create_rect("r_black", 0,5,5, 0,10,10)
         if xneg == "block_happy_air" then
             create_rect("anti_plug", 0,6,6, 0,9,9)
@@ -59,7 +60,7 @@ function p.__main()
     end
     
     -- Create holes - y
-    if ypos == "block_happy_tall_grass_a_hall" or ypos == "block_happy_air" then
+    if ypos == "block_happy_tall_grass_a_hall" or (ypos == "block_happy_air" and zneg ~= "block_happy_tall_grass_a_room") then
         create_rect("r_black", 5,15,5, 10,15,10)
         if ypos == "block_happy_air" then
             create_rect("anti_plug", 6,15,6, 9,15,9)
@@ -67,7 +68,7 @@ function p.__main()
             create_rect("happy_air", 6,15,6, 9,15,9)
         end
     end
-    if yneg == "block_happy_tall_grass_a_hall" or yneg == "block_happy_air" then
+    if yneg == "block_happy_tall_grass_a_hall" or (yneg == "block_happy_air" and zneg ~= "block_happy_tall_grass_a_room") then
         create_rect("r_black", 5,0,5, 10,0,10)
         if yneg == "block_happy_air" then
             create_rect("anti_plug", 6,0,6, 9,0,9)
@@ -164,8 +165,10 @@ function p.__main()
         end
         if msg_num == 6 then
             msg = "(6/7)\n\n"
-                .."The treasure room of a Tall Grass Apartment only spawns ^xff000010% of the time!^! "
-                .."Good thing the Landlord was able to buy out so many of them!"
+                .."The treasure room of a Tall Grass Apartment only spawns on ^xff0000Floor 6!^!"
+                .."In order to reach the treasure, you need to travel up the Brown Staircase chunks that are guarded with ^xff0000Apartment Key Guards.^! "
+                .."To get past these, you need to find a key in one of the rooms and bring it back to access the next Floor.\n\n"
+                .."Also, ^xff0000try not to kill the Residents.^!"
         end
         if msg_num == 7 then
             msg = "(7/7)\n\n"

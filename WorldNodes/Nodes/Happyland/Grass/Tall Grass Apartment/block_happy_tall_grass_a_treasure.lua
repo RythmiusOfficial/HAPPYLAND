@@ -7,7 +7,7 @@ function p.__get_tex()
 end
 
 function p.__main()
-    set_default_block("happy_air")
+    set_default_block("e")
     std.create_shell("r_white_bdless")
 
     local xpos = get_input_adj_bt(1,0,0)
