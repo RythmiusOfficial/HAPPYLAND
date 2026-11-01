@@ -37,7 +37,7 @@ function p.__main()
 
     -- Create treasure
     add_bent(13,13,13, "bent_base_ring_pink_source")
-    local msg = "This pink ring will take you out of this ^x00ff00Tall Grass Apartment.^!"
+    local msg = "This pink ring will take you down to a room on Floor 1 of this ^x00ff00Tall Grass Apartment.^!"
     add_bent_s(13,13,11, "bent_base_txt", msg)
 
     msg = "Message from TON 618:\n\n"
@@ -49,30 +49,35 @@ function p.__main()
         .."Or would it be out of pure oblivion and curiosity?\n\n"
         .."Whatever the reason, it still is rather irritating to feel another 'you' someplace else amongst the whole of reality...^!"
 
-    add_bent_s(2,2,13, "bent_base_txt", msg)
+    add_bent_s(2,13,11, "bent_base_txt", msg)
 
-    add_bent(2,2,9, "bent_trophy_tall_grass_apartment")
+    add_bent(2,13,9, "bent_trophy_tall_grass_apartment")
 
     add_bent_s(2,13,13, "bent_base_waypoint", "Tall Grass Apartment")
 
     -- Upgrades (plasma)
+    add_bent(13,2,13, "bent_upgrade_gun_1_ammo_cap")
     add_bent(13,2,11, "bent_upgrade_gun_1_ammo_cap")
     add_bent(13,2,9, "bent_upgrade_gun_1_ammo_cap")
     add_bent(13,2,7, "bent_upgrade_gun_1_ammo_cap")
 
+    add_bent(11,2,13, "bent_upgrade_gun_1_ammo_regen")
     add_bent(11,2,11, "bent_upgrade_gun_1_ammo_regen")
     add_bent(11,2,9, "bent_upgrade_gun_1_ammo_regen")
     add_bent(11,2,7, "bent_upgrade_gun_1_ammo_regen")
 
-    add_bent(7,2,11, "bent_upgrade_gun_1_damage")
-    add_bent(7,2,9, "bent_upgrade_gun_1_damage")
-    add_bent(7,2,7, "bent_upgrade_gun_1_damage")
+    add_bent(6,2,11, "bent_upgrade_gun_1_damage")
+    add_bent(9,2,11, "bent_upgrade_gun_1_damage")
+    add_bent(6,2,13, "bent_upgrade_gun_1_damage")
+    add_bent(9,2,13, "bent_upgrade_gun_1_damage")
 
-    add_bent(3,2,11, "bent_upgrade_gun_1_fire_speed")
-    add_bent(3,2,9, "bent_upgrade_gun_1_fire_speed")
-    add_bent(3,2,7, "bent_upgrade_gun_1_fire_speed")
+    add_bent(4,2,13, "bent_upgrade_gun_1_fire_speed")
+    add_bent(4,2,11, "bent_upgrade_gun_1_fire_speed")
+    add_bent(4,2,9, "bent_upgrade_gun_1_fire_speed")
+    add_bent(4,2,7, "bent_upgrade_gun_1_fire_speed")
 
-    add_bent(1,2,11, "bent_upgrade_gun_1_proj_speed")
-    add_bent(1,2,9, "bent_upgrade_gun_1_proj_speed")
-    add_bent(1,2,7, "bent_upgrade_gun_1_proj_speed")
+    add_bent(2,2,13, "bent_upgrade_gun_1_proj_speed")
+    add_bent(2,2,11, "bent_upgrade_gun_1_proj_speed")
+    add_bent(2,2,9, "bent_upgrade_gun_1_proj_speed")
+    add_bent(2,2,7, "bent_upgrade_gun_1_proj_speed")
 end

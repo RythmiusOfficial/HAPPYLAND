@@ -21,8 +21,11 @@ function p.__main()
 
     -- Create trophy
     if floor_chand == 6 then
-        add_bent(7,7,7, "bent_trophy_st_chandelier")
+        add_bent(7,7,9, "bent_trophy_st_chandelier")
     end
+
+    -- Create key
+    add_bent_i(7,7,7, "bent_key_apartment", 25)
 
     -- Create gold
     add_bent(7,7,5, "bent_gold_once_5")

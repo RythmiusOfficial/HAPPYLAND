@@ -37,6 +37,7 @@ function p.remove_keys()
     ga_set_f("xar.key_time.universe", neg)
     ga_set_f("xar.key_time.laser_genesis", neg)
     ga_set_f("xar.key_time.dans_house", neg)
+    ga_set_f("xar.key_time.apartment", neg)
 end
 
 --Cheatcode.
@@ -54,4 +55,5 @@ function p.give_keys()
     ga_set_f("xar.key_time.universe",       new_time)
     ga_set_f("xar.key_time.laser_genesis",  new_time)
     ga_set_f("xar.key_time.dans_house",     new_time)
+    ga_set_f("xar.key_time.apartment",      new_time)
 end

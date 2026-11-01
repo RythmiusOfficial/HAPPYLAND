@@ -94,6 +94,7 @@ function p.respawn_player(param)
     ga_set_f("xar.key_time.universe", -1.0)
     ga_set_f("xar.key_time.laser_genesis", -1.0)
     ga_set_f("xar.key_time.dans_house", -1.0)
+    ga_set_f("xar.key_time.apartment", -1.0)
 
     ga_set_b("xar.first_life", false)
 

@@ -145,6 +145,7 @@ key_blue               _ BEnts/key_blue.jpg
 key_green              _ BEnts/key_green.jpg
 key_laser_genesis      _ BEnts/key_laser_genesis.jpg
 key_dans_house         _ BEnts/key_dans_house.jpg
+key_apartment          _ BEnts/key_apartment.jpg
 
 ###############################################################################
 #

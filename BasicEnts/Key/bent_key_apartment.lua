@@ -1,6 +1,10 @@
+function p.__get_mesh()
+    return "bent_key_apartment"
+end
+
 function p.payload(level, bp)
     local num_sec = ga_bent_get_param_i(level, bp)
-    ga_set_f("happy.key_time.apartment", num_sec)
+    ga_set_f("xar.key_time.apartment", num_sec)
     ga_play_sound("pickup_powerup")
     game_bent.remove_temp(level, bp, 60) --One minute.
 end

@@ -84,8 +84,8 @@ function p.init_maybe_helper()
     -- Happy Land
 
     p.add("block_happy_land_0",				"hl_happy_land")
-    p.add("block_tall_grass_apartment",                 "hl_tall_grass_apartment")
-    p.add("block_happy_exit_cube_air_part",		"hl_exit_cube_part_dungeon")
+    p.add("block_tall_grass_apartment",     "hl_tall_grass_apartment")
+    p.add("block_happy_exit_cube_air_part",	"hl_exit_cube_part_dungeon")
 end
 
 -------------------------------------------------------------------------------

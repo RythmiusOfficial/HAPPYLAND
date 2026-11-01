@@ -269,7 +269,7 @@ s xar.key_time.green_combo     ""
 f xar.key_time.universe        0.0
 f xar.key_time.laser_genesis   0.0
 f xar.key_time.dans_house      0.0
-f happy.key_time.apartment     0.0
+f xar.key_time.apartment       0.0
 f xar.emp_end_time             0.0
 
 # Should probably get rid of word stacking.

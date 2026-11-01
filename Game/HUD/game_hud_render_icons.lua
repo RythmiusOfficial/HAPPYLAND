@@ -121,6 +121,20 @@ function p.render_icons(wid)
             cur_x = cur_x + step_x
         end
     end
+
+    if ga_exists("xar.key_time.apartment") then
+        local key_time = ga_get_f("xar.key_time.apartment")
+        if (key_time > 0.0) then
+            local tex = "key_apartment"
+            ga_win_quad(wid, cur_x, icon_bot, cur_x+icon_width, icon_top, tex)
+            win_hud.txt_col(wid, col_green)
+            ga_win_txt_center_at_bg(wid, 
+                cur_x + 0.5*icon_width,
+                icon_top,
+                math.floor(key_time) )
+            cur_x = cur_x + step_x
+        end
+    end
     
     if ga_exists("xar.key_time.blue") then
         local key_time = ga_get_f("xar.key_time.blue")

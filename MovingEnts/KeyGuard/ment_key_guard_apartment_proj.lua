@@ -32,7 +32,7 @@ end
 
 function p.xar_process_hit(args)
     local exceptions = {}
-    if( ga_get_f("happy.key_time.apartment") > 0 ) then
+    if( ga_get_f("xar.key_time.apartment") > 0 ) then
         ga_ment_set_i(args.source_inst_id, "damage", 0)
     end
     local ret = game_ment_hit.process_got_hit(args, exceptions)

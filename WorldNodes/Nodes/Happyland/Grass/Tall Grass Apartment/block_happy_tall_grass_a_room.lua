@@ -9,8 +9,6 @@ end
 function p.__main()
     set_default_block("e")
 
-    chunk_set_i("floor_num", 1)
-
     local furn_type = randi(1,7) -- 4 used, 3 unused; results in a 57% chance of there being a furnishing in the room
     local resident_chance = randf()
     local resident = randi(1,5)
@@ -258,9 +256,8 @@ function p.__main()
             ment_end()
         end
     end
-    print(tostring(floor_num))
 end
 
-function p.__type_init(tid)
-    ia_block_new_var_i(tid, "floor_num", 2)
+function p.__type_init(id)
+    ia_block_new_var_i(id, "floor_num", 1)
 end

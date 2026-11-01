@@ -14,10 +14,10 @@ function p.__main()
     local w_table = {}
     local l_table = {}
 
-    for x = 5,15,2 do
+    for x = 5,13,2 do
         table.insert(w_table, x)
     end
-    for y = 5,15,2 do
+    for y = 5,13,2 do
         table.insert(l_table, y)
     end
 
@@ -135,6 +135,9 @@ function p.__main()
         rand_posx = vertex_regionx[vertex_index_x]
         rand_posy = vertex_regiony[vertex_index_y]
     end
+
+    -- Pink Dest
+    add_bent((0+aw-1),(0+al-1),0, "bent_base_ring_pink_dest")
 
     -- Chimney
     -- Placeholder

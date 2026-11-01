@@ -63,6 +63,7 @@ bent_key_yellow             key_yellow             large_box.obj
 bent_key_green              key_green              large_box.obj
 bent_key_laser_genesis      key_laser_genesis      large_box.obj
 bent_key_dans_house         key_dans_house         large_box.obj
+bent_key_apartment          key_apartment          large_box.obj
 bent_xp_5x_stacking         xp_5x_stacking         large_box.obj
 bent_damage_5x_stacking     damage_5x_stacking     large_box.obj
 bent_invun_stacking         invun_stacking         large_box.obj
