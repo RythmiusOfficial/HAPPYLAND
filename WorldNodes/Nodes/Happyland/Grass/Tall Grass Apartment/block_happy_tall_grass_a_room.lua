@@ -91,6 +91,9 @@ function p.__main()
         create_rect("r_metal", 5,6,(15-chand_len), 5,8,(15-chand_len))
         create_rect("r_metal", 9,6,(15-chand_len), 9,8,(15-chand_len))
 
+        local level = get_level()
+        local floor_num = get_input_path_block_i(level, "floor_num")
+
         -- create bulb
         set_pos(7,7,(15-chand_len-1), "happy_chandelier_bulb")
         block_set_i(7,7,(15-chand_len-1), "floor_chand", floor_num)

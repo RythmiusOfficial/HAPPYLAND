@@ -96,6 +96,7 @@ function p.__render(wid)
         p.draw_trophy(wid, grid, 0,2, "platters", 0)
         p.draw_trophy(wid, grid, 0,3, "st_hollow_medium_grass", 1)
         p.draw_trophy(wid, grid, 1,0, "st_exit_cube_part_dungeon", 1)
+        p.draw_trophy(wid, grid, 1,1, "st_chandelier", 1)
     end
 end
 
