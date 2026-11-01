@@ -9,7 +9,7 @@ end
 function p.__main()
     set_default_block("happy_air")
 
-    local floors = randi(2,6)
+    local floors = 6
 
     local w_table = {}
     local l_table = {}
@@ -94,11 +94,40 @@ function p.__main()
         end end
     end
 
-    -- Treasure room; delete its coordinates from the array so the stairs don't overwrite it :(
+    -- Room floor variable setting
+    for z = 1,floors do
+    for x = (0+aw),(15-o_aw),2 do
+    for y = (0+al),(15-o_al),2 do
+        block_set_i(x,y,z, "floor_num", z)
+    end end end
+
+    -- Staircases
+    for z = 1,(floors-1) do
+        create_rect("happy_tall_grass_a_staircase", rand_posx,rand_posy,z, rand_posx,rand_posy,z+1)
+        
+        local cur_x = rand_posx
+        local cur_y = rand_posy
+
+        vertex_index_x = randi(1, #vertex_regionx)
+        vertex_index_y = randi(1, #vertex_regiony)
+
+        rand_posx = vertex_regionx[vertex_index_x]
+        rand_posy = vertex_regiony[vertex_index_y]
+
+        -- test to see if the staircase below has already been generated in the previous floor below
+        while cur_x == rand_posx do
+            vertex_index_x = randi(1, #vertex_regionx)
+            rand_posx = vertex_regionx[vertex_index_x]
+        end
+        while cur_y == rand_posy do
+            vertex_index_y = randi(1, #vertex_regiony)
+            rand_posy = vertex_regiony[vertex_index_y]
+        end
+    end
+
+    -- Treasure room; can overwrite stairs which might prove to be an issue later; please fix me
     if floors == 6 then
         set_pos(rand_posx,rand_posy,6, "happy_tall_grass_a_treasure")
-        table.remove(vertex_regionx, vertex_index_x)
-        table.remove(vertex_regiony, vertex_index_y)
 
         vertex_index_x = randi(1, #vertex_regionx)
         vertex_index_y = randi(1, #vertex_regiony)
@@ -107,17 +136,9 @@ function p.__main()
         rand_posy = vertex_regiony[vertex_index_y]
     end
 
-    -- Staircase
-    for z = 1,floors do
-        set_pos(rand_posx,rand_posy,z, "happy_tall_grass_a_staircase")
-    end
-
     -- Chimney
     -- Placeholder
 
     -- Kitchen
     -- Placeholder
-
-    print(table.concat(vertex_regionx))
-    print(table.concat(vertex_regiony))
 end

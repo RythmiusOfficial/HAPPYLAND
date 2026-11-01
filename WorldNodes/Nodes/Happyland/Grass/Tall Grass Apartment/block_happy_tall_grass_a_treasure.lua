@@ -3,12 +3,12 @@ function p.__get_is_solid()
 end
 
 function p.__get_tex()
-    return "block_white_borderless"
+    return "block_concrete_white_diag"
 end
 
 function p.__main()
     set_default_block("e")
-    std.create_shell("r_white_bdless")
+    std.create_shell("r_concrete_white_diag")
 
     local xpos = get_input_adj_bt(1,0,0)
     local xneg = get_input_adj_bt(-1,0,0)
@@ -64,15 +64,15 @@ function p.__main()
     add_bent(11,2,9, "bent_upgrade_gun_1_ammo_regen")
     add_bent(11,2,7, "bent_upgrade_gun_1_ammo_regen")
 
-    add_bent(9,2,11, "bent_upgrade_gun_1_damage")
-    add_bent(9,2,9, "bent_upgrade_gun_1_damage")
-    add_bent(9,2,7, "bent_upgrade_gun_1_damage")
+    add_bent(7,2,11, "bent_upgrade_gun_1_damage")
+    add_bent(7,2,9, "bent_upgrade_gun_1_damage")
+    add_bent(7,2,7, "bent_upgrade_gun_1_damage")
 
-    add_bent(7,2,11, "bent_upgrade_gun_1_fire_speed")
-    add_bent(7,2,9, "bent_upgrade_gun_1_fire_speed")
-    add_bent(7,2,7, "bent_upgrade_gun_1_fire_speed")
+    add_bent(3,2,11, "bent_upgrade_gun_1_fire_speed")
+    add_bent(3,2,9, "bent_upgrade_gun_1_fire_speed")
+    add_bent(3,2,7, "bent_upgrade_gun_1_fire_speed")
 
-    add_bent(5,2,11, "bent_upgrade_gun_1_proj_speed")
-    add_bent(5,2,9, "bent_upgrade_gun_1_proj_speed")
-    add_bent(5,2,7, "bent_upgrade_gun_1_proj_speed")
+    add_bent(1,2,11, "bent_upgrade_gun_1_proj_speed")
+    add_bent(1,2,9, "bent_upgrade_gun_1_proj_speed")
+    add_bent(1,2,7, "bent_upgrade_gun_1_proj_speed")
 end

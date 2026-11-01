@@ -8,12 +8,15 @@ end
 
 function p.__main()
     set_default_block("e")
+
+    chunk_set_i("floor_num", 1)
+
     local furn_type = randi(1,7) -- 4 used, 3 unused; results in a 57% chance of there being a furnishing in the room
     local resident_chance = randf()
     local resident = randi(1,5)
     local resident_name = randi(1,20)
     local msg = ""
-    local msg_num = randi(1,7)
+    local msg_num = randi(1,8)
 
     local chand_len = randi(4,7)
 
@@ -90,6 +93,13 @@ function p.__main()
 
         -- create bulb
         set_pos(7,7,(15-chand_len-1), "happy_chandelier_bulb")
+        block_set_i(7,7,(15-chand_len-1), "floor_chand", floor_num)
+
+        -- create expanders
+        set_pos(7,8,(15-chand_len-1), "expander")
+        set_pos(7,6,(15-chand_len-1), "expander")
+        set_pos(8,7,(15-chand_len-1), "expander")
+        set_pos(6,7,(15-chand_len-1), "expander")
     end
 
     if furn_type == 2 then -- Purple Recliner
@@ -129,50 +139,58 @@ function p.__main()
 
         -- text boxes
         if msg_num == 1 then
-            msg = "(1/7)\n\n"
+            msg = "(1/8)\n\n"
                 .."You are currently in a ^x00ff00Tall Grass Apartment.^!\n"
                 .."LIST OF FURNITURE:\n\n"
-                .."^xffff00    Chandeliers:^! Don't fly too close to Chandeliers.  "
+                .."^xffff00Chandeliers:^! Don't fly too close to Chandeliers. "
                 .."A ^xff0000Pool Ball^! resides within it.\n\n"
-                .."^x800080    Purple Recliners:^! Comfy! The residents seem to enjoy them...\n\n"
-                .."^x964b00    Tables:^! Tables hold various information on the Apartment and other locations in Happy Land.\n\n"
-                .."^xff0000    Rug:^! Shrinking into a rug reveals gold that increases in value the deeper you go. "
+                .."^x800080Purple Recliners:^! Comfy! The residents seem to enjoy them...\n\n"
+                .."^x964b00Tables:^! Tables hold various information on the Apartment and other locations in Happy Land.\n\n"
+                .."^xff0000Rug:^! Shrinking into a rug reveals gold that increases in value the deeper you go. "
                 .."However, the ^xff0000Rats also get stronger.^!"
         end
         if msg_num == 2 then
-            msg = "(2/7)\n\n"
+            msg = "(2/8)\n\n"
                 .."There is a ^xffff00secret^! in Medium Grass chunks. "
-                .."Sometimes, Medium Grass can grow Treasure Flowers on their tops."
+                .."Sometimes, Medium Grass can grow Treasure Flowers on their tops. "
                 .."The ones that do have one, have a secret inside.\n\n"
                 .."^xff0000But how would you get inside?^!"
         end
         if msg_num == 3 then
-            msg = "(3/7)\n\n"
+            msg = "(3/8)\n\n"
                 .."If you haven't yet, you can find Cannon upgrades inside of ^x00ff00Platters.^! "
                 .."Platters can be found on the branches of Treasure Flowers and can be entered through a hole near the bottom of the stem."
         end
         if msg_num == 4 then
-            msg = "(4/7)\n\n"
-                .."The residents here can be found in their rooms about 20% of the time, "
+            msg = "(4/8)\n\n"
+                .."The residents here can be found in their rooms about 35% of the time, "
                 .."consisting of Heavy Marines, Menaces, Blood Boys, Orcs, and Demons. "
                 .."They also ^xff0000don't really like intruders,^! because no one really enjoys home invasions.\n\n"
                 .."...except for maybe the Blood Boys; they'd open their doors to EVERY sketchy salesman."
         end
         if msg_num == 5 then
-            msg = "(5/7)\n\n"
+            msg = "(5/8)\n\n"
                 .."You wanna know what would be funny? "
-                .."Leaving this worthless paper on the table for any home invaders to read!"
+                .."Leaving this worthless note on the table for any home invaders to read!"
         end
         if msg_num == 6 then
-            msg = "(6/7)\n\n"
-                .."The treasure room of a Tall Grass Apartment only spawns on ^xff0000Floor 6!^!"
+            msg = "(6/8)\n\n"
+                .."The treasure room of a Tall Grass Apartment only spawns on ^x00ff00Floor 6!^! "
                 .."In order to reach the treasure, you need to travel up the Brown Staircase chunks that are guarded with ^xff0000Apartment Key Guards.^! "
                 .."To get past these, you need to find a key in one of the rooms and bring it back to access the next Floor.\n\n"
                 .."Also, ^xff0000try not to kill the Residents.^!"
         end
         if msg_num == 7 then
-            msg = "(7/7)\n\n"
+            msg = "(7/8)\n\n"
                 .."The Landlord hires only so many chimney sweepers, so ^xff0000not every Apartment has their chimney swept...^!"
+        end
+        if msg_num == 8 then
+            msg = "(8/8)\n\n"
+                .."You can find ^x00ff00Apartment Keys^! in the following locations:\n\n"
+                .."^xffff00Chandeliers^! have an Apartment key ^x00ff00100%^! of the time. "
+                .."However, the Pool Balls inside increase in rank the higher you go.\n\n"
+                .."^x964b00Tables^! have a 20% chance to have an Apartment Key.\n\n"
+                .."ADD MORE HERE"
         end
 
         add_bent_s(t_off_x,t_off_y,(t_leg_h+2), "bent_base_txt", msg) 
@@ -237,4 +255,9 @@ function p.__main()
             ment_end()
         end
     end
+    print(tostring(floor_num))
+end
+
+function p.__type_init(tid)
+    ia_block_new_var_i(tid, "floor_num", 2)
 end

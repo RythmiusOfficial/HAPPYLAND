@@ -42,7 +42,7 @@ function p.__main()
         end
         
         -- Gray Exit Cube
-        if randi(1,amount_chance) == 1 then
+        if randi(1,amount_chance*1.5) == 1 then
             if e_cube == false then
                 set_pos(x,y,z, "happy_exit_cube")
                 x = randi(0,15)

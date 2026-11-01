@@ -438,6 +438,7 @@ MonsterKeyGreen                    _ MEnts/Key/monster_key_green.jpg
 MonsterKeyUniverse                 _ MEnts/Key/monster_key_universe.jpg
 MonsterKeyLaserGenesis             _ MEnts/Key/monster_key_laser_genesis.jpg
 MonsterKeyDansHouse                _ MEnts/Key/monster_key_dans_house.jpg
+MonsterKeyApartment                _ MEnts/Key/monster_key_apartment.jpg
 WhiteBoxDevice                     _ MEnts/white_box_device.jpg
 YellowBoxDevice                    _ MEnts/yellow_box_device.jpg
 Drop                               _ MEnts/drop.jpg

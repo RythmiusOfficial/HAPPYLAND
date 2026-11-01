@@ -198,6 +198,7 @@ MonsterKeyGreen            MonsterKeyGreen            sphere.obj
 MonsterKeyUniverse         MonsterKeyUniverse         sphere.obj
 MonsterKeyLaserGenesis     MonsterKeyLaserGenesis     sphere.obj
 MonsterKeyDansHouse        MonsterKeyDansHouse        sphere.obj
+MonsterKeyApartment        MonsterKeyApartment        sphere.obj
 #MonsterGear               MonsterGear                sphere.obj
 MonsterAbominationBlue     MonsterAbominationBlue     sphere.obj
 MonsterAbominationAntiBlue MonsterAbominationAntiBlue sphere.obj

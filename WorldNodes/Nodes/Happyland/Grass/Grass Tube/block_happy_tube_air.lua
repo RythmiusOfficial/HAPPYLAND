@@ -40,7 +40,7 @@ function p.__main()
         end
 
         -- Shrink ring
-        if randi(1,amount_chance) == 1 then
+        if randi(1,amount_chance*1.3) == 1 then
             if s_cube == false then
                 add_bent(x,y,z, "bent_base_ring_green_danger")
                 x = randi(0,15)
