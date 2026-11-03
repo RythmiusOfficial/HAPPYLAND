@@ -72,9 +72,9 @@ function p.__main()
     add_bent(9,2,13, "bent_upgrade_gun_1_damage")
 
     add_bent(4,2,13, "bent_upgrade_gun_1_fire_speed")
-    add_bent(4,2,11, "bent_upgrade_gun_1_fire_speed")
-    add_bent(4,2,9, "bent_upgrade_gun_1_fire_speed")
-    add_bent(4,2,7, "bent_upgrade_gun_1_fire_speed")
+    add_bent(4,2,11, "bent_upgrade_gun_1_damage")
+    add_bent(4,2,9, "bent_upgrade_gun_1_damage")
+    add_bent(4,2,7, "bent_upgrade_gun_1_damage")
 
     add_bent(2,2,13, "bent_upgrade_gun_1_proj_speed")
     add_bent(2,2,11, "bent_upgrade_gun_1_proj_speed")

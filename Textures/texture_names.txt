@@ -30,9 +30,14 @@ block_brown_concrete    _ Blocks/block_brown_concrete.jpg
 block_concrete          _ Blocks/block_concrete_border.jpg
 block_happy_land        _ Blocks/block_happy_land.jpg
 block_metal             _ Blocks/block_metal.jpg
-block_to_apt            _ Blocks/block_to_apt.jpg
 block_glass             a Blocks/block_glass.tga
 block_chain             a Blocks/block_chain.png
+
+block_rug_1              _ Blocks/block_rug_1.jpg
+block_rug_2              _ Blocks/block_rug_2.jpg
+block_rug_3              _ Blocks/block_rug_3.jpg
+block_rug_4              _ Blocks/block_rug_4.jpg
+block_rug_5              _ Blocks/block_rug_5.jpg
 
 #Mandatory Bullet Sprites
 block_black                _ Blocks/block_black.jpg

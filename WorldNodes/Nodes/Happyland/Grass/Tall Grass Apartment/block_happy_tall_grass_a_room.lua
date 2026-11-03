@@ -26,8 +26,8 @@ function p.__main()
     local t_off_x = randi(1+t_leg_w,14-t_leg_w) -- origin offset x
     local t_off_y = randi(1+t_leg_l,14-t_leg_l) -- origin offset y
 
-    local rug_w = randi(3,7)
-    local rug_l = randi(3,7)
+    local rug_w = randi(3,13)
+    local rug_l = randi(3,13)
     local rw = math.floor(rug_w/2) -- x offset amt
     local rl = math.floor(rug_l/2) -- y offset amt
     local r_off_x = randi(0+rw,15-rw) -- origin offset x
@@ -198,7 +198,8 @@ function p.__main()
     end
 
     if furn_type == 4 then -- Rug
-        -- create_rect("rug", (r_off_x-rw),(r_off_y-rl),0, (r_off_x+rw),(r_off_y+rl),0)
+        create_rect("happy_rug_caves_1", (r_off_x-rw),(r_off_y-rl),0, (r_off_x+rw),(r_off_y+rl),0)
+        create_rect("expander", (r_off_x-rw),(r_off_y-rl),1, (r_off_x+rw),(r_off_y+rl),1)
     end
 
     -- Determine resident names
