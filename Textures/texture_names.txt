@@ -288,6 +288,17 @@ particle_2   a   Particles/particle_2.tga
 
 ###############################################################################
 #
+#                         TEXTURES FOR PICTURES
+#
+###############################################################################
+
+#Pictures
+picture_abstract_1      _ Pictures/pic_abstract_1.jpg
+picture_abstract_2      _ Pictures/pic_abstract_2.jpg
+picture_abstract_3      _ Pictures/pic_abstract_3.jpg
+
+###############################################################################
+#
 #                         TEXSTURES FOR MOVING ENTITIES
 #
 ###############################################################################
@@ -476,4 +487,3 @@ rocketmodel_pink_striped            _ MEnts/Community/rocketmodel_pink_striped.p
 #picture_cot_ophelia                 _ MEnts/Pictures/pic_cot_ophelia.jpg
 #picture_card_char                   _ MEnts/Pictures/pic_card_char.jpg
 picture_m_to_omega                  _ MEnts/Pictures/pic_m_to_omega.jpg
-

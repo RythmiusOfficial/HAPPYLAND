@@ -10,6 +10,7 @@ function p.__main()
     set_default_block("e")
 
     local furn_type = randi(1,7) -- 4 used, 3 unused; results in a 57% chance of there being a furnishing in the room
+    local pic = randi(1,6) -- 3 used, 3 unused; results in a 50% chance of there being a picture in the room
     local resident_chance = randf()
     local resident = randi(1,5)
     local resident_name = randi(1,20)
@@ -18,7 +19,7 @@ function p.__main()
 
     local chand_len = randi(4,7)
 
-    local t_leg_h = randi(2,6)
+    local t_leg_h = randi(1,4)
     local table_w = randi(3,7) -- x
     local table_l = randi(3,7) -- y
     local t_leg_w = math.floor(table_w/2) -- x leg offset amt
@@ -30,8 +31,8 @@ function p.__main()
     local rug_l = randi(3,13)
     local rw = math.floor(rug_w/2) -- x offset amt
     local rl = math.floor(rug_l/2) -- y offset amt
-    local r_off_x = randi(0+rw,15-rw) -- origin offset x
-    local r_off_y = randi(0+rl,15-rl) -- origin offset y
+    local r_off_x = randi(1+rw,14-rw) -- origin offset x
+    local r_off_y = randi(1+rl,14-rl) -- origin offset y
 
     local xpos = get_input_adj_bt(1,0,0)
     local xneg = get_input_adj_bt(-1,0,0)
@@ -68,6 +69,16 @@ function p.__main()
         else
             create_rect("happy_air", 6,15,6, 9,15,9)
         end
+    else
+        -- Create pictures in rooms depending on if the pic var is selected
+        if pic >= 1 and pic <= 3 then
+            create_rect("r_black", 4,14,4, 10,14,10)
+            create_rect("expander", 5,14,5, 9,14,9)
+        end
+        if pic == 1 then add_bent(7,14,7, "bent_picture_abstract_1") end
+        if pic == 2 then add_bent(7,14,7, "bent_picture_abstract_2") end
+        if pic == 3 then add_bent(7,14,7, "bent_picture_abstract_3") end
+        pic = 4
     end
     if yneg == "block_happy_tall_grass_a_hall" or (yneg == "block_happy_air" and zneg ~= "block_happy_tall_grass_a_room") then
         create_rect("r_black", 5,0,5, 10,0,10)
@@ -76,12 +87,22 @@ function p.__main()
         else
             create_rect("happy_air", 6,0,6, 9,0,9)
         end
+    else
+        -- Create pictures in rooms depending on if the pic var is selected
+        if pic >= 1 and pic <= 3 then
+            create_rect("r_black", 4,1,4, 10,1,10)
+            create_rect("expander", 5,1,5, 9,1,9)
+        end
+        if pic == 1 then add_bent(7,0,7, "bent_picture_abstract_1") end
+        if pic == 2 then add_bent(7,0,7, "bent_picture_abstract_2") end
+        if pic == 3 then add_bent(7,0,7, "bent_picture_abstract_3") end
+        pic = 4
     end
 
     -- Create furniture - chandelier, purple recliner, table, rug
     if furn_type == 1 then -- Chandelier
         -- stem
-        create_rect("chain", 7,7,(15-chand_len), 7,7,15)
+        create_rect("chain", 7,7,(15-chand_len), 7,7,14)
 
         -- metal layer 1
         create_rect("r_metal", 6,5,(15-chand_len), 8,5,(15-chand_len))

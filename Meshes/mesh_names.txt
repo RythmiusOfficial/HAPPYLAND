@@ -384,6 +384,11 @@ marker_long_2          pattern_diag_green         octahedron.obj
 #picture_cot_ophelia     picture_cot_ophelia        ment_picture_box.obj
 #picture_card_char       picture_card_char          ment_picture_box.obj
 
+#Custom Picture Meshes
+bent_picture_abstract_1     picture_abstract_1      5_picture_box.obj
+bent_picture_abstract_2     picture_abstract_2      5_picture_box.obj
+bent_picture_abstract_3     picture_abstract_3      5_picture_box.obj
+
 # Custom Trophy Meshes
 trophy_treasure_flower_orange    trophy_treasure_flower_orange    large_box.obj
 trophy_platters                  trophy_platters                  large_box.obj
