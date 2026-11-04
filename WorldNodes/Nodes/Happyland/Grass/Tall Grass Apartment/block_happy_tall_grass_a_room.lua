@@ -15,7 +15,7 @@ function p.__main()
     local resident = randi(1,5)
     local resident_name = randi(1,20)
     local msg = ""
-    local msg_num = randi(1,8)
+    local msg_num = randi(1,9)
 
     local chand_len = randi(4,7)
 
@@ -143,10 +143,6 @@ function p.__main()
 
         -- backing
         create_rect("r_purple_bdless", 13,6,2, 13,9,4)
-
-        -- shrink ring
-        create_rect("e", 12,7,1, 12,8,1)
-        add_bent(12,7,1, "bent_base_ring_green_danger")
     end
 
     if furn_type == 3 then -- Table
@@ -161,7 +157,7 @@ function p.__main()
 
         -- text boxes
         if msg_num == 1 then
-            msg = "(1/8)\n\n"
+            msg = "(1/9)\n\n"
                 .."You are currently in a ^x00ff00Tall Grass Apartment.^!\n"
                 .."LIST OF FURNITURE:\n\n"
                 .."^xffff00Chandeliers:^! Don't fly too close to Chandeliers. "
@@ -172,47 +168,54 @@ function p.__main()
                 .."However, the ^xff0000Rats also get stronger.^!"
         end
         if msg_num == 2 then
-            msg = "(2/8)\n\n"
+            msg = "(2/9)\n\n"
                 .."There is a ^xffff00secret^! in Medium Grass chunks. "
                 .."Sometimes, Medium Grass can grow Treasure Flowers on their tops. "
                 .."The ones that do have one, have a secret inside.\n\n"
                 .."^xff0000But how would you get inside?^!"
         end
         if msg_num == 3 then
-            msg = "(3/8)\n\n"
+            msg = "(3/9)\n\n"
                 .."If you haven't yet, you can find Cannon upgrades inside of ^x00ff00Platters.^! "
                 .."Platters can be found on the branches of Treasure Flowers and can be entered through a hole near the bottom of the stem."
         end
         if msg_num == 4 then
-            msg = "(4/8)\n\n"
+            msg = "(4/9)\n\n"
                 .."The residents here can be found in their rooms about 35% of the time, "
                 .."consisting of Heavy Marines, Menaces, Blood Boys, Orcs, and Demons. "
                 .."They also ^xff0000don't really like intruders,^! because no one really enjoys home invasions.\n\n"
                 .."...except for maybe the Blood Boys; they'd open their doors to EVERY sketchy salesman."
         end
         if msg_num == 5 then
-            msg = "(5/8)\n\n"
+            msg = "(5/9)\n\n"
                 .."You wanna know what would be funny? "
                 .."Leaving this worthless note on the table for any home invaders to read!"
         end
         if msg_num == 6 then
-            msg = "(6/8)\n\n"
+            msg = "(6/9)\n\n"
                 .."The treasure room of a Tall Grass Apartment only spawns on ^x00ff00Floor 6!^! "
                 .."In order to reach the treasure, you need to travel up the Brown Staircase chunks that are guarded with ^xff0000Apartment Key Guards.^! "
                 .."To get past these, you need to find a key in one of the rooms and bring it back to access the next Floor.\n\n"
                 .."Also, ^xff0000try not to kill the Residents.^!"
         end
         if msg_num == 7 then
-            msg = "(7/8)\n\n"
-                .."The Landlord hires only so many chimney sweepers, so ^xff0000not every Apartment has their chimney swept...^!"
+            msg = "(7/9)\n\n"
+                .."The Chimneys of the Apartment get really dusty so the Landlord hired a lot of chimney sweepers. "
+                .."He owns a lot of land, ^x00ff00so not every Chimney has been dusted^!"
         end
         if msg_num == 8 then
-            msg = "(8/8)\n\n"
+            msg = "(8/9)\n\n"
                 .."You can find ^x00ff00Apartment Keys^! in the following locations:\n\n"
                 .."^xffff00Chandeliers^! have an Apartment key ^x00ff00100%^! of the time. "
                 .."However, the Pool Balls inside increase in rank the higher you go.\n\n"
                 .."^x964b00Tables^! have a 20% chance to have an Apartment Key.\n\n"
                 .."ADD MORE HERE"
+        end
+        if msg_num == 9 then
+            msg = "(9/9)\n\n"
+                .."The Landlord had been given three originals from well-known artist \"LTG\", "
+                .."and so he decided on photocopying these priceless artifacts so every resident in his apartments can have one in their rooms!\n\n"
+                .."What a selfless (and unfaithful) guy!"
         end
 
         add_bent_s(t_off_x,t_off_y,(t_leg_h+2), "bent_base_txt", msg) 

@@ -30,6 +30,7 @@ block_brown_concrete    _ Blocks/block_brown_concrete.jpg
 block_concrete          _ Blocks/block_concrete_border.jpg
 block_happy_land        _ Blocks/block_happy_land.jpg
 block_metal             _ Blocks/block_metal.jpg
+block_dust              _ Blocks/block_dust.jpg
 block_glass             a Blocks/block_glass.tga
 block_chain             a Blocks/block_chain.png
 
@@ -201,6 +202,7 @@ secret_trophy                     _ Trophies/secret_trophy.jpg
 trophy_treasure_flower_orange     _ Trophies/HAPPY/treasure_flower_orange.jpg
 trophy_platters                   _ Trophies/HAPPY/platters.jpg
 trophy_tall_grass_apartment       _ Trophies/HAPPY/tall_grass_apartment.jpg
+trophy_chimney                    _ Trophies/HAPPY/chimney.jpg
 
 # SECRET TROPHIES
 trophy_st_exit_cube_part_dungeon  _ Trophies/HAPPY/exit_cube_particle_dungeon.jpg

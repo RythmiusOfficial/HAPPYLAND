@@ -91,12 +91,13 @@ function p.__render(wid)
     win_num = ga_get_i("temp.xar.stats5.win_num")
     if win_num == 1 then
         ga_win_txt_center(wid, type_y, "HAPPY LAND TROPHIES")
-        p.draw_trophy(wid, grid, 0,0, "tall_grass_apartment", 0)
-        p.draw_trophy(wid, grid, 0,1, "treasure_flower_orange", 0)
-        p.draw_trophy(wid, grid, 0,2, "platters", 0)
-        p.draw_trophy(wid, grid, 0,3, "st_hollow_medium_grass", 1)
-        p.draw_trophy(wid, grid, 1,0, "st_exit_cube_part_dungeon", 1)
-        p.draw_trophy(wid, grid, 1,1, "st_chandelier", 1)
+        p.draw_trophy(wid, grid, 0,0, "treasure_flower_orange", 0)
+        p.draw_trophy(wid, grid, 0,1, "platters", 0)
+        p.draw_trophy(wid, grid, 0,2, "tall_grass_apartment", 0)
+        p.draw_trophy(wid, grid, 0,3, "chimney", 0)
+        p.draw_trophy(wid, grid, 1,0, "st_hollow_medium_grass", 1)
+        p.draw_trophy(wid, grid, 1,1, "st_exit_cube_part_dungeon", 1)
+        p.draw_trophy(wid, grid, 1,2, "st_chandelier", 1)
     end
 end
 

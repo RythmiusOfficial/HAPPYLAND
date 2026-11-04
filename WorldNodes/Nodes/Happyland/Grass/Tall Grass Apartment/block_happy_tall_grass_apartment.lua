@@ -114,7 +114,7 @@ function p.__main()
         rand_posx = vertex_regionx[vertex_index_x]
         rand_posy = vertex_regiony[vertex_index_y]
 
-        -- test to see if the staircase below has already been generated in the previous floor below
+        -- checks to see if the staircase below has already been generated in the previous floor below
         while cur_x == rand_posx do
             vertex_index_x = randi(1, #vertex_regionx)
             rand_posx = vertex_regionx[vertex_index_x]
@@ -140,8 +140,8 @@ function p.__main()
     add_bent((0+aw-1),(0+al-1),0, "bent_base_ring_pink_dest")
 
     -- Chimney
-    -- Placeholder
+    create_rect("happy_tall_grass_a_chimney", (0+aw+2),(0+al+2),8, (0+aw+2),(0+al+2),10)
 
-    -- Kitchen
+    -- Secret Kitchen
     -- Placeholder
 end

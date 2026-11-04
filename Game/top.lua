@@ -51,10 +51,11 @@ function p.__load_game()
 
     ga_command("cheat hodisclosetov nosound")
     ga_command("cheat on nosound")
-    ga_command("god on")
-    ga_command("noclip on")
-    ga_command("shrinkany on")
-    ga_command("cheat chpasswd rythmius") -- you spoiled it.
+    --ga_command("god on")
+    --ga_command("noclip on")
+    --ga_command("shrinkany on")
+    ga_command("cheat chpasswd n90v432180") -- you spoiled it.
+    ga_command("cheat off")
     ga_command("clear")
 
     --DEBUGGING!!!
