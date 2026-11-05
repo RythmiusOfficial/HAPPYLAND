@@ -9,7 +9,7 @@ end
 -- What if i made the air a semi-transparent gray to make it appear more like smoke?
 -- :0 peak idea; do this later PLEASEEEEE
 function p.__main() 
-    set_default_block("e")
+    set_default_block("block_smoke")
 
     local chance = 700
     local placed = false
