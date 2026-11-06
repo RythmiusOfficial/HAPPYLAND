@@ -28,13 +28,15 @@ block_purple_borderless _ Blocks/block_purple_borderless.jpg
 block_white_borderless  _ Blocks/block_white_borderless.jpg
 block_brown_concrete    _ Blocks/block_brown_concrete.jpg
 block_concrete          _ Blocks/block_concrete_border.jpg
+block_dark_gray         _ Blocks/block_dark_gray.jpg
+block_stove_top         _ Blocks/block_stove_top.jpg
 block_happy_land        _ Blocks/block_happy_land.jpg
 block_metal             _ Blocks/block_metal.jpg
 block_dust              _ Blocks/block_dust.jpg
 block_glass             a Blocks/block_glass.tga
 block_chain             a Blocks/block_chain.png
 
-block_smoke_trans		a Blocks/block_smoke_trans.png
+block_water		        a Blocks/block_water_trans.png
 
 block_rug_1              _ Blocks/block_rug_1.jpg
 block_rug_2              _ Blocks/block_rug_2.jpg
@@ -211,9 +213,9 @@ trophy_st_exit_cube_part_dungeon  _ Trophies/HAPPY/exit_cube_particle_dungeon.jp
 trophy_st_hollow_medium_grass     _ Trophies/HAPPY/hollow_medium_grass.jpg
 trophy_st_chandelier              _ Trophies/HAPPY/chandelier.jpg
 
-xp_5x_stacking              _ BEnts/ent_xp_5x_stacking.jpg
-damage_5x_stacking          _ BEnts/ent_damage_5x_stacking.jpg
-invun_stacking              _ BEnts/ent_invun_stacking.jpg
+xp_5x_stacking              	_ BEnts/ent_xp_5x_stacking.jpg
+damage_5x_stacking          	_ BEnts/ent_damage_5x_stacking.jpg
+invun_stacking              	_ BEnts/ent_invun_stacking.jpg
 
 bent_bookmark                   _ BEnts/ent_bookmark.png
 bent_bookmark_gray              _ BEnts/ent_bookmark_gray.png
@@ -251,8 +253,10 @@ bent_unlock_stable_sing         _ BEnts/ent_unlock_stable_sing.jpg
 bent_black_hole_control_panel   _ BEnts/ent_black_hole_control_panel.png
 bent_quasar_control_panel       _ BEnts/ent_quasar_control_panel.png
 
-genesis_marker_short        _ BEnts/ent_genesis_marker_short.jpg
-genesis_marker_long         _ BEnts/ent_genesis_marker_long.jpg
+genesis_marker_short        	_ BEnts/ent_genesis_marker_short.jpg
+genesis_marker_long         	_ BEnts/ent_genesis_marker_long.jpg
+
+indescribable_food		_ BEnts/indescribable_food.jpg
 
 #################################################
 #    Other (may be used for moving entities)

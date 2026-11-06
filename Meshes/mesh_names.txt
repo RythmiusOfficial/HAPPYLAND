@@ -19,6 +19,8 @@ bent_armor_200p             armor_200p(gold)       large_box.obj
 bent_armor_600p             armor_600p(ivory)      large_box.obj
 bent_armor_1000p            armor_1000p(jade)      large_box.obj
 
+bent_indescribable_food     indescribable_food     large_box.obj
+
 bent_ammo_gun_1        ammo_gun1              large_box.obj
 bent_ammo_gun_2_small  ammo_gun2              small_box.obj
 bent_ammo_gun_2_large  ammo_gun2              large_box.obj

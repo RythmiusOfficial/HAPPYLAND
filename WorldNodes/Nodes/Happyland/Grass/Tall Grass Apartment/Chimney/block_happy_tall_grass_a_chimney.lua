@@ -27,12 +27,18 @@ function p.__main()
     end
 
     -- Create dust
-    if zneg == "block_r_green" then
+    if zneg == "block_r_green" or zneg == "block_happy_chimney_tunnel" then
         create_rect("r_concrete", 5,5,0, 11,11,0)
         for x = 5,11 do
         for y = 5,11 do
             len = randi(1,4)
             create_rect("dust", x,y,1, x,y,len+1)
         end end
+    end
+
+    -- Overwrite concrete with empty if the Kitchen has been created in the Apartment
+    if zneg == "block_happy_chimney_tunnel" then
+        create_rect("e", 5,5,0, 11,11,0)
+        create_sprinkles(5,5,1, 11,11,4, 0.2, "dust")
     end
 end

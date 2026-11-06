@@ -576,3 +576,13 @@ function p.dark_hole_proj_speed()
     game_msg.add("Dark hole projectile speed increased!")
     ga_play_sound("pickup_upgrade")
 end
+
+function p.indescribable_food()
+    local delta = 6
+    if ga_get_b("xar.difficulty.easy_2") then delta = 8 end
+    std.set_bydelta_i("xar.player.health.level", delta)
+    std.set_bydelta_i("xar.player.health.regen_level", delta)
+    ga_hud_msg("You ate the Indescribable Food!", 5.0)
+    game_msg.add("You ate the Indescribable Food!")
+    ga_play_sound("pickup_upgrade") -- probably change to an eating sound
+end

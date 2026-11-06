@@ -11,6 +11,8 @@ function p.__main()
 
     local floors = 6
 
+    local kitchen = randi(1,1)
+
     local w_table = {}
     local l_table = {}
 
@@ -140,8 +142,11 @@ function p.__main()
     add_bent((0+aw-1),(0+al-1),0, "bent_base_ring_pink_dest")
 
     -- Chimney
-    create_rect("happy_tall_grass_a_chimney", (0+aw+2),(0+al+2),8, (0+aw+2),(0+al+2),10)
+    create_rect("happy_tall_grass_a_chimney", (0+aw+1),(0+al+1),8, (0+aw+1),(0+al+1),10)
 
     -- Secret Kitchen
-    -- Placeholder
+    if kitchen == 1 then
+        set_pos((0+aw+1),(0+al+1),7, "happy_chimney_tunnel")
+        set_pos((0+aw+1),(0+al+1),6, "happy_tall_grass_a_kitchen")
+    end
 end

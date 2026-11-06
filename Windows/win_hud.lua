@@ -75,16 +75,16 @@ function p.interp_col(col1, col2, frac)
     return col
 end
 
-function p.player_eye_in_smoke()
+function p.player_eye_in_water()
     local level = ga_get_viewer_level()
     local bp    = ga_get_viewer_bp(level)
     local bt    = ga_bp_to_bt(level, bp)
-    if( bt == "block_smoke" ) then return true end
+    if( bt == "block_water" ) then return true end
     return false
 end
 
-function p.get_smoke_color()
-    return std.vec(1, 1, 1) -- Black
+function p.get_water_color()
+    return std.vec(0.66, 0.83, 0.96) -- blue
 end
 
 function p.__render(wid)
@@ -121,12 +121,12 @@ function p.__render(wid)
 
     ga_debug_pop("win_hud.__render main")
     
-    if p.player_eye_in_smoke() then
+    if p.player_eye_in_water() then
         local min_x = 0.0
         local min_y = 0.0
         local max_x = 1.0
         local max_y = 1.0
-        local color = p.get_smoke_color()
+        local color = p.get_water_color()
         local alpha = 0.8
         ga_win_quad_color_alpha(wid, min_x, min_y, max_x, max_y, color, alpha)
     end
