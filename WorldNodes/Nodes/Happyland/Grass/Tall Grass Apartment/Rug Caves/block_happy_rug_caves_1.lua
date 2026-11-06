@@ -70,7 +70,7 @@ function p.__main()
 
         -- Text box
         if (get_pos(x,y,z) == "block_grow_air") then
-            if randf() <= 0.0001 then -- 0.01% chance!
+            if randi(1,10000) == 1 then
                 local msg = "^x00ff00Current Rug Level:^! 1\n"
                           .."^x00ff00Depth:^! " .. tostring(depth)
                 add_bent_s(x,y,z, "bent_base_txt", msg)

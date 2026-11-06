@@ -63,6 +63,4 @@ function p.__main()
     msg = "This waypoint is the only way out of ^x00ff00Hollow Medium Grass.^!\n\n"
         .."(unless you really wanna fly all the way back...)"
     add_bent_s(2,2,11, "bent_base_txt", msg)
-    msg = "There might be a faster way to enter this treasure room without having to fly to the Overhead Tunnel System...\n\n^xff8000I wonder how...^!"
-    add_bent_s(2,2,9, "bent_base_txt", msg)
 end

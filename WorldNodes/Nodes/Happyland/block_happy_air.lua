@@ -74,6 +74,8 @@ function p.__main()
                          .. "^xff0000Not anymore...^!"
                 add_bent_s(x,y,z, "bent_base_txt", msg)
             end
+            -- Set to 'used'
+            t_cube = true
         end
 
         -- Shrink ring

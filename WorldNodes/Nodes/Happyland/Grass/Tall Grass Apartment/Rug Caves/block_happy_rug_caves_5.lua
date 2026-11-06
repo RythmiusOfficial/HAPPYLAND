@@ -75,7 +75,7 @@ function p.__main()
 
         -- Text box
         if (get_pos(x,y,z) == "block_grow_air") then
-            if randf() <= 0.0001 then -- 0.01% chance!
+            if randi(1,10000) == 1 then
                 local msg = "^xff0000Current Rug Level:^! MAX\n"
                           .."^xff0000Depth:^! " .. tostring(depth) .. "\n\n"
                           .."What would happen if you went deeper?"

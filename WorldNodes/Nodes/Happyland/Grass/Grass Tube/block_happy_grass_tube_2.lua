@@ -3,7 +3,7 @@ function p.__get_is_solid()
 end
 
 function p.__get_tex()
-    return "block_green"
+    return "block_orange_concrete"
 end
 
 function p.__main()

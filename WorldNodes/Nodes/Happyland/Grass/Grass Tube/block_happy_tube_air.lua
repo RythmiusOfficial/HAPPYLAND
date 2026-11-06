@@ -40,7 +40,7 @@ function p.__main()
         end
 
         -- Shrink ring
-        if randi(1,amount_chance*1.3) == 1 then
+        if randi(1,amount_chance*1.4) == 1 then
             if s_cube == false then
                 add_bent(x,y,z, "bent_base_ring_green_danger")
                 x = randi(0,15)
@@ -52,7 +52,7 @@ function p.__main()
         end
 
         -- Light Marines
-        if randi(1,(amount_chance*4)) == 1 then
+        if randi(1,amount_chance*4) == 1 then
             if marine == false then
                 ment_start(x,y,z, "ment_monster_marine_light")
                 ment_set_offset(x,y,z)

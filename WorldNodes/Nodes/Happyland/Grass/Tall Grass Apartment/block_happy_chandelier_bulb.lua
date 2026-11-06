@@ -13,7 +13,6 @@ function p.__main()
     local level = get_level()
     local floor_chand = get_input_path_block_i(level, "floor_chand")
 
-    
     -- Create pool ball
     ment_start(7,7,7, "ment_monster_pool_ball_" .. tostring(floor_chand))
     ment_set_offset(7.5,7.5,7.5)

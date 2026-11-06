@@ -38,11 +38,11 @@ block_chain             a Blocks/block_chain.png
 
 block_water		        a Blocks/block_water_trans.png
 
-block_rug_1              _ Blocks/block_rug_1.jpg
-block_rug_2              _ Blocks/block_rug_2.jpg
-block_rug_3              _ Blocks/block_rug_3.jpg
-block_rug_4              _ Blocks/block_rug_4.jpg
-block_rug_5              _ Blocks/block_rug_5.jpg
+block_rug_1             _ Blocks/block_rug_1.jpg
+block_rug_2             _ Blocks/block_rug_2.jpg
+block_rug_3             _ Blocks/block_rug_3.jpg
+block_rug_4             _ Blocks/block_rug_4.jpg
+block_rug_5             _ Blocks/block_rug_5.jpg
 
 #Mandatory Bullet Sprites
 block_black                _ Blocks/block_black.jpg

@@ -53,7 +53,6 @@ function p.__main()
         end
         add_bent_s(2,2,13, "bent_base_txt", msg)
     else
-
         -- Create internal windows
         if right_bt == "block_happy_tube_air" then
             create_rect("happy_tube_air", 0,6,5, 1,9,9)

@@ -11,7 +11,7 @@ function p.__main()
 
     local floors = 6
 
-    local kitchen = randi(1,1)
+    local kitchen = randi(1,10)
 
     local w_table = {}
     local l_table = {}
@@ -130,6 +130,9 @@ function p.__main()
     -- Treasure room; can overwrite stairs which might prove to be an issue later; please fix me
     if floors == 6 then
         set_pos(rand_posx,rand_posy,6, "happy_tall_grass_a_treasure")
+        if kitchen == 1 then
+            block_set_b(rand_posx,rand_posy,6, "kitchen", true)
+        end
 
         vertex_index_x = randi(1, #vertex_regionx)
         vertex_index_y = randi(1, #vertex_regiony)
