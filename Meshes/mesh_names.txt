@@ -324,6 +324,8 @@ MonsterPoolBall8                MonsterPoolBall8                sphere.obj
 MonsterYinYangOrange            MonsterYinYangOrange            sphere_high.obj
 MonsterYinYangGreen             MonsterYinYangGreen             sphere_high.obj
 
+MonsterChimneySweeper           MonsterChimneySweeper           sphere.obj
+
 monster_gremlin        monster_gremlin        sphere.obj
 monster_gremlin_proj   monster_gremlin_proj   octahedron.obj
 

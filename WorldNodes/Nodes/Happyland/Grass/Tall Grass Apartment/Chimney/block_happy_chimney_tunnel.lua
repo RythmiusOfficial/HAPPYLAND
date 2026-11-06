@@ -13,13 +13,12 @@ function p.__main()
     create_rect("r_green_x", 4,4,1, 12,12,15)
     create_rect("happy_smokey_air", 5,5,1, 11,11,15)
 
-    -- Dust
-    for x = 5,11 do
-    for y = 5,11 do
-    for z = 1,15 do
-        create_sprinkles(5,5,1, 11,11,4, 0.2, "dust")
-    end end end
-
     -- hole
-    set_pos(7,7,0, "expander")
+    set_pos(8,8,0, "expander")
+
+    -- create Chimney Sweeper
+    set_pos(8,8,1, "e")
+    ment_start(8,8,1, "ment_monster_chimney_sweeper")
+    ment_set_offset(8.5,8.5,1.5)
+    ment_end()
 end

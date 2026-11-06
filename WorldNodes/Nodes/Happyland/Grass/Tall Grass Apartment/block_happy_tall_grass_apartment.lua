@@ -11,7 +11,7 @@ function p.__main()
 
     local floors = 6
 
-    local kitchen = randi(1,10)
+    local kitchen = randi(1,1)
 
     local w_table = {}
     local l_table = {}

@@ -457,6 +457,8 @@ MonsterPoolBall8                   _ MEnts/Monster/PoolBall/monster_pool_ball_8.
 MonsterYinYangOrange               _ MEnts/monster_yinyang_orange.jpg
 MonsterYinYangGreen                _ MEnts/monster_yinyang_green.jpg
 
+MonsterChimneySweeper		       _ MEnts/Monster/Happy/monster_chimney_sweeper.jpg
+
 #Not exactly monsters:
 MonsterKeyYellow                   _ MEnts/Key/monster_key_yellow.jpg
 MonsterKeyBlue                     _ MEnts/Key/monster_key_blue.jpg
