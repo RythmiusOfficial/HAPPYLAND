@@ -9,9 +9,9 @@ function p.__type_init(id)
     ia_ment_set_builtin_var_s(id, "__mesh", "MonsterChimneySweeper")
     ia_ment_new_var_i(id, "health", 10000, 60.0)
     ia_ment_new_static_var_f(id, "dps", 20.0)
-    ia_ment_new_static_var_s(id, "sound_hurt", "hurt_marine") -- change this
+    ia_ment_new_static_var_s(id, "sound_hurt", "hurt_sweep") -- change this
     ia_ment_new_static_var_f(id, "sound_hurt_period", 0.5)
-    ia_ment_new_static_var_s(id, "sound_death", "die_marine") -- change this
+    ia_ment_new_static_var_s(id, "sound_death", "die_sweep") -- change this
     ia_ment_new_static_var_s(id, "identity_str", "Chimney Sweeper")
     ia_ment_new_static_var_b(id, "freeze_immune_true", true)
     --

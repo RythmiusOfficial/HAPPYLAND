@@ -200,8 +200,8 @@ function p.__main()
         end
         if msg_num == 7 then
             msg = "(7/9)\n\n"
-                .."The Chimneys of the Apartment get really dusty so the Landlord hired a lot of chimney sweepers. "
-                .."He owns a lot of land, ^x00ff00so not every Chimney has been dusted^!"
+                .."The Chimneys of the Apartment get really dusty so the Landlord hired a lot of Chimney Sweepers. "
+                .."He owns a lot of land, ^x00ff00so not every Chimney has been dusted.^!"
         end
         if msg_num == 8 then
             msg = "(8/9)\n\n"

@@ -11,7 +11,7 @@ function p.__main()
 
     local floors = 6
 
-    local kitchen = randi(1,1)
+    local kitchen = randi(1,7)
 
     local w_table = {}
     local l_table = {}
@@ -141,8 +141,9 @@ function p.__main()
         rand_posy = vertex_regiony[vertex_index_y]
     end
 
-    -- Pink Dest
+    -- Pink Dest and shrink
     add_bent((0+aw-1),(0+al-1),0, "bent_base_ring_pink_dest")
+    add_bent((0+aw-1),(0+al+1),0, "bent_base_ring_green_danger")
 
     -- Chimney
     create_rect("happy_tall_grass_a_chimney", (0+aw+1),(0+al+1),8, (0+aw+1),(0+al+1),10)

@@ -142,6 +142,7 @@ hurt_abomination_blue Hurt/(homemade)_hurt_abomination_blue.ogg
 hurt_abomination_anti_blue Hurt/(homemade)_hurt_abomination_anti_blue.ogg
 hurt_rat              Hurt/(homemade)_hurt_rat.ogg
 hurt_sliver           Hurt/(homemade)_hurt_sliver.ogg
+hurt_sweep            Hurt/hurt_sweep.ogg
 
 #Monster death.
 monster_death            Die/(homemade)_monster_death.ogg
@@ -183,6 +184,7 @@ die_dragoon              Die/(homemade)_die_dragoon.ogg
 die_beholder             Die/(homemade)_die_beholder.ogg
 die_abomination_blue     Die/(homemade)_die_abomination_blue.ogg
 die_abomination_anti_blue     Die/(homemade)_die_abomination_anti_blue.ogg
+die_sweep                Die/die_sweep.ogg
 
 die_shiver_me_timbers    Die/(homemade)_die_shiver_me_timbers.ogg
 

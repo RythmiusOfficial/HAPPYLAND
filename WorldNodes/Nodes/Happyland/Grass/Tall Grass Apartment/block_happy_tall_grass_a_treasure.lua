@@ -43,7 +43,7 @@ function p.__main()
 
     if kitchen == true then
         msg = "^xffffffBREAKING NEWS:^!\n\n"
-            .."The residents in this Apartment mentioned something about a ^x00ff00chimney sweeper^! coming in through here. "
+            .."The residents in this Apartment mentioned something about a ^x00ff00Chimney Sweeper^! coming in through here. "
             .."Many suspect that the furnaces would now be safe to use, but they don't have any furnaces so they wouldn't know."
     else
         if news_reporter == 1 then

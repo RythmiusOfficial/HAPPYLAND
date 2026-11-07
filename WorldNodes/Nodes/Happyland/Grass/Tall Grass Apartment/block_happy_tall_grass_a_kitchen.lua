@@ -72,5 +72,5 @@ function p.__main()
     -- Black ceiling
     create_rect("r_black", 1,1,15, 14,14,15)
     -- Hole
-    set_pos(7,7,15, "anti_plug")
+    set_pos(8,8,15, "anti_plug")
 end
