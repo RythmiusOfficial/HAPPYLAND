@@ -40,6 +40,9 @@ function p.__main()
     local yneg = get_input_adj_bt(0,-1,0)
     local zneg = get_input_adj_bt(0,0,-1)
 
+    local level = get_level()
+    local floor_num = get_input_path_block_i(level, "floor_num")
+
     -- Create room
     std.create_shell("r_green_x")
     
@@ -106,12 +109,10 @@ function p.__main()
 
         -- metal layer 1
         create_rect("r_metal", 6,5,(15-chand_len), 8,5,(15-chand_len))
+
         create_rect("r_metal", 6,9,(15-chand_len), 8,9,(15-chand_len))
         create_rect("r_metal", 5,6,(15-chand_len), 5,8,(15-chand_len))
         create_rect("r_metal", 9,6,(15-chand_len), 9,8,(15-chand_len))
-
-        local level = get_level()
-        local floor_num = get_input_path_block_i(level, "floor_num")
 
         -- create bulb
         set_pos(7,7,(15-chand_len-1), "happy_chandelier_bulb")
@@ -122,6 +123,11 @@ function p.__main()
         set_pos(7,6,(15-chand_len-1), "expander")
         set_pos(8,7,(15-chand_len-1), "expander")
         set_pos(6,7,(15-chand_len-1), "expander")
+
+        -- shrink ring
+        if floor_num ~= 6 then
+            add_bent(7,7,(15-chand_len-4), "bent_base_ring_green")
+        end
     end
 
     if furn_type == 2 then -- Purple Recliner
@@ -208,22 +214,28 @@ function p.__main()
                 .."You can find ^x00ff00Apartment Keys^! in the following locations:\n\n"
                 .."^xffff00Chandeliers^! have an Apartment key ^x00ff00100%^! of the time. "
                 .."However, the Pool Balls inside increase in rank the higher you go.\n\n"
-                .."^x964b00Tables^! have a 20% chance to have an Apartment Key.\n\n"
-                .."ADD MORE HERE"
+                .."^x964b00Tables^! have a 10% chance to have an Apartment Key.\n\n"
+                .."ff0000Rugs^! have increasingly higher chances of spawning an Apartment Key depending on how deep you go in the Caves. "
+                .."^xff0000Rugs can be very dangerous early-game^!, but they reward you with really long-lasting keys."
         end
         if msg_num == 9 then
             msg = "(9/9)\n\n"
                 .."The Landlord had been given three originals from well-known artist \"LTG\", "
                 .."and so he decided on photocopying these priceless artifacts so every resident in his apartments can have one in their rooms!\n\n"
-                .."What a selfless (and unfaithful) guy!"
+                .."^x00ff00What a selfless (and unfaithful) guy!^!"
         end
 
         add_bent_s(t_off_x,t_off_y,(t_leg_h+2), "bent_base_txt", msg) 
+
+        if randi(1,10) == 1 then
+            add_bent_((t_off_x+2),t_off_y,(t_leg_h+2), "bent_key_apartment", 15)
+        end
     end
 
     if furn_type == 4 then -- Rug
         create_rect("happy_rug_caves_1", (r_off_x-rw),(r_off_y-rl),0, (r_off_x+rw),(r_off_y+rl),0)
         create_rect("expander", (r_off_x-rw),(r_off_y-rl),1, (r_off_x+rw),(r_off_y+rl),1)
+        add_bent(1,1,1, "bent_base_ring_green")
     end
 
     -- Determine resident names

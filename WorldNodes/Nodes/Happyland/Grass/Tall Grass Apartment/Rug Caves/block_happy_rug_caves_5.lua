@@ -77,7 +77,8 @@ function p.__main()
         if (get_pos(x,y,z) == "block_grow_air") then
             if randi(1,10000) == 1 then
                 local msg = "^xff0000Current Rug Level:^! MAX\n"
-                          .."^xff0000Depth:^! " .. tostring(depth) .. "\n\n"
+                          .."^xff0000Depth:^! " .. tostring(depth) .. "\n"
+                          .."^xff0000Key Chance:^! 0%\n\n"
                           .."What would happen if you went deeper?"
                 add_bent_s(x,y,z, "bent_base_txt", msg)
             end

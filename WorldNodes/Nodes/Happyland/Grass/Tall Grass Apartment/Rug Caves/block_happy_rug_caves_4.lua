@@ -20,6 +20,11 @@ function p.__main()
     local depth = parent_depth + 1
     chunk_set_i("depth", depth)
 
+    local key = math.max(0, math.min(146,4*depth*4))
+    local after_key = 150 - key
+    local keyc = (1/after_key)*100
+    local key_chance = tostring(math.floor(keyc * 100 + 0.5) / 100) .. "%"
+
     if depth <= depth_limit then set_default_block("happy_rug_caves_4") end
     if depth > depth_limit then set_default_block("happy_rug_caves_5") end
 
@@ -55,8 +60,13 @@ function p.__main()
 
             if (dist < 1.5) and filled_nodes[which_node] == nil then
                 if randf() <= 0.001 then -- 0.1% chance!
-                    filled_nodes[which_node] = true
-                    add_bent(x,y,z, "bent_gold_" .. tostring(gold))
+                    if randi(1,after_key) == 1 then
+                        filled_nodes[which_node] = true
+                        add_bent_i(x,y,z, "bent_key_apartment", 100+(depth-1))
+                    else
+                        filled_nodes[which_node] = true
+                        add_bent(x,y,z, "bent_gold_" .. tostring(gold))
+                    end
 
                     -- Lesser Rat
                     if randf() <= 0.5 then -- 0.005% chance!
@@ -79,7 +89,10 @@ function p.__main()
         if (get_pos(x,y,z) == "block_grow_air") then
             if randi(1,10000) == 1 then
                 local msg = "^xff8000Current Rug Level:^! 4\n"
-                          .."^xff8000Depth:^! " .. tostring(depth)
+                          .."^xff8000Depth:^! " .. tostring(depth) .. "\n"
+                          .."^xff8000Key Chance:^! " .. tostring(key_chance)
+                          .. " (if D is depth and R is Rug Level, chance is calculated based on D multiplied by R)\n"
+                          .."^xff8000Key Time:^! " .. tostring(75 + (depth-1)) .. " seconds"
                 add_bent_s(x,y,z, "bent_base_txt", msg)
             end
         end
