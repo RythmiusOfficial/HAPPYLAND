@@ -8,6 +8,7 @@ end
 
 function p.__main()
     local gold = 50
+    local bent = false
 
     local parent_depth = 0
     local level = get_level()
@@ -67,9 +68,12 @@ function p.__main()
         end
 
         -- Add shrink rings
-        if (get_pos(x,y,z) == "block_grow_air") and (get_pos(x,y,z-1) == "block_happy_rug_caves_5") then
-            if randf() <= 0.001 then -- 0.1% chance!
-                add_bent(x,y,z, "bent_base_ring_green")
+        if not bent then
+            if (get_pos(x,y,z) == "block_grow_air") and (get_pos(x,y,z-1) == "block_happy_rug_caves_5") then
+                if randf() <= 0.001 then -- 0.1% chance!
+                    add_bent(x,y,z, "bent_base_ring_green")
+                    bent = true
+                end
             end
         end
 
@@ -81,6 +85,15 @@ function p.__main()
                           .."^xff0000Key Chance:^! 0%\n\n"
                           .."What would happen if you went deeper?"
                 add_bent_s(x,y,z, "bent_base_txt", msg)
+            end
+        end
+
+        -- Power Plant
+        if not bent then
+            if (get_pos(x,y,z) == "block_grow_air") and (get_pos(x,y,z-1) == "block_happy_rug_caves_5") then
+                if randf() <= 0.001 then -- 0.1% chance
+                    set_pos(x,y,z, "happy_tga_powerplant")
+                end
             end
         end
     end end end
