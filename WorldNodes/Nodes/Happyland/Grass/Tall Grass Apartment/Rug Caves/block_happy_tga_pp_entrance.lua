@@ -3,11 +3,11 @@ function p.__get_is_solid()
 end
 
 function p.__get_tex()
-    return "block_rug_2"
+    return "block_rug_3"
 end
 
 function p.__main()
-    set_default_block("r_rug_2")
+    set_default_block("r_rug_3")
 
     -- Key Guard
     ment_start(8,8,8, "ment_key_guard_apartment")

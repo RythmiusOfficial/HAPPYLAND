@@ -28,7 +28,7 @@ function p.__main()
         local close_to_node = data.close
 
         if close_to_node or close_to_edge then
-            set_pos(x,y,z, "happy_rug_caves_3")
+            set_pos(x,y,z, "happy_rug_caves_2")
         end
 
         -- Add monsters!
