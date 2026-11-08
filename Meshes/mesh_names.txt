@@ -113,6 +113,8 @@ bent_open_green_door            bent_open_door_green            large_box.obj
 bent_black_hole_control_panel   bent_black_hole_control_panel   large_box.obj
 bent_quasar_control_panel       bent_quasar_control_panel       large_box.obj
 
+bent_breaker_box                bent_breaker_box                large_box.obj
+
 genesis_marker_short        genesis_marker_short   large_box.obj
 genesis_marker_long         genesis_marker_long    large_box.obj
 
@@ -325,6 +327,7 @@ MonsterYinYangOrange            MonsterYinYangOrange            sphere_high.obj
 MonsterYinYangGreen             MonsterYinYangGreen             sphere_high.obj
 
 MonsterChimneySweeper           MonsterChimneySweeper           sphere.obj
+MonsterPowerSweeper             MonsterPowerSweeper             sphere.obj
 
 monster_gremlin        monster_gremlin        sphere.obj
 monster_gremlin_proj   monster_gremlin_proj   octahedron.obj

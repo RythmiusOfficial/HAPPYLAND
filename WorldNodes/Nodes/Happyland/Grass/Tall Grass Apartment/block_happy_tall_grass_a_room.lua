@@ -228,7 +228,7 @@ function p.__main()
         add_bent_s(t_off_x,t_off_y,(t_leg_h+2), "bent_base_txt", msg) 
 
         if randi(1,10) == 1 then
-            add_bent_((t_off_x+2),t_off_y,(t_leg_h+2), "bent_key_apartment", 15)
+            add_bent_i((t_off_x+2),t_off_y,(t_leg_h+2), "bent_key_apartment", 15)
         end
     end
 

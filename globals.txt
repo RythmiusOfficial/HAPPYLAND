@@ -46,6 +46,8 @@ b worldgen.state.low_max_ammo        false
 b worldgen.state.low_buy_upgrades    false
 b worldgen.state.no_stable_sing      false
 
+i worldgen.state.tga_keyguard        0
+
 ######################################
 #                HUD
 ######################################

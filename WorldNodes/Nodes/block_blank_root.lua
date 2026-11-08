@@ -27,5 +27,6 @@ function p.__main()
     add_bent(2,2,9, "bent_base_respawn_point")
     add_bent(2,2,7, "bent_base_ring_pink_dest")
     add_bent(7,7,6, "bent_base_ring_green_danger")
-    set_blue_type_terminal(2,2,5);
+    
+    set_pos(7,3,7, "happy_tga_powerplant")
 end

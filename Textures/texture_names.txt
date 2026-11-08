@@ -253,10 +253,12 @@ bent_unlock_stable_sing         _ BEnts/ent_unlock_stable_sing.jpg
 bent_black_hole_control_panel   _ BEnts/ent_black_hole_control_panel.png
 bent_quasar_control_panel       _ BEnts/ent_quasar_control_panel.png
 
+bent_breaker_box                _ BEnts/ent_breaker_box.jpg
+
 genesis_marker_short        	_ BEnts/ent_genesis_marker_short.jpg
 genesis_marker_long         	_ BEnts/ent_genesis_marker_long.jpg
 
-indescribable_food		_ BEnts/indescribable_food.jpg
+indescribable_food		        _ BEnts/indescribable_food.jpg
 
 #################################################
 #    Other (may be used for moving entities)
@@ -458,6 +460,7 @@ MonsterYinYangOrange               _ MEnts/monster_yinyang_orange.jpg
 MonsterYinYangGreen                _ MEnts/monster_yinyang_green.jpg
 
 MonsterChimneySweeper		       _ MEnts/Monster/Happy/monster_chimney_sweeper.jpg
+MonsterPowerSweeper                _ MEnts/Monster/Happy/monster_power_sweeper.jpg
 
 #Not exactly monsters:
 MonsterKeyYellow                   _ MEnts/Key/monster_key_yellow.jpg

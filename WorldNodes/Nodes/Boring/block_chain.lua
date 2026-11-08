@@ -20,8 +20,6 @@ function p.__get_inv_tex_y_pos() return "block_chain" end
 
 function p.__get_inv_tex_y_neg() return "block_chain" end
 
-function p.__get_is_partially_transparent() return true end
-
 function p.__main()
     set_default_block("chain")
 end

@@ -12,8 +12,8 @@ function p.__main()
     -- Create cave system
     caves_start()
     caves_set_5x5x5()
-    caves_set_num_nodes(5.0, 8.99)
-    caves_set_nodes(0.01, 3.0,4.3, 6.0,7.0)
+    caves_set_num_nodes(8.0, 11.99)
+    caves_set_nodes(0.01, 3.0,4.3, 6.0,7.0) -- 67 ._.
     caves_end()
 
     -- Carve out cave data
@@ -33,7 +33,7 @@ function p.__main()
 
         -- Add monsters!
         if randi(1,1000) == 1 then
-            ment_start(x,y,z, "ment_monster_chimney_sweeper") -- unnerfed
+            ment_start(x,y,z, "ment_monster_power_sweeper") -- unnerfed
             ment_set_offset(x,y,z)
             ment_end()
         end

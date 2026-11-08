@@ -17,15 +17,20 @@ function p.__main()
 
     local z_max = 15
 
+    local keyguard = state_get_i("tga_keyguard")
+    local keychance = math.abs(keyguard * 10)
+
     -- Carve out insides; create key guard if the top isn't a staircase
     if zpos == "block_happy_tall_grass_a_staircase" then
         z_max = 15
     else
         z_max = 14
         -- Apartment Key Guard
-        ment_start(7,7,7, "ment_key_guard_apartment")
-        ment_set_offset(8,8,8)
-        ment_end()
+        if randi(1,100) > keychance then
+            ment_start(7,7,7, "ment_key_guard_apartment")
+            ment_set_offset(8,8,8)
+            ment_end()
+        end
     end
 
     create_rect("e", 1,1,0, 14,14,z_max)
