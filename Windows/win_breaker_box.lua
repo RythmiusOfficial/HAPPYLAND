@@ -9,12 +9,12 @@ function p.__render(wid)
     ga_win_set_background_default(wid)
     ga_win_txt_center(wid, 0.9, "DEACTIVATE 10% OF APARTMENT KEY GUARDS")
 
-    local keyguard_amt = ga_get_i("worldgen.state.tga_keyguard")*10
+    local keymax = ga_get_i("worldgen.state.tga")
+    local keyguard_amt = keymax*10
 
     ga_win_txt_center(wid, 0.8, "CURRENTLY DEACTIVATING " .. tostring(keyguard_amt) .. "% OF APT. KEY GUARDS")
     
-    local keymax = ga_get_i("worldgen.state.tga_keyguard")
-    if keymax ~= 10 then
+    if keymax < 10 then
         local txt = "PRESS ENTER: PAY 2000 GOLD TO BEGIN DEACTIVATION"
         ga_win_widget_button_start(wid, main_button_handle, 0.0, 0.5, 0.02, 0.04, txt)
         ga_win_widget_button_center_x_at(wid, main_button_handle, 0.5)
@@ -39,25 +39,24 @@ function p.__process_input(wid)
         ga_window_pop()
     end
 
+    local keymax = ga_get_i("worldgen.state.tga")
     local which_button = ga_win_widget_button_process_input(wid)
-    local keymax = ga_get_i("worldgen.state.tga_keyguard")
-    if keymax ~= 10 then
-        if( which_button == main_button_handle or 
+
+    if( which_button == main_button_handle or 
             game_key.pressed_or_spammed(wid, "ENTER") )
         then
+        if keymax < 10 then
             local gold = ga_get_i("xar.player.gold.amount")
             if (gold >= 2000) then
                 local new_gold = gold - 2000
                 ga_set_i("xar.player.gold.amount", new_gold)
-                std.set_bydelta_i("worldgen.state.tga_keyguard", 1)
-                ga_worldgen_refresh_state_var("tga_keyguard")
+                std.set_bydelta_i("worldgen.state.tga", 1)
+                ga_worldgen_refresh_state_var("tga")
                 ga_play_sound("buy")
+            else
+                ga_play_sound("error")
             end
-        end
-    else
-        if( which_button == main_button_handle or 
-            game_key.pressed_or_spammed(wid, "ENTER") )
-        then
+        else
             ga_play_sound("error")
         end
     end

@@ -17,7 +17,7 @@ function p.__main()
 
     local z_max = 15
 
-    local keyguard = state_get_i("tga_keyguard")
+    local keyguard = state_get_i("tga")
     local keychance = math.abs(keyguard * 10)
 
     -- Carve out insides; create key guard if the top isn't a staircase

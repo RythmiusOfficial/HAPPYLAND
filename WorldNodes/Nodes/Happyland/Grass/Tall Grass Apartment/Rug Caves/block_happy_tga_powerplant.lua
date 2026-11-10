@@ -24,7 +24,7 @@ function p.__main()
     set_pos(8,8,5, "happy_tga_pp_room")
 
     -- Pink dest
-    --add_bent(10,8,1, "bent_base_ring_pink_dest")
+    add_bent(11,8,1, "bent_base_ring_pink_dest")
 
     -- Shrink ring
     add_bent(4,8,1, "bent_base_ring_green")

@@ -213,6 +213,7 @@ trophy_st_exit_cube_part_dungeon  _ Trophies/HAPPY/exit_cube_particle_dungeon.jp
 trophy_st_hollow_medium_grass     _ Trophies/HAPPY/hollow_medium_grass.jpg
 trophy_st_chandelier              _ Trophies/HAPPY/chandelier.jpg
 trophy_st_powerplant              _ Trophies/HAPPY/powerplant.jpg
+trophy_st_kitchen		  _ Trophies/Happy/secret_kitchen.jpg
 
 xp_5x_stacking              	_ BEnts/ent_xp_5x_stacking.jpg
 damage_5x_stacking          	_ BEnts/ent_damage_5x_stacking.jpg
