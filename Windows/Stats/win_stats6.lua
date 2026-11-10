@@ -99,6 +99,7 @@ function p.__render(wid)
         p.draw_trophy(wid, grid, 1,1, "st_exit_cube_part_dungeon", 1)
         p.draw_trophy(wid, grid, 1,2, "st_chandelier", 1)
         p.draw_trophy(wid, grid, 1,3, "st_powerplant", 1)
+        p.draw_trophy(wid, grid, 2,0, "st_kitchen", 1)
     end
 end
 

@@ -24,6 +24,7 @@ function p.init_maybe()
     p.add("st_chandelier",             type_hl)
     p.add("chimney",                   type_hl)
     p.add("st_powerplant",             type_hl)
+    p.add("st_kitchen",                type_hl)
 end
 
 function p.trophy_type(name)

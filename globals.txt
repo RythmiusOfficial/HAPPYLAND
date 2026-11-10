@@ -681,3 +681,4 @@ b game.trophy.st_hollow_medium_grass    false
 b game.trophy.st_chandelier             false
 b game.trophy.chimney                   false
 b game.trophy.st_powerplant             false
+b game.trophy.st_kitchen                false

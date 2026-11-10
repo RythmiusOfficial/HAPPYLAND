@@ -405,3 +405,4 @@ trophy_tall_grass_apartment      trophy_tall_grass_apartment      large_box.obj
 trophy_st_chandelier             trophy_st_chandelier             large_box.obj
 trophy_chimney                   trophy_chimney                   large_box.obj
 trophy_st_powerplant             trophy_st_powerplant             large_box.obj
+trophy_st_kitchen                trophy_st_kitchen                large_box.obj
