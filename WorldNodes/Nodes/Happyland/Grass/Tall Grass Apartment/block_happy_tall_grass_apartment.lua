@@ -10,16 +10,17 @@ function p.__main()
     set_default_block("happy_air")
 
     local floors = 6
+    local msg = ""
 
-    local kitchen = randi(1,7)
+    local kitchen = randi(1,7) -- 14.3% chance :)
 
     local w_table = {}
     local l_table = {}
 
-    for x = 5,13,2 do
+    for x = 7,13,2 do
         table.insert(w_table, x)
     end
-    for y = 5,13,2 do
+    for y = 7,13,2 do
         table.insert(l_table, y)
     end
 
@@ -141,9 +142,15 @@ function p.__main()
         rand_posy = vertex_regiony[vertex_index_y]
     end
 
-    -- Pink Dest and shrink
+    -- Pink Dest, shrink, and text box
     add_bent((0+aw-1),(0+al-1),0, "bent_base_ring_pink_dest")
     add_bent((0+aw-1),(0+al+1),0, "bent_base_ring_green_danger")
+    msg = "This is a ^x00ff00Tall Grass Apartment^!, a fine establishment hosted by a being known as The Landlord. "
+        .."The treasure consists of many upgrades for your Plasma weapon, including a rare Fire Rate upgrade.\n\n"
+        .."In order to reach the treasure, you must navigate through each floor of the six-story Apartment. "
+        .."To go up a floor, you must find a brown Staircase. These will take you up one floor at at time and are guarded with Apartment Key Guards. "
+        .."Further information such as Apartment Key locations can be found on the table furniture that can be found throughout the rooms."
+    add_bent_s((0+aw-1),(0+al+3),0, "bent_base_txt", msg)
 
     -- Chimney
     create_rect("happy_tall_grass_a_chimney", (0+aw+1),(0+al+1),8, (0+aw+1),(0+al+1),10)

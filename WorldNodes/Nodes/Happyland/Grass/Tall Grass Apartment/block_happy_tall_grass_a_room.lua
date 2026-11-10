@@ -193,9 +193,11 @@ function p.__main()
                 .."...except for maybe the Blood Boys; they'd open their doors to EVERY sketchy salesman."
         end
         if msg_num == 5 then
-            msg = "(5/9)\n\n"
-                .."You wanna know what would be funny? "
-                .."Leaving this worthless note on the table for any home invaders to read!"
+            msg = "(5/9) Note from a Resident:\n\n"
+                .."^x3cdfffWhy would I leave this PARADISE?! Why would I leave my HEAVEN?!^! "
+                .."^xff0000WHY WOULD I ABANDON MY GOD!!!??^!\n\n"
+                .."^x3cdfffMy family tried to take me out of here...^!\n\n"
+                .."^xff0000I had to kill them... hahAHHAAHHAAAA!!!!^!"
         end
         if msg_num == 6 then
             msg = "(6/9)\n\n"

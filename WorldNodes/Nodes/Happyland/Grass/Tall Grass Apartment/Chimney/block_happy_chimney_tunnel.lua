@@ -14,7 +14,7 @@ function p.__main()
     create_rect("happy_smokey_air", 5,5,1, 11,11,15)
 
     -- hole
-    set_pos(8,8,0, "expander")
+    set_pos(8,8,0, "expander_key_guard") -- expander block but with an apartment key guard in the center
 
     -- create Chimney Sweeper
     set_pos(8,8,1, "e")

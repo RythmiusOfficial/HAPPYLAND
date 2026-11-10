@@ -8,6 +8,7 @@
 #Non-alpha files must be .jpg or .png files.
 
 block_blank     a Blocks/blank.png
+block_info	_ Blocks/block_info.jpg
 
 block_plug      _ Blocks/block_stopper.jpg
 block_r_plug    _ Blocks/block_yellow_black_striped.jpg
@@ -24,6 +25,7 @@ block_green_x           _ Blocks/block_dark_green_x.jpg
 block_yellow_concrete   _ Blocks/block_concrete_yellow_border.jpg
 block_orange_concrete   _ Blocks/block_concrete_orange_border.jpg
 block_white_concrete    _ Blocks/block_concrete_white_border.jpg
+block_blue_concrete     _ Blocks/block_concrete_blue_border.jpg
 block_purple_borderless _ Blocks/block_purple_borderless.jpg
 block_white_borderless  _ Blocks/block_white_borderless.jpg
 block_brown_concrete    _ Blocks/block_brown_concrete.jpg

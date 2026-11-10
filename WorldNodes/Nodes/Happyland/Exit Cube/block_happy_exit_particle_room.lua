@@ -22,17 +22,21 @@ function p.__main()
     -- Create holes - x
     if xpos == "block_happy_exit_particle_hall" then
         create_rect("happy_exit_cube_air", 15,6,6, 15,9,9)
+    else -- add floor marking code here
     end
     if xneg == "block_happy_exit_particle_hall" then
         create_rect("happy_exit_cube_air", 0,6,6, 0,9,9)
+    else -- add floor marking code here
     end
 
     -- Create holes - y
     if ypos == "block_happy_exit_particle_hall" then
         create_rect("happy_exit_cube_air", 6,15,6, 9,15,9)
+    else -- add floor marking code here
     end
     if yneg == "block_happy_exit_particle_hall" then
         create_rect("happy_exit_cube_air", 6,0,6, 9,0,9)
+    else -- add floor marking code here
     end
 
     -- Create holes - z

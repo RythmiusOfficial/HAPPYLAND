@@ -3,7 +3,7 @@ function p.__get_is_solid()
 end
 
 function p.__get_tex()
-    return("block_orange_concrete")
+    return("block_blue_concrete")
 end
 
 function p.__main()
@@ -17,22 +17,26 @@ function p.__main()
     local zneg = get_input_adj_bt(0,0,-1)
     
     -- Create room
-    std.create_shell("r_orange")
+    std.create_shell("r_blue")
 
     -- Create holes - x
     if xpos == "block_happy_smoke_particle_hall" then
         create_rect("happy_smokey_air", 15,6,6, 15,9,9)
+    else -- add floor marking code here
     end
     if xneg == "block_happy_smoke_particle_hall" then
         create_rect("happy_smokey_air", 0,6,6, 0,9,9)
+    else -- add floor marking code here
     end
 
     -- Create holes - y
     if ypos == "block_happy_smoke_particle_hall" then
         create_rect("happy_smokey_air", 6,15,6, 9,15,9)
+    else -- add floor marking code here
     end
     if yneg == "block_happy_smoke_particle_hall" then
         create_rect("happy_smokey_air", 6,0,6, 9,0,9)
+    else -- add floor marking code here
     end
 
     -- Create holes - z

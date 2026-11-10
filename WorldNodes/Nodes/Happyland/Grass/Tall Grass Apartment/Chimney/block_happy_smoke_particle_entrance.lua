@@ -42,7 +42,7 @@ function p.__main()
     -- Create text box
     local msg = "This is a ^x00ff00Smoke Particle Dungeon!^!\n\n"
               .."You will find upgrades for your Laser and Rocket weapons at the end of the following easy 5x5x5 maze, which can be entered by using the shrink ring below and flying through the plug(s) in the wall(s).\n\n"
-              .."The treasure rooms can be found at dead ends on the bottom-most floor, indicated with ^xffff00yellow^! rooms. Regular rooms are ^xffa500orange^! and are filled with Smokey Air (as well as this room).\n\n"
+              .."The treasure rooms can be found at dead ends on the bottom-most floor, indicated with ^xffff00yellow^! rooms. Regular rooms are ^x0000ffblue^! and are filled with Smokey Air (as well as this room).\n\n"
               .."There are no monsters in this Dungeon."
     add_bent_s(7,7,7, "bent_base_txt", msg)
 
