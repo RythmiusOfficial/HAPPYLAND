@@ -16,13 +16,12 @@ function p.__main()
     -- Counter bottoms
     create_rect("r_concrete", 1,3,1, 2,14,3)
     create_rect("r_concrete", 1,13,1, 14,14,3)
-    create_rect("r_concrete", 13,3,1, 14,14,3)
+    create_rect("r_concrete", 13,1,1, 14,14,3)
     -- Counter tops
     create_rect("r_white_bdless", 1,2,4, 3,14,4)
     create_rect("r_white_bdless", 1,12,4, 14,14,4)
-    create_rect("r_white_bdless", 12,2,4, 14,14,4)
+    create_rect("r_white_bdless", 12,3,4, 14,14,4)
     set_pos(3,2,4, "e")
-    set_pos(12,2,4, "e")
 
     -- Oven
     create_rect("e", 1,6,1, 3,8,3)
@@ -53,9 +52,9 @@ function p.__main()
     -- Backing
     set_pos(15,7,6, "r_white_bdless")
     create_rect("r_white_bdless", 15,7,2, 15,7,3)
-    -- Indescribable Food
+    -- Indescribable Food and trophy
     add_bent(13,7,2, "bent_indescribable_food")
-    -- add_bent(13,7,3, "bent_trophy_st_secret_kitchen")
+    add_bent(13,7,3, "bent_trophy_st_kitchen")
 
     add_bent(13,7,6, "bent_indescribable_food")
     add_bent(14,7,6, "bent_indescribable_food")
@@ -68,9 +67,39 @@ function p.__main()
     create_rect("r_white_bdless", 1,1,11, 2,14,11)
     create_rect("r_white_bdless", 1,13,11, 14,14,11)
     create_rect("r_white_bdless", 13,1,11, 14,14,11)
+    create_rect("r_concrete", 13,1,4, 14,2,12)
+    -- Oven tunnel
+    create_rect("e", 1,3,1, 1,7,1)
+    create_rect("r_dark_gray", 1,3,0, 1,7,0)
+    create_rect("r_dark_gray", 0,3,1, 0,7,1)
+    set_pos(1,7,2, "e")
+    set_pos(0,7,2, "r_black")
+    add_bent(2,7,2, "bent_indescribable_food")
+
+    -- Sink tunnel
+    create_rect("water", 8,14,1, 8,14,3)
+    create_rect("water", 8,14,1, 14,14,1)
+    create_rect("water", 14,9,1, 14,14,1)
+    create_rect("water", 15,5,1, 15,9,1)
+    create_rect("water", 14,1,1, 14,5,1)
+    create_rect("water", 14,1,1, 14,1,14)
+    create_rect("water", 14,1,14, 14,14,14)
+    create_rect("water", 1,14,14, 14,14,14)
+    create_rect("water", 1,1,14, 1,14,14)
+    add_bent(1,1,14, "bent_indescribable_food")
+    add_bent(1,2,14, "bent_indescribable_food")
+    add_bent(1,3,14, "bent_indescribable_food")
+    add_bent(1,4,14, "bent_gold_once_1000")
 
     -- Black ceiling
     create_rect("r_black", 1,1,15, 14,14,15)
     -- Hole
     set_pos(8,8,15, "anti_plug")
+
+    -- misc bents
+    add_bent(2,13,6, "bent_base_ring_pink_source")
+    local msg = "This pink ring will take you to the outside of this ^x00ff00Tall Grass Apartment^!"
+    add_bent_s(2,13,8, "bent_base_txt", msg)
+    -- msg = "TON 618 message placeholder"
+    -- add_bent_s(?,?,?, "bent_base_txt", msg)
 end
