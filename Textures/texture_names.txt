@@ -46,6 +46,12 @@ block_rug_3             _ Blocks/block_rug_3.jpg
 block_rug_4             _ Blocks/block_rug_4.jpg
 block_rug_5             _ Blocks/block_rug_5.jpg
 
+block_num_1             _ Blocks/block_num_1.jpg
+block_num_2             _ Blocks/block_num_2.jpg
+block_num_3             _ Blocks/block_num_3.jpg
+block_num_4             _ Blocks/block_num_4.jpg
+block_num_5             _ Blocks/block_num_5.jpg
+
 #Mandatory Bullet Sprites
 block_black                _ Blocks/block_black.jpg
 block_concrete_purple_x    _ Blocks/block_concrete_purple_x.jpg

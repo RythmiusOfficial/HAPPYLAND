@@ -30,7 +30,4 @@ function p.__main()
     if yneg == "block_happy_tall_grass_a_room" or yneg == "block_happy_tall_grass_a_treasure" or yneg == "block_happy_tall_grass_a_staircase" then
         std.create_half_tube(2,"y_neg", "happy_air")
     end
-
-    -- Decorate later
-    -- Placeholder
 end

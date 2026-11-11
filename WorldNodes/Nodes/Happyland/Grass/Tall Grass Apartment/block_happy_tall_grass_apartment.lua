@@ -106,16 +106,8 @@ function p.__main()
 
     -- Staircases
     for z = 1,(floors-1) do
-        create_rect("happy_tall_grass_a_staircase", rand_posx,rand_posy,z, rand_posx,rand_posy,z+1)
-        
         local cur_x = rand_posx
         local cur_y = rand_posy
-
-        vertex_index_x = randi(1, #vertex_regionx)
-        vertex_index_y = randi(1, #vertex_regiony)
-
-        rand_posx = vertex_regionx[vertex_index_x]
-        rand_posy = vertex_regiony[vertex_index_y]
 
         -- checks to see if the staircase below has already been generated in the previous floor below
         while cur_x == rand_posx do
@@ -125,6 +117,12 @@ function p.__main()
         while cur_y == rand_posy do
             vertex_index_y = randi(1, #vertex_regiony)
             rand_posy = vertex_regiony[vertex_index_y]
+        end
+
+        create_rect("happy_tall_grass_a_staircase", rand_posx,rand_posy,z, rand_posx,rand_posy,z+1)
+        if z == 1 then
+            -- Create basement
+            set_pos(rand_posx,rand_posy,0, "landlord_basement")
         end
     end
 

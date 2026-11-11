@@ -25,6 +25,11 @@ function p.default(inst_id)
             local r_kills = ga_get_i("resident_kills")
             local r_new_kills = r_kills + 1
             ga_set_i("resident_kills", r_new_kills)
+            if r_new_kills == 2 then
+                game_msg.add("^x0000ffYou feel something open...^!", 10)
+                ga_set_b("worldgen.state.basement", true)
+                ga_worldgen_refresh_state_var("basement")
+            end
         end
     end
 
