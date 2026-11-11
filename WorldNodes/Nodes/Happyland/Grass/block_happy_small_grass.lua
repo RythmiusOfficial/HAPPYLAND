@@ -31,7 +31,11 @@ function p.__main()
                         .."Apartments appear as green boxes with Xs on them. "
                         .."They also contain a ton of cool areas and ^xc2009elate-game secrets!^!"
                     add_bent_s(x,y,len+1, "bent_base_txt", msg)
-                    set_pos(x,y,len, "r_info")
+                    if randi(1,3) == 1 then
+                        set_pos(x,y,len-1, "hollow_info")
+                    else
+                        set_pos(x,y,len-1, "r_info")
+                    end
                 else
                     set_pos(x,y,z, "r_green")
                     -- Create tall grass on top

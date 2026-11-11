@@ -31,7 +31,11 @@ function p.__main()
                     msg = "You are currently above ^x00ff00Medium Grass!^!\n\n"
                         .."If you shrink here, you can find ^x00ff00Small Grass^! growing on the floor."
                     add_bent_s(x,y,len+1, "bent_base_txt", msg)
-                    set_pos(x,y,len, "r_info")
+                    if randi(1,3) == 1 then
+                        set_pos(x,y,len-1, "hollow_info")
+                    else
+                        set_pos(x,y,len-1, "r_info")
+                    end
                 else
                     set_pos(x,y,z, "r_green")
                 end

@@ -33,6 +33,7 @@ oh_yeah            (homemade)_oh_yeah.ogg
 holy_cow           (homemade)_holy_cow.ogg
 level_up           (homemade)_level_up_down20db.ogg
 drop_level         (homemade)_drop_level.ogg
+door_open	   rocks_falling.ogg
 
 #Making less annoying:
 fanfare            (homemade)_oh_yeah.ogg

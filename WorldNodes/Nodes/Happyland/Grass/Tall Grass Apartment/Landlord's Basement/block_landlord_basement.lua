@@ -13,7 +13,7 @@ function p.__main()
     local x_table = {}
     local y_table = {}
 
-    local basement = state_get_i("basement")
+    local basement = state_get_b("basement")
 
     for x = 3,14,2 do
         table.insert(x_table, x)

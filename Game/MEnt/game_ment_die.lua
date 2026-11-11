@@ -20,15 +20,17 @@ function p.default(inst_id)
     if (ga_ment_type_var_exists(ment_type, "residency")) then
         local resident = ga_ment_get_b(inst_id, "residency")
         if resident then
-            game_msg.add("You killed a ^xff0000RESIDENT...^!", 5)
-            ga_play_sound_with_volume("die_resident", 0.5)
             local r_kills = ga_get_i("resident_kills")
             local r_new_kills = r_kills + 1
+            game_msg.add("You killed a ^xff0000RESIDENT...^!", 5)
             ga_set_i("resident_kills", r_new_kills)
             if r_new_kills == 2 then
                 game_msg.add("^x0000ffYou feel something open...^!", 10)
                 ga_set_b("worldgen.state.basement", true)
                 ga_worldgen_refresh_state_var("basement")
+                ga_play_sound_with_volume("door_open", 0.8)
+            else
+                ga_play_sound_with_volume("die_resident", 0.5)
             end
         end
     end
