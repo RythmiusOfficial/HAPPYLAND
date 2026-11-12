@@ -30,6 +30,7 @@ block_purple_borderless _ Blocks/block_purple_borderless.jpg
 block_white_borderless  _ Blocks/block_white_borderless.jpg
 block_brown_concrete    _ Blocks/block_brown_concrete.jpg
 block_concrete          _ Blocks/block_concrete_border.jpg
+block_concrete_x        _ Blocks/block_concrete_x.jpg
 block_dark_gray         _ Blocks/block_dark_gray.jpg
 block_stove_top         _ Blocks/block_stove_top.jpg
 block_happy_land        _ Blocks/block_happy_land.jpg
@@ -471,6 +472,11 @@ MonsterYinYangGreen                _ MEnts/monster_yinyang_green.jpg
 
 MonsterChimneySweeper		       _ MEnts/Monster/Happy/monster_chimney_sweeper.jpg
 MonsterPowerSweeper                _ MEnts/Monster/Happy/monster_power_sweeper.jpg
+
+MonsterDemonFallen                 _ MEnts/Monster/Fallen/monster_demon_fallen.jpg
+MonsterMarineHeavyFallen           _ MEnts/Monster/Fallen/monster_marine_heavy_fallen.jpg
+MonsterMenaceFallen                _ MEnts/Monster/Fallen/monster_menace_fallen.jpg
+MonsterOrcFallen                   _ MEnts/Monster/Fallen/monster_orc_fallen.jpg
 
 #Not exactly monsters:
 MonsterKeyYellow                   _ MEnts/Key/monster_key_yellow.jpg

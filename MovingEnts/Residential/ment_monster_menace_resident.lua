@@ -49,11 +49,4 @@ end
 function p.__on_alarm(inst_id, alarm_name)
     game_ment_alarms.monster(inst_id, alarm_name)
 end
-
-function p.__on_telefragged(inst_id)
-    ga_hud_msg("You killed a RESIDENT...", 5)
-    local r_kills = ga_get_i("resident_kills")
-    local r_new_kills = r_kills + 1
-    ga_set_i("resident_kills", r_new_kills)
-end
     

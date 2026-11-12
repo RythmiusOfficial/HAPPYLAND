@@ -43,8 +43,23 @@ function p.__main()
     local level = get_level()
     local floor_num = get_input_path_block_i(level, "floor_num")
 
+    local basement = state_get_b("basement")
+
+    local b_type = {}
+    local block = ""
+    local b_index = 0
+
+    b_type[0] = "green_x"
+    b_type[1] = "concrete_x"
+
+    if basement then
+        b_index = 1
+    end
+
+    block = b_type[b_index]
+
     -- Create room
-    std.create_shell("r_green_x")
+    std.create_shell("r_" .. tostring(block))
     
     -- Create holes - x
     if xpos == "block_happy_tall_grass_a_hall" or (xpos == "block_happy_air" and zneg ~= "block_happy_tall_grass_a_room") then
@@ -83,7 +98,7 @@ function p.__main()
         if pic == 3 then add_bent(7,14,7, "bent_picture_abstract_3") end
         pic = 4
     end
-    if yneg == "block_happy_tall_grass_a_hall" or (yneg == "block_happy_air" and zneg ~= "block_happy_tall_grass_a_room") then
+    if yneg == "block_happy_tall_grass_a_hall" or (yneg == "block_happy_air" and zneg ~= "block_happy_tall_grass_a_room" and not basement) then
         create_rect("r_black", 5,0,5, 10,0,10)
         if yneg == "block_happy_air" then
             create_rect("anti_plug", 6,0,6, 9,0,9)
@@ -227,6 +242,10 @@ function p.__main()
                 .."^x00ff00What a selfless (and unfaithful) guy!^!"
         end
 
+        if basement then
+            msg = "^xff0000:)^!"
+        end
+
         add_bent_s(t_off_x,t_off_y,(t_leg_h+2), "bent_base_txt", msg) 
 
         if randi(1,10) == 1 then
@@ -263,35 +282,51 @@ function p.__main()
     if resident_name == 20 then resident_name = "Winston" end
 
     -- Create residents
+    local tag = "resident"
+
+    if basement then
+        tag = "fallen"
+    end
+
     if resident_chance <= 0.35 then -- 35% chance!
         if resident == 1 then
-            ment_start(7,7,7, "ment_monster_menace_resident")
+            ment_start(7,7,7, "ment_monster_menace_" .. tag)
             ment_set_offset(randi(2,13),randi(2,13),randi(2,13))
-            ment_set_s("identity_str", "Menace - Resident " .. resident_name)
+            if tag == "resident" then
+                ment_set_s("identity_str", "Menace - Resident " .. resident_name)
+            end
             ment_end()
         end
         if resident == 2 then
-            ment_start(7,7,7, "ment_monster_marine_heavy_resident")
+            ment_start(7,7,7, "ment_monster_marine_heavy_" .. tag)
             ment_set_offset(randi(2,13),randi(2,13),randi(2,13))
-            ment_set_s("identity_str", "Heavy Marine - Resident " .. resident_name)
+            if tag == "resident" then
+                ment_set_s("identity_str", "Heavy Marine - Resident " .. resident_name)
+            end
             ment_end()
         end
         if resident == 3 then
-            ment_start(7,7,7, "ment_monster_blood_boy_resident")
+            ment_start(7,7,7, "ment_monster_blood_boy_" .. tag)
             ment_set_offset(randi(2,13),randi(2,13),randi(2,13))
-            ment_set_s("identity_str", "Blood Boy - Resident " .. resident_name)
+            if tag == "resident" then
+                ment_set_s("identity_str", "Blood Boy - Resident " .. resident_name)
+            end
             ment_end()
         end
         if resident == 4 then
-            ment_start(7,7,7, "ment_monster_orc_resident")
+            ment_start(7,7,7, "ment_monster_orc_" .. tag)
             ment_set_offset(randi(2,13),randi(2,13),randi(2,13))
-            ment_set_s("identity_str", "Orc - Resident " .. resident_name)
+            if tag == "resident" then
+                ment_set_s("identity_str", "Orc - Resident " .. resident_name)
+            end
             ment_end()
         end
         if resident == 5 then
-            ment_start(7,7,7, "ment_monster_demon_resident")
+            ment_start(7,7,7, "ment_monster_demon_" .. tag)
             ment_set_offset(randi(2,13),randi(2,13),randi(2,13))
-            ment_set_s("identity_str", "Demon - Resident " .. resident_name)
+            if tag == "resident" then
+                ment_set_s("identity_str", "Demon - Resident " .. resident_name)
+            end
             ment_end()
         end
     end

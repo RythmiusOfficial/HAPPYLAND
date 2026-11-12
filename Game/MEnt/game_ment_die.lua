@@ -25,9 +25,9 @@ function p.default(inst_id)
             game_msg.add("You killed a ^xff0000RESIDENT...^!", 5)
             ga_set_i("resident_kills", r_new_kills)
             if r_new_kills == 2 then
-                game_msg.add("^x0000ffYou feel something open...^!", 10)
                 ga_set_b("worldgen.state.basement", true)
                 ga_worldgen_refresh_state_var("basement")
+                game_msg.add("^x0000ffYou feel something open within the Apartment...^!", 10) 
                 ga_play_sound_with_volume("door_open", 0.8)
             else
                 ga_play_sound_with_volume("die_resident", 0.5)

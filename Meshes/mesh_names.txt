@@ -329,6 +329,12 @@ MonsterYinYangGreen             MonsterYinYangGreen             sphere_high.obj
 MonsterChimneySweeper           MonsterChimneySweeper           sphere.obj
 MonsterPowerSweeper             MonsterPowerSweeper             sphere.obj
 
+MonsterBloodBoyFallen           block_black                     sphere.obj
+MonsterDemonFallen              MonsterDemonFallen              sphere.obj
+MonsterMarineHeavyFallen        MonsterMarineHeavyFallen        sphere.obj
+MonsterOrcFallen                MonsterOrcFallen                sphere.obj
+MonsterMenaceFallen             MonsterMenaceFallen             sphere.obj
+
 monster_gremlin        monster_gremlin        sphere.obj
 monster_gremlin_proj   monster_gremlin_proj   octahedron.obj
 
