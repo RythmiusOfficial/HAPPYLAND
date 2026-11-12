@@ -47,6 +47,7 @@ b worldgen.state.low_buy_upgrades    false
 b worldgen.state.no_stable_sing      false
 
 i worldgen.state.tga        0
+i worldgen.state.tgaplasma  3
 b worldgen.state.basement   false
 
 ######################################

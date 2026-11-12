@@ -9,6 +9,7 @@ end
 function p.__main()
     local gold = 1
     local depth_limit = 4
+    local ammo_type = randi(1,4)
 
     local parent_depth = 0
     local level = get_level()

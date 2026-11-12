@@ -21,7 +21,7 @@ function p.__main()
             len = randi(3,16)
             local apmt_chance = randf()
             local info_chance = randf()
-            if apmt_chance <= 0.08 then -- 8% chance!
+            if apmt_chance <= 0.02 then -- 2% chance!
                 set_pos(x,y,0, "happy_tall_grass_apartment")
                 add_bent(x,y,1, "bent_base_ring_pink_dest")
             else

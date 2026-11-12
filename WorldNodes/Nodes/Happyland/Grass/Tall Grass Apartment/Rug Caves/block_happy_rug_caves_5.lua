@@ -9,6 +9,7 @@ end
 function p.__main()
     local gold = 50
     local bent = false
+    local ammo_type = randi(1,4)
 
     local parent_depth = 0
     local level = get_level()
@@ -85,6 +86,23 @@ function p.__main()
                           .."^xff0000Key Chance:^! 0%\n\n"
                           .."What would happen if you went deeper?"
                 add_bent_s(x,y,z, "bent_base_txt", msg)
+                bent = true
+            end
+        end
+
+        -- ammo
+        if (get_pos(x,y,z) == "block_grow_air") then
+            if randi(1,100000) == 1 then
+                if ammo_type == 1 then -- Plasma ammo
+                    add_bent(x,y,z, "bent_ammo_gun_1")
+                elseif ammo_type == 2 then -- Cannon ammo
+                    add_bent(x,y,z, "bent_ammo_gun_2_small")
+                elseif ammo_type == 3 then -- Laser ammo
+                    add_bent(x,y,z, "bent_ammo_gun_3_small")
+                elseif ammo_type == 4 then -- Rail ammo
+                    add_bent(x,y,z, "bent_ammo_gun_7_small")
+                end
+                bent = true
             end
         end
 

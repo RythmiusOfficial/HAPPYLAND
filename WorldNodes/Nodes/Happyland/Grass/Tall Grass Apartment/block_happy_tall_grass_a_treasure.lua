@@ -15,6 +15,8 @@ function p.__main()
     local ypos = get_input_adj_bt(0,1,0)
     local yneg = get_input_adj_bt(0,-1,0)
 
+    local p_rate_spawn = state_get_i("tgaplasma")
+
     -- Create holes - x
     if xpos == "block_happy_tall_grass_a_hall" then
         create_rect("r_black", 15,5,5, 15,10,10)
@@ -108,7 +110,13 @@ function p.__main()
     add_bent(6,2,13, "bent_upgrade_gun_1_damage")
     add_bent(9,2,13, "bent_upgrade_gun_1_damage")
 
-    add_bent(4,2,13, "bent_upgrade_gun_1_fire_speed")
+    -- fire rate limiter; no late-game cheesing
+    if p_rate_spawn > 0 then
+        add_bent_i(4,2,13, "bent_upgrade_gun_1_fire_speed", 1)
+    end
+
+    print(tostring(p_rate_spawn))
+
     add_bent(4,2,11, "bent_upgrade_gun_1_damage")
     add_bent(4,2,9, "bent_upgrade_gun_1_damage")
     add_bent(4,2,7, "bent_upgrade_gun_1_damage")

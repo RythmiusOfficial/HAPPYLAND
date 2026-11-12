@@ -163,6 +163,12 @@ function p.__main()
 
         -- backing
         create_rect("r_purple_bdless", 13,6,2, 13,9,4)
+
+        -- shrink ring
+        if floor_num == 6 then
+            create_rect("e", 12,7,1, 12,8,1)
+            add_bent(12,7,1, "bent_base_ring_green_danger")
+        end
     end
 
     if furn_type == 3 then -- Table
@@ -183,7 +189,7 @@ function p.__main()
                 .."^xffff00Chandeliers:^! Don't fly too close to Chandeliers. "
                 .."A ^xff0000Pool Ball^! resides within it.\n\n"
                 .."^x800080Purple Recliners:^! Comfy! The residents seem to enjoy them...\n\n"
-                .."^x964b00Tables:^! Tables hold various information on the Apartment and other locations in Happy Land.\n\n"
+                .."^x964b00Tables:^! Tables hold various information on the Apartment and other locations in Happy Land, as well as weapon ammo.\n\n"
                 .."^xff0000Rug:^! Shrinking into a rug reveals gold that increases in value the deeper you go. "
                 .."However, the ^xff0000Rats also get stronger.^!"
         end
@@ -230,7 +236,7 @@ function p.__main()
                 .."You can find ^x00ff00Apartment Keys^! in the following locations:\n\n"
                 .."^xffff00Chandeliers^! have an Apartment key ^x00ff00100%^! of the time. "
                 .."However, the Pool Balls inside increase in rank the higher you go.\n\n"
-                .."^x964b00Tables^! have a 10% chance to have an Apartment Key.\n\n"
+                .."^x964b00Tables^! have a 12.5% chance to have an Apartment Key.\n\n"
                 .."ff0000Rugs^! have increasingly higher chances of spawning an Apartment Key depending on how deep you go in the Caves. "
                 .."^xff0000Rugs can be very dangerous early-game^!, but they reward you with really long-lasting keys."
         end
@@ -247,15 +253,27 @@ function p.__main()
 
         add_bent_s(t_off_x,t_off_y,(t_leg_h+2), "bent_base_txt", msg) 
 
-        if randi(1,10) == 1 then
-            add_bent_i((t_off_x+2),t_off_y,(t_leg_h+2), "bent_key_apartment", 15)
+        if randi(1,8) == 1 then
+            add_bent_i((t_off_x+1),t_off_y,(t_leg_h+2), "bent_key_apartment", 15)
         end
+
+        -- ammo
+        if randi(1,5) == 1 then
+            local ammo_type = randi(1,3)
+            if ammo_type == 1 then -- plasma ammo
+                add_bent((t_off_x-1),t_off_y,(t_leg_h+2), "bent_ammo_gun_1")
+            elseif ammo_type == 2 then -- cannon ammo
+                add_bent((t_off_x-1),t_off_y,(t_leg_h+2), "bent_ammo_gun_2_small")
+            elseif ammo_type == 3 then -- minigun ammo
+                add_bent((t_off_x-1),t_off_y,(t_leg_h+2), "bent_ammo_gun_6_small")
     end
 
-    if furn_type == 4 then -- Rug
-        create_rect("happy_rug_caves_1", (r_off_x-rw),(r_off_y-rl),0, (r_off_x+rw),(r_off_y+rl),0)
-        create_rect("expander", (r_off_x-rw),(r_off_y-rl),1, (r_off_x+rw),(r_off_y+rl),1)
-        add_bent(1,1,1, "bent_base_ring_green")
+    if furn_type == 4 then -- Rug; only spawn on floors 1-5
+        if floor_num ~= 6 then
+            create_rect("happy_rug_caves_1", (r_off_x-rw),(r_off_y-rl),0, (r_off_x+rw),(r_off_y+rl),0)
+            create_rect("expander", (r_off_x-rw),(r_off_y-rl),1, (r_off_x+rw),(r_off_y+rl),1)
+            add_bent(1,1,1, "bent_base_ring_green")
+        end
     end
 
     -- Determine resident names

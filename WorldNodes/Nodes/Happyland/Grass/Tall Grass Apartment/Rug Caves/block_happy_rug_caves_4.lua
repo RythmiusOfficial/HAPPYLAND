@@ -9,6 +9,7 @@ end
 function p.__main()
     local gold = 20
     local depth_limit = 30
+    local ammo_type = randi(1,4)
 
     local parent_depth = 0
     local level = get_level()
@@ -94,6 +95,21 @@ function p.__main()
                           .. " (if D is depth and R is Rug Level, chance is calculated based on D multiplied by R)\n"
                           .."^xff8000Key Time:^! " .. tostring(75 + (depth-1)) .. " seconds"
                 add_bent_s(x,y,z, "bent_base_txt", msg)
+            end
+        end
+
+        -- ammo
+        if (get_pos(x,y,z) == "block_grow_air") then
+            if randi(1,100000) == 1 then
+                if ammo_type == 1 then -- Plasma ammo
+                    add_bent(x,y,z, "bent_ammo_gun_1")
+                elseif ammo_type == 2 then -- Cannon ammo
+                    add_bent(x,y,z, "bent_ammo_gun_2_small")
+                elseif ammo_type == 3 then -- Laser ammo
+                    add_bent(x,y,z, "bent_ammo_gun_3_small")
+                elseif ammo_type == 4 then -- Rail ammo
+                    add_bent(x,y,z, "bent_ammo_gun_7_small")
+                end
             end
         end
     end end end
