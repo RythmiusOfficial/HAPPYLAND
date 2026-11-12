@@ -266,6 +266,8 @@ function p.__main()
                 add_bent((t_off_x-1),t_off_y,(t_leg_h+2), "bent_ammo_gun_2_small")
             elseif ammo_type == 3 then -- minigun ammo
                 add_bent((t_off_x-1),t_off_y,(t_leg_h+2), "bent_ammo_gun_6_small")
+            end
+        end
     end
 
     if furn_type == 4 then -- Rug; only spawn on floors 1-5
