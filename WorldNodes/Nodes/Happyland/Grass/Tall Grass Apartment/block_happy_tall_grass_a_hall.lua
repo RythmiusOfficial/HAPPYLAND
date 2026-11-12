@@ -3,16 +3,30 @@ function p.__get_is_solid()
 end
 
 function p.__get_tex()
-    return "block_green_x"
+    return ("block_green_x")
 end
 
 function p.__main()
-    set_default_block("r_green_x")
-
     local xpos = get_input_adj_bt(1,0,0)
     local xneg = get_input_adj_bt(-1,0,0)
     local ypos = get_input_adj_bt(0,1,0)
     local yneg = get_input_adj_bt(0,-1,0)
+
+    local basement = state_get_b("basement")
+    local b_type = {}
+    local block = ""
+    local b_index = 0
+
+    b_type[0] = "green_x"
+    b_type[1] = "concrete"
+
+    if basement then
+        b_index = 1
+    end
+
+    block = b_type[b_index]
+
+    set_default_block("r_" .. block)
 
     -- Create tubes - x
     if xpos == "block_happy_tall_grass_a_room" or xpos == "block_happy_tall_grass_a_treasure" or xpos == "block_happy_tall_grass_a_staircase" then

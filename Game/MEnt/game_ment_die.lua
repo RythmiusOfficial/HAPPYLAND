@@ -27,6 +27,10 @@ function p.default(inst_id)
             if r_new_kills == 2 then
                 ga_set_b("worldgen.state.basement", true)
                 ga_worldgen_refresh_state_var("basement")
+                
+                local chunk_id = ga_get_viewer_chunk_id()
+                game_base_tele_pink.tele(chunk_id)
+
                 game_msg.add("^x0000ffYou feel something open within the Apartment...^!", 10) 
                 ga_play_sound_with_volume("door_open", 0.8)
             else

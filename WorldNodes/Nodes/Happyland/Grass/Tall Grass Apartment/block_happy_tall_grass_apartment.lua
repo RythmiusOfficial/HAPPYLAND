@@ -3,7 +3,7 @@ function p.__get_is_solid()
 end
 
 function p.__get_tex()
-    return "block_green_x"
+    return ("block_green_x")
 end
 
 function p.__main()
@@ -52,11 +52,25 @@ function p.__main()
     local rand_posx = vertex_regionx[vertex_index_x]
     local rand_posy = vertex_regiony[vertex_index_y]
 
+    local basement = state_get_b("basement")
+    local b_type = {}
+    local block = ""
+    local b_index = 0
+
+    b_type[0] = "green"
+    b_type[1] = "concrete"
+
+    if basement then
+        b_index = 1
+    end
+
+    block = b_type[b_index]
+
     -- Create tall grass floor
     create_rect("happy_tall_grass", 0,0,0, 15,15,0)
     
     -- Create an airless region that will get carved out
-    create_rect("r_green", (0+aw),(0+al),0, (15-o_aw),(15-o_al),(floors+1))
+    create_rect("r_" .. block, (0+aw),(0+al),0, (15-o_aw),(15-o_al),(floors+1))
  
     -- Create maze vertexes
     for z = 1,floors do
@@ -128,27 +142,33 @@ function p.__main()
 
     -- Treasure room; can overwrite stairs which might prove to be an issue later; please fix me
     if floors == 6 then
+        cur_x = rand_posx
+        cur_y = rand_posy
+
+        -- checks to see if there was a staircase below
+        -- if so, then re-generate the coords
+        while cur_x == rand_posx do
+            vertex_index_x = randi(1, #vertex_regionx)
+            rand_posx = vertex_regionx[vertex_index_x]
+        end
+        while cur_y == rand_posy do
+            vertex_index_y = randi(1, #vertex_regiony)
+            rand_posy = vertex_regiony[vertex_index_y]
+        end
         set_pos(rand_posx,rand_posy,6, "happy_tall_grass_a_treasure")
         if kitchen == 1 then
             block_set_b(rand_posx,rand_posy,6, "kitchen", true)
         end
-
-        vertex_index_x = randi(1, #vertex_regionx)
-        vertex_index_y = randi(1, #vertex_regiony)
-
-        rand_posx = vertex_regionx[vertex_index_x]
-        rand_posy = vertex_regiony[vertex_index_y]
     end
 
-    -- Pink Dest, shrink, and text box
-    add_bent((0+aw-1),(0+al-1),0, "bent_base_ring_pink_dest")
-    add_bent((0+aw-1),(0+al+1),0, "bent_base_ring_green_danger")
+    -- shrink and text box
+    add_bent((0+aw-1),(0+al-1),0, "bent_base_ring_green_danger")
     msg = "This is a ^x00ff00Tall Grass Apartment^!, a fine establishment hosted by a being known as The Landlord. "
         .."The treasure consists of many upgrades for your Plasma weapon, including a rare Fire Rate upgrade.\n\n"
         .."In order to reach the treasure, you must navigate through each floor of the six-story Apartment. "
         .."To go up a floor, you must find a brown Staircase. These will take you up one floor at at time and are guarded with Apartment Key Guards. "
         .."Further information such as Apartment Key locations can be found on the table furniture that can be found throughout the rooms."
-    add_bent_s((0+aw-1),(0+al+3),0, "bent_base_txt", msg)
+    add_bent_s((0+aw-1),(0+al+1),0, "bent_base_txt", msg)
 
     -- Chimney
     create_rect("happy_tall_grass_a_chimney", (0+aw+1),(0+al+1),8, (0+aw+1),(0+al+1),10)

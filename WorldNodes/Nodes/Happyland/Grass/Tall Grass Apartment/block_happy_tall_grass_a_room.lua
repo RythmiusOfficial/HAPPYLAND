@@ -3,7 +3,7 @@ function p.__get_is_solid()
 end
 
 function p.__get_tex()
-    return "block_green_x"
+    return ("block_green_x")
 end
 
 function p.__main()
@@ -44,7 +44,6 @@ function p.__main()
     local floor_num = get_input_path_block_i(level, "floor_num")
 
     local basement = state_get_b("basement")
-
     local b_type = {}
     local block = ""
     local b_index = 0

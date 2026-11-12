@@ -3,7 +3,7 @@ function p.__get_is_solid()
 end
 
 function p.__get_tex()
-    return "block_green_x"
+    return ("block_green_x")
 end
 
 function p.__main()
@@ -11,15 +11,29 @@ function p.__main()
 
     local zpos = get_input_adj_bt(0,0,1)
     local zneg = get_input_adj_bt(0,0,-1)
+
+    local basement = state_get_b("basement")
+    local b_type = {}
+    local block = ""
+    local b_index = 0
+
+    b_type[0] = "green_x"
+    b_type[1] = "concrete_x"
+
+    if basement then
+        b_index = 1
+    end
+
+    block = b_type[b_index]
     
     -- Create chimney layout
-    create_rect("r_green_x", 4,4,0, 12,12,15)
+    create_rect("r_" .. block, 4,4,0, 12,12,15)
     create_rect("happy_smokey_air", 5,5,0, 11,11,15)
 
     -- Create chimney top bulge
     if zpos == "block_happy_air" then
         create_rect("e", 4,4,15, 12,12,15)
-        create_rect("r_green_x", 2,2,10, 14,14,14)
+        create_rect("r_" .. block, 2,2,10, 14,14,14)
         create_rect("happy_smokey_air", 5,5,10, 11,11,14)
         create_rect("plug", 5,5,10, 11,11,10)
         create_rect("expander", 5,5,11, 11,11,11)
@@ -27,7 +41,7 @@ function p.__main()
     end
 
     -- Create dust
-    if zneg == "block_r_green" or zneg == "block_happy_chimney_tunnel" then
+    if zneg == "block_r_green" or zneg == "block_happy_chimney_tunnel" or zneg == "block_r_concrete_x" then
         create_rect("r_concrete", 5,5,0, 11,11,0)
         for x = 5,11 do
         for y = 5,11 do

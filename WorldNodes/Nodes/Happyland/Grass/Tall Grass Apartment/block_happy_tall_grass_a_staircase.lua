@@ -7,18 +7,31 @@ function p.__get_tex()
 end
 
 function p.__main()
-    set_default_block("r_brown_concrete")
-
     local xpos = get_input_adj_bt(1,0,0)
     local xneg = get_input_adj_bt(-1,0,0)
     local ypos = get_input_adj_bt(0,1,0)
     local yneg = get_input_adj_bt(0,-1,0)
     local zpos = get_input_adj_bt(0,0,1)
-
     local z_max = 15
 
     local keyguard = state_get_i("tga")
     local keychance = math.abs(keyguard * 10)
+
+    local basement = state_get_b("basement")
+    local b_type = {}
+    local block = ""
+    local b_index = 0
+
+    b_type[0] = "brown_concrete"
+    b_type[1] = "concrete"
+
+    if basement then
+        b_index = 1
+    end
+
+    block = b_type[b_index]
+
+    set_default_block("r_" .. block)
 
     -- Carve out insides; create key guard if the top isn't a staircase
     if zpos == "block_happy_tall_grass_a_staircase" then
