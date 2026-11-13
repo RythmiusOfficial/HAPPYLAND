@@ -10,6 +10,7 @@ function p.__main()
     set_default_block("happy_air")
 
     local chance = 12
+    local spawned = false
     
     -- Create floor grass
     create_rect("happy_small_grass", 0,0,0, 15,15,0)
@@ -20,6 +21,7 @@ function p.__main()
         if randi(1,chance) == 1 then
             local spawn_chance = randf()
             local info_chance = randf()
+            local monster_chance = randf()
             len = randi(3,7)
 
             for z = 0,(len-1) do
@@ -42,6 +44,19 @@ function p.__main()
                     set_pos(x,y,len, "happy_tall_grass")
                 end
             end
+
+            -- If z = 1 is empty, then spawn a monster if the randf() allows it
+            if (get_pos(0,0,1) == "block_happy_air") then
+            if not spawned then
+                if monster_chance <= 0.01 then -- 1% chance!
+                    for mz = 1,15,2 do
+                        ment_start(0,0,mz, "ment_monster_sweeper_lawn")
+                        ment_set_offset(0,0,mz)
+                        ment_end()
+                        spawned = true
+                    end
+                end
+            end end
         
             -- Create dangerous shrink two blocks above top if spawn chance is satisfied
             if spawn_chance <= 0.02 then -- 2% chance!

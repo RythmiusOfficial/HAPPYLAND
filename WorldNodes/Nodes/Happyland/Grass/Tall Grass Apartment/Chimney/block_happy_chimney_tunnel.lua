@@ -38,7 +38,7 @@ function p.__main()
 
     -- create Chimney Sweeper
     set_pos(8,8,1, "e")
-    ment_start(8,8,1, "ment_monster_chimney_sweeper")
+    ment_start(8,8,1, "ment_monster_sweeper_chimney")
     ment_set_offset(8.5,8.5,1.5)
     ment_end()
 end

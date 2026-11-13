@@ -33,7 +33,7 @@ function p.__main()
 
         -- Add monsters!
         if randi(1,1000) == 1 then
-            ment_start(x,y,z, "ment_monster_power_sweeper") -- unnerfed
+            ment_start(x,y,z, "ment_monster_sweeper_power") -- unnerfed
             ment_set_offset(x,y,z)
             ment_end()
         end
