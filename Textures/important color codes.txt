@@ -1,2 +1,3 @@
 #6f3d26 = apartment key brown
 #c2009e = secret plum
+#9500ff = proxima purple

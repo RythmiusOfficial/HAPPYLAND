@@ -84,7 +84,7 @@ function p.__main()
         .."If someone did, I might be able to explain how you ended up here.\n\n"
         .."The mere idea of copying this universe is rather unsettling however... "
         .."Why would anyone do such a thing? "
-        .."To^! ^x800080watch over me?^! ^x0000ffTo ensure my entrapment is eternal? "
+        .."To^! ^x9500ffwatch over me?^! ^x0000ffTo ensure my entrapment is eternal? "
         .."Or would it be out of pure oblivion and curiosity?\n\n"
         .."Whatever the reason, it still is rather irritating to feel another 'you' someplace else amongst the whole of reality...^!"
 

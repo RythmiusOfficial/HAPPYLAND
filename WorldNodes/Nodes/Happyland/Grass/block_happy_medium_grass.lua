@@ -21,7 +21,9 @@ function p.__main()
         if randi(1,chance) == 1 then
             local hollow_chance = randf()
             local info_chance = randf()
+            local shrink_chance = randf()
             local len = randi(3,11)
+            local info = false
             for z = 0,(len-1) do
                 if hollow_chance <= 0.11 then -- 11% chance!
                     set_pos(x,y,z, "happy_med_grass_hollow")
@@ -31,15 +33,20 @@ function p.__main()
                     msg = "You are currently above ^x00ff00Medium Grass!^!\n\n"
                         .."If you shrink here, you can find ^x00ff00Small Grass^! growing on the floor."
                     add_bent_s(x,y,len+1, "bent_base_txt", msg)
-                    if randi(1,3) == 1 then
+                    info = true
+                    if randi(1,2) == 1 then
                         set_pos(x,y,len-1, "hollow_info")
                     else
                         set_pos(x,y,len-1, "r_info")
                     end
+                elseif shrink_chance <= 0.01 then -- 1% chance!
+                    add_bent(x,y,0, "bent_base_ring_green_danger")
                 else
                     set_pos(x,y,z, "r_green")
                 end
-                set_pos(x+1,y,z, "happy_grass_tube_0")
+                if not info then
+                    set_pos(x+1,y,z, "happy_grass_tube_0")
+                end
             end
         end
     end end

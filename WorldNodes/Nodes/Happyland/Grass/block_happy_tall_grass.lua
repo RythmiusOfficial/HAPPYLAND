@@ -34,7 +34,7 @@ function p.__main()
                                 .."You can re-enter Happy Land through the \"Start Hooks\" growing on the Left sides of the Tall Grass blades, "
                                 .."because it is a bit difficult to escape Tall Grass."
                             add_bent_s(x,y,len+1, "bent_base_txt", msg)
-                            if randi(1,3) == 1 then
+                            if randi(1,2) == 1 then
                                 set_pos(x,y,len-1, "hollow_info")
                             else
                                 set_pos(x,y,len-1, "r_info")

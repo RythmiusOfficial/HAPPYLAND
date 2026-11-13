@@ -36,4 +36,7 @@ function p.__main()
     -- Pink Ring Destination
     set_pos(6,6,0, "e")
     add_bent(6,6,0, "bent_base_ring_pink_dest")
+
+    -- shrink
+    add_bent(7,7,14, "bent_base_ring_green_danger")
 end

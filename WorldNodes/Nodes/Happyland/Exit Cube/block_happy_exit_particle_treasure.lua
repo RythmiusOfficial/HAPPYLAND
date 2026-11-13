@@ -46,7 +46,7 @@ function p.__main()
 
     -- Create treasure
     add_bent(13,13,13, "bent_base_ring_pink_source")
-    local msg = "This pink ring will take you out of this dungeon. Now that I think about it, I need to move the pink sphere to the initial Exit Cube so you can actually escape."
+    local msg = "This pink ring will take you out of this ^x00ff00Exit Cube Particle Dungeon.^!"
     add_bent_s(13,13,11, "bent_base_txt", msg)
 
     msg = "Message from TON 618:\n\n"

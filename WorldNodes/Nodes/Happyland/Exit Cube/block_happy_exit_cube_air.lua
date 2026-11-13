@@ -17,7 +17,7 @@ function p.__main()
     for y = 0,15 do
     for z = 0,14 do
         if placed == false then
-            if randi(1,chance) == 1 then
+            if randi(1,chance*9) == 1 then
                 set_pos(x,y,z, "happy_exit_air_part")
                 add_bent(x,y,z+1, "bent_base_ring_green")
                 placed = true
