@@ -12,6 +12,7 @@ function p.__main()
 
     -- Start on layer 1
     local layer = 1
+    local msg = ""
 
     local xpos = get_input_adj_bt(1,0,0)
     local xneg = get_input_adj_bt(-1,0,0)
@@ -62,5 +63,37 @@ function p.__main()
     end
 
     -- Create bents based on layer num
-    -- Placeholder
+    if layer == 1 then
+        msg = "Message from The Landlord:\n\n"
+            .."^xffff00It appears that you have found my basement... Funny... "
+            .."No one usually wants to see me in person, unless they really want me^! ^xff0000dead.^!\n\n"
+            .."^xffff00You better hope you're here for autographs, because I don't tend well to assassins.^!"
+        add_bent_s(4,4,10, "bent_base_txt", msg)
+        add_bent(4,4,8, "bent_base_save")
+        add_bent(4,4,6, "bent_upgrade_health_regen")
+    end
+    if layer == 2 then
+        msg = "Message from The Landlord:\n\n"
+            .."^xffff00A little birdy told me that you have^! ^xff0000killed a couple of my clients.^! "
+            .."^xffff00But, maybe you actually saved them from the hell that they didn't even know they were in.\n\n"
+            .."You see, housing is considered a luxury in this universe, so a lot of customers came pouring into my apartment. "
+            .."More and more continued to purchase rooms, so much so that I ran out of rooms!\n\n"
+            .."I didn't realize that the housing industry was^! ^xff0000BOOMING!^!"
+        add_bent_s(4,4,10, "bent_base_txt", msg)
+        add_bent(4,4,8, "bent_base_save")
+        add_bent(4,4,6, "bent_upgrade_health_cap")
+    end
+    if layer == 3 then
+        msg = "Message from The Landlord:\n\n"
+            .."^xffff00I had realized that once the influx of new customers kept exponentially increasing, "
+            .."I had to purchase more and more land to build more copies of my apartment.\n"
+            .."Turns out it doesn't cost much to purchase land when land is recursively infinite...\n\n"
+            .."What does cost a lot is constructing the apartment copies, so I had to cut costs on food supply. "
+            .."In response, I had sealed off the kitchens and the food budget. "
+            .."I got severe reputational backlash from the residents, so I did what any good business owner would do:^!\n\n"
+            .."^xff0000I brainwashed them into thinking the Apartment as their savior. Now, they never want to leave!^!"
+        add_bent_s(4,4,10, "bent_base_txt", msg)
+        add_bent(4,4,8, "bent_base_save")
+        add_bent(4,4,6, "bent_upgrade_gun_7_damage")
+    end
 end

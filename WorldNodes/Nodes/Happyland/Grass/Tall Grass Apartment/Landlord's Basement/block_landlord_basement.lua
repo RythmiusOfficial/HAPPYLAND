@@ -91,10 +91,12 @@ function p.__main()
     end
 
     -- Layer 4 - In-Between Space
-    -- Placeholder
+    create_rect("landlord_inbetween_pillars", 1,1,12, 14,14,12)
+    set_pos(14,14,12, "landlord_info_4")
 
     -- Layer 5 - Office
-    -- Placeholder
+    -- Placeholder rectangle
+    create_rect("r_concrete", 1,1,11, 14,14,11)
 
     -- Layer 6-8 - Stairwell
     -- Placeholder
