@@ -50,8 +50,8 @@ function p.__main()
             if not spawned then
                 if monster_chance <= 0.01 then -- 1% chance!
                     for mz = 1,15,2 do
-                        ment_start(0,0,mz, "ment_monster_sweeper_lawn")
-                        ment_set_offset(0,0,mz)
+                        ment_start(7,7,mz, "ment_monster_sweeper_lawn")
+                        ment_set_offset(randi(6,8),randi(6,8),mz)
                         ment_end()
                         spawned = true
                     end

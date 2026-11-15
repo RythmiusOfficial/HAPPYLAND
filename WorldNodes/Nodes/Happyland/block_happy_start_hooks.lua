@@ -58,7 +58,9 @@ function p.__main()
             -- Check to place shrink rings
             if shrink_chance <= 0.08 then -- 8% chance!
                 if bend_chance > 0.1 then
-                    add_bent(len,y,z+1, "bent_base_ring_green_danger")
+                    if get_pos(len,y,z+1) ~= "block_r_green" then
+                        add_bent(len,y,z+1, "bent_base_ring_green_danger")
+                    end
                 end
             end
         end end
