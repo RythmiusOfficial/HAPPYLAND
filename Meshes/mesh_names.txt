@@ -336,6 +336,10 @@ MonsterMarineHeavyFallen        MonsterMarineHeavyFallen        sphere.obj
 MonsterOrcFallen                MonsterOrcFallen                sphere.obj
 MonsterMenaceFallen             MonsterMenaceFallen             sphere.obj
 
+MonsterAgentConformed           MonsterAgentConformed           sphere.obj
+MonsterAgentAssimilated         MonsterAgentAssimilated          sphere.obj
+MonsterAgentIntegrated          MonsterAgentIntegrated          sphere.obj
+
 monster_gremlin        monster_gremlin        sphere.obj
 monster_gremlin_proj   monster_gremlin_proj   octahedron.obj
 

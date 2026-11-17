@@ -7,10 +7,11 @@ function p.__get_tex()
 end
 
 function p.__main()
-    set_default_block("landlord_office_air")
+    set_default_block("r_concrete")
+    create_sprinkles(0,0,0, 15,15,15, 0.2, "r_dark_gray")
     
     -- Create structure
-    std.create_shell("r_concrete")
+    create_rect("e", 1,1,1, 14,14,14)
     create_rect("plug", 1,1,15, 14,14,15)
 
     -- Create hallway

@@ -14,6 +14,9 @@ function p.__main()
     local x = randi(0,16-radius)
     local y = randi(0,16-radius)
 
+    -- add floor
+    create_rect("r_concrete_x", 0,0,0, 15,15,0)
+
     if get_input_adj_bt(0,0,1) ~= "block_landlord_b_room_tunnel" then
         create_rect("r_concrete_x", x,y,0, x+(radius-1),y+(radius-1),15)
 

@@ -479,6 +479,10 @@ MonsterMarineHeavyFallen           _ MEnts/Monster/Fallen/monster_marine_heavy_f
 MonsterMenaceFallen                _ MEnts/Monster/Fallen/monster_menace_fallen.jpg
 MonsterOrcFallen                   _ MEnts/Monster/Fallen/monster_orc_fallen.jpg
 
+MonsterAgentConformed              _ MEnts/Monster/Agent/monster_agent_conformed.jpg
+MonsterAgentAssimilated            _ MEnts/Monster/Agent/monster_agent_assimilated.jpg
+MonsterAgentIntegrated             _ MEnts/Monster/Agent/monster_agent_integrated.jpg
+
 #Not exactly monsters:
 MonsterKeyYellow                   _ MEnts/Key/monster_key_yellow.jpg
 MonsterKeyBlue                     _ MEnts/Key/monster_key_blue.jpg

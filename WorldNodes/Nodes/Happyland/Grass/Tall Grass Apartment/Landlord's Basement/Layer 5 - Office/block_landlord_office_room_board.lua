@@ -7,8 +7,9 @@ function p.__get_tex()
 end
 
 function p.__main()
-    set_default_block("landlord_office_air")
-    std.create_shell("r_concrete")
+    set_default_block("r_concrete")
+    create_sprinkles(0,0,0, 15,15,15, 0.2, "r_dark_gray")
+    create_rect("e", 1,1,1, 14,14,14)
 
     local xpos = get_input_adj_bt(1,0,0)
     local xneg = get_input_adj_bt(-1,0,0)
