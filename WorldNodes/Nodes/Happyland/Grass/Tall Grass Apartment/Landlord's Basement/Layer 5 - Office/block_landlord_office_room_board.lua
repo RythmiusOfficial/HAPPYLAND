@@ -40,12 +40,24 @@ function p.__main()
 
     if ypos == "block_landlord_office_hall_key" or ypos == "block_landlord_office_room_board" then
         create_rect("e", 1,15,1, 14,15,14)
+        create_rect("landlord_concrete_growth", 1,15,1, 1,15,14)
+        create_rect("landlord_concrete_growth", 14,15,1, 14,15,14)
+        for z = 1,14 do
+            block_set_i(1,15,z, "dir", 3)
+            block_set_i(14,15,z, "dir", 4)
+        end
         if ypos == "block_landlord_office_room_board" then
             adj = adj + 1
         end
     end
     if yneg == "block_landlord_office_hall" or yneg == "block_landlord_office_room_board" then
         create_rect("e", 1,0,1, 14,0,14)
+        create_rect("landlord_concrete_growth", 1,0,1, 1,0,14)
+        create_rect("landlord_concrete_growth", 14,0,1, 14,0,14)
+        for z = 1,14 do
+            block_set_i(1,0,z, "dir", 3)
+            block_set_i(14,0,z, "dir", 4)
+        end
         if yneg == "block_landlord_office_room_board" then
             adj = adj + 1
         end
@@ -67,10 +79,14 @@ function p.__main()
 
         create_rect("landlord_concrete_growth", 6,5,1, 9,5,14)
         create_rect("landlord_concrete_growth", 6,10,1, 9,10,14)
+        create_rect("landlord_concrete_growth", 5,6,1, 5,9,14)
+        create_rect("landlord_concrete_growth", 10,6,1, 10,9,14)
         for x = 5,10 do
         for z = 1,14 do
             block_set_i(x,5,z, "dir", 2)
             block_set_i(x,10,z, "dir", 1)
+            block_set_i(5,x,z, "dir", 4)
+            block_set_i(10,x,z, "dir", 3)
         end end
     end
 

@@ -9,8 +9,8 @@ end
 function p.__main()
     set_default_block("landlord_office_air")
     local conformity = 160000
-    local assimilation = 480000
-    local integration = 2000000
+    local assimilation = 4800000
+    local integration = 20000000
     local chance = randi(1,5)
     local ment = false
 

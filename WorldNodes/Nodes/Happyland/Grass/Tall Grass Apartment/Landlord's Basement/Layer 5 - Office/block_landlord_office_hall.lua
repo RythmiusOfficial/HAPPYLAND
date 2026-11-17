@@ -17,10 +17,30 @@ function p.__main()
 
     -- Create halls
     if xpos == "block_landlord_office_room" or xpos == "block_landlord_office_hall" then
-        create_rect("landlord_office_air", 6,6,1, 15,9,14)
+        create_rect("landlord_concrete_growth", 6,6,1, 14,6,14)
+        create_rect("landlord_concrete_growth", 6,9,1, 14,9,14)
+        create_rect("landlord_office_air", 6,6,1, 9,6,14)
+        create_rect("landlord_office_air", 6,9,1, 9,9,14)
+        for x = 6,14 do
+        for z = 1,14 do
+            block_set_i(x,6,z, "dir", 1)
+            block_set_i(x,9,z, "dir", 2)
+        end end
+
+        create_rect("landlord_office_air", 6,7,1, 15,8,14)
     end
     if xneg == "block_landlord_office_room" or xneg == "block_landlord_office_hall" then
-        create_rect("landlord_office_air", 0,6,1, 9,9,14)
+        create_rect("landlord_concrete_growth", 1,6,1, 8,6,14)
+        create_rect("landlord_concrete_growth", 1,9,1, 8,9,14)
+        create_rect("landlord_office_air", 6,6,1, 9,6,14)
+        create_rect("landlord_office_air", 6,9,1, 9,9,14)
+        for x = 1,8 do
+        for z = 1,14 do
+            block_set_i(x,6,z, "dir", 1)
+            block_set_i(x,9,z, "dir", 2)
+        end end
+
+        create_rect("landlord_office_air", 0,7,1, 9,8,14)
     end
 
     -- The ypos only needs to check for the Boardroom because that's the only way in
@@ -28,7 +48,17 @@ function p.__main()
     if (ypos == "block_landlord_office_room"
         or ypos == "block_landlord_office_hall"
         or ypos == "block_landlord_office_room_board") then
-        create_rect("landlord_office_air", 6,6,1, 9,15,14)
+        create_rect("landlord_concrete_growth", 6,7,1, 6,14,14)
+        create_rect("landlord_concrete_growth", 9,7,1, 9,14,14)
+        create_rect("landlord_office_air", 6,6,1, 6,9,14)
+        create_rect("landlord_office_air", 9,6,1, 9,9,14)
+        for y = 6,14 do
+        for z = 1,14 do
+            block_set_i(6,y,z, "dir", 3)
+            block_set_i(9,y,z, "dir", 4)
+        end end
+        
+        create_rect("landlord_office_air", 7,6,1, 8,15,14)
     end
     -- The yneg is the only direction that is needed to check for the Apartment Key variant of the hallway script
     -- The yneg also is the only direction that needs to check for the entrance
@@ -36,7 +66,17 @@ function p.__main()
         or yneg == "block_landlord_office_hall"
         or yneg == "block_landlord_office_hall_key"
         or yneg == "block_landlord_office_room") then
-        create_rect("landlord_office_air", 6,0,1, 9,9,14)
+        create_rect("landlord_concrete_growth", 6,1,1, 6,8,14)
+        create_rect("landlord_concrete_growth", 9,1,1, 9,8,14)
+        create_rect("landlord_office_air", 6,6,1, 6,9,14)
+        create_rect("landlord_office_air", 9,6,1, 9,9,14)
+        for y = 1,8 do
+        for z = 1,14 do
+            block_set_i(6,y,z, "dir", 3)
+            block_set_i(9,y,z, "dir", 4)
+        end end
+
+        create_rect("landlord_office_air", 7,0,1, 8,9,14)
     end
     
     -- add enemies
