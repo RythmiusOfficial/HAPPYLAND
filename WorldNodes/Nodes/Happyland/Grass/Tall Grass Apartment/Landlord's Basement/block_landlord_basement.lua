@@ -92,11 +92,37 @@ function p.__main()
 
     -- Layer 4 - In-Between Space
     create_rect("landlord_inbetween_pillars", 1,1,12, 14,14,12)
-    set_pos(14,14,12, "landlord_info_4")
+    set_pos(14,1,12, "landlord_info_4")
 
     -- Layer 5 - Office
-    -- Placeholder rectangle
-    create_rect("r_concrete", 1,1,11, 14,14,11)
+    create_rect("r_concrete", 1,1,11, 14,14,11)                 -- placeholder rectangle
+    set_pos(14,1,11, "landlord_office_entrance")                -- entrance
+        -- halls - perimeter
+    create_rect("landlord_office_hall", 2,2,11, 14,2,11)
+    create_rect("landlord_office_hall", 2,2,11, 2,13,11)
+    create_rect("landlord_office_hall", 2,13,11, 13,13,11)
+    create_rect("landlord_office_hall", 13,2,11, 13,13,11)
+        -- halls - other
+    create_rect("landlord_office_hall", 5,13,11, 5,8,11)
+    create_rect("landlord_office_hall", 5,10,11, 10,10,11)
+    set_pos(10,5,11, "landlord_office_hall")
+    create_rect("landlord_office_hall", 10,4,11, 13,4,11)
+        -- rooms
+    set_pos(8,3,11, "landlord_office_room")                     -- 1
+    set_pos(5,1,11, "landlord_office_room")                     -- 2
+    set_pos(3,6,11, "landlord_office_room")                     -- 3
+    set_pos(3,8,11, "landlord_office_room")                     -- 4
+    set_pos(1,8,11, "landlord_office_room")                     -- 5
+    set_pos(3,11,11, "landlord_office_room")                    -- 6
+    set_pos(8,12,11, "landlord_office_room")                    -- 7
+    set_pos(11,12,11, "landlord_office_room")                   -- 8
+    set_pos(14,9,11, "landlord_office_room")                    -- 9
+    set_pos(14,6,11, "landlord_office_room")                    -- 10
+    create_rect("landlord_office_room_board", 9,6,11, 11,8,11)  -- boardrooms
+    set_pos(5,6,11, "landlord_office_exit")                     -- exit
+        -- apartment key halls
+    set_pos(5,7,11, "landlord_office_hall_key")
+    set_pos(10,9,11, "landlord_office_hall_key")
 
     -- Layer 6-8 - Stairwell
     -- Placeholder
