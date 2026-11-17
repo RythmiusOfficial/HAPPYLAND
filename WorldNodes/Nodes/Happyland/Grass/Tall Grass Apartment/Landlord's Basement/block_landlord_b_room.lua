@@ -24,12 +24,17 @@ function p.__main()
     local ypos = get_input_adj_bt(0,1,0)
     local yneg = get_input_adj_bt(0,-1,0)
     local zpos = get_input_adj_bt(0,0,1)
+    local zzpos = get_input_adj_bt(0,0,2)
 
     -- Check to see what layer the room is on and generate enemies accordingly
-    if get_input_adj_bt(0,0,1) == "block_landlord_b_room" or get_input_adj_bt(0,0,1) == "block_landlord_b_room_tunnel" then
+    if (zpos == "block_landlord_b_room"
+        or zpos == "block_landlord_b_room_tunnel"
+        or zpos == "block_landlord_b_room_entrance") then
         layer = layer + 1
     end
-    if get_input_adj_bt(0,0,2) == "block_landlord_b_room" or get_input_adj_bt(0,0,2) == "block_landlord_b_room_tunnel" then
+    if (zzpos == "block_landlord_b_room"
+        or zzpos == "block_landlord_b_room_tunnel"
+        or zzpos == "block_landlord_b_room_entrance") then
         layer = layer + 1
     end
 

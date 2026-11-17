@@ -12,6 +12,7 @@ function p.__main()
 
     local level = get_level()
     local floor_chand = get_input_path_block_i(level, "floor_chand")
+    local obstacle = get_input_path_block_b(level, "obstacle")
 
     -- Create pool ball
     ment_start(7,7,7, "ment_monster_pool_ball_" .. tostring(floor_chand))
@@ -23,13 +24,16 @@ function p.__main()
         add_bent(7,7,9, "bent_trophy_st_chandelier")
     end
 
-    -- Create key
-    add_bent_i(7,7,7, "bent_key_apartment", 25)
+    if not obstacle then
+        -- Create key
+        add_bent_i(7,7,7, "bent_key_apartment", 25)
 
-    -- Create gold
-    add_bent(7,7,5, "bent_gold_once_5")
+        -- Create gold
+        add_bent(7,7,5, "bent_gold_once_5")
+    end
 end
 
 function p.__type_init(id)
     ia_block_new_var_i(id, "floor_chand", 2)
+    ia_block_new_var_b(id, "obstacle", false)
 end

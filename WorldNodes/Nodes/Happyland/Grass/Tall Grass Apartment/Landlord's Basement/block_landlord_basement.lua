@@ -103,7 +103,7 @@ function p.__main()
     create_rect("landlord_office_hall", 2,13,11, 13,13,11)
     create_rect("landlord_office_hall", 13,2,11, 13,13,11)
         -- halls - other
-    create_rect("landlord_office_hall", 5,13,11, 5,8,11)
+    create_rect("landlord_office_hall", 5,8,11, 5,13,11)
     create_rect("landlord_office_hall", 5,10,11, 10,10,11)
     set_pos(10,5,11, "landlord_office_hall")
     create_rect("landlord_office_hall", 10,4,11, 13,4,11)

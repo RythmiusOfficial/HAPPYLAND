@@ -24,8 +24,8 @@ function p.__main()
     local table_l = randi(3,7) -- y
     local t_leg_w = math.floor(table_w/2) -- x leg offset amt
     local t_leg_l = math.floor(table_l/2) -- y leg offset amt
-    local t_off_x = randi(1+t_leg_w,14-t_leg_w) -- origin offset x
-    local t_off_y = randi(1+t_leg_l,14-t_leg_l) -- origin offset y
+    local t_off_x = randi(2+t_leg_w,13-t_leg_w) -- origin offset x
+    local t_off_y = randi(2+t_leg_l,13-t_leg_l) -- origin offset y
 
     local rug_w = randi(3,13)
     local rug_l = randi(3,13)
@@ -248,7 +248,7 @@ function p.__main()
         end
 
         if basement then
-            msg = "^xff0000:)^!"
+            msg = "^xff0000:)^!" -- :)
         end
 
         add_bent_s(t_off_x,t_off_y,(t_leg_h+2), "bent_base_txt", msg) 
