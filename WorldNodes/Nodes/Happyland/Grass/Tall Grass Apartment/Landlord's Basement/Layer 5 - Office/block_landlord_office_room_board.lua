@@ -76,7 +76,8 @@ function p.__main()
         create_rect("r_concrete", 6,9,1, 6,9,14)
         create_rect("r_concrete", 9,9,1, 9,9,14)
         create_rect("r_concrete", 9,6,1, 9,6,14)
-
+        
+        -- fertile growths
         create_rect("landlord_concrete_growth", 6,5,1, 9,5,14)
         create_rect("landlord_concrete_growth", 6,10,1, 9,10,14)
         create_rect("landlord_concrete_growth", 5,6,1, 5,9,14)
@@ -84,9 +85,13 @@ function p.__main()
         for x = 5,10 do
         for z = 1,14 do
             block_set_i(x,5,z, "dir", 2)
+            block_set_b(x,5,z, "fertile", true)
             block_set_i(x,10,z, "dir", 1)
+            block_set_b(x,10,z, "fertile", true)
             block_set_i(5,x,z, "dir", 4)
+            block_set_b(5,x,z, "fertile", true)
             block_set_i(10,x,z, "dir", 3)
+            block_set_b(10,x,z, "fertile", true)
         end end
     end
 
