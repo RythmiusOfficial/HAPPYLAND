@@ -20,7 +20,11 @@ function p.__main()
         create_rect("r_concrete", 7,len-1,9, 8,len,10)
         create_rect("expander_solid", 7,len-1,11, 8,len,11)
         create_rect("landlord_concrete_growth", 7,len+1,7, 8,len+1,10)
-        -- no need to set the variable because it automatically defaults it to 1
+        for x = 0,15 do
+        for z = 0,15 do
+            -- no need to set the variable because it automatically defaults it to 1
+            block_set_b(x,0,z, "fertile", fertile)
+        end end
         -- create concrete grass
         create_rect("landlord_concrete_grass", 7,0,9, 8,len-2,9)
         for x = 7,8 do
@@ -37,6 +41,7 @@ function p.__main()
         for x = 0,15 do
         for z = 0,15 do
             block_set_i(x,15,z, "dir", 2)
+            block_set_b(x,15,z, "fertile", fertile)
         end end
         create_rect("r_concrete", 7,15-len,7, 8,15,8)
         create_rect("r_concrete", 7,15-len,9, 8,(15-len+1),10)
@@ -65,6 +70,7 @@ function p.__main()
         for y = 0,15 do
         for z = 0,15 do
             block_set_i(0,y,z, "dir", 3)
+            block_set_b(0,y,z, "fertile", fertile)
         end end
         create_rect("r_concrete", 0,7,7, len,8,8)
         create_rect("r_concrete", len-1,7,9, len,8,10)
@@ -73,6 +79,7 @@ function p.__main()
         for y = 7,8 do
         for z = 7,10 do
             block_set_i(len+1,y,z, "dir", 3)
+            block_set_b(len+1,y,z, "fertile", fertile)
         end end
 
         -- create concrete grass
@@ -91,6 +98,7 @@ function p.__main()
         for y = 0,15 do
         for z = 0,15 do
             block_set_i(15,y,z, "dir", 4)
+            block_set_b(15,y,z, "fertile", fertile)
         end end
         create_rect("r_concrete", 15-len,7,7, 15,8,8)
         create_rect("r_concrete", 15-len,7,9, (15-len+1),8,10)
