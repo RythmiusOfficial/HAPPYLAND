@@ -109,12 +109,15 @@ function p.__main()
     create_rect("landlord_office_hall", 10,4,11, 13,4,11)
         -- rooms
     set_pos(8,3,11, "landlord_office_room")                     -- 1
+    block_set_i(8,3,11, "room", 1)
     set_pos(5,1,11, "landlord_office_room")                     -- 2
+    block_set_i(5,1,11, "room", 2)
     set_pos(3,6,11, "landlord_office_room")                     -- 3
     set_pos(3,8,11, "landlord_office_room")                     -- 4
     set_pos(1,8,11, "landlord_office_room")                     -- 5
     set_pos(3,11,11, "landlord_office_room")                    -- 6
     set_pos(8,12,11, "landlord_office_room")                    -- 7
+    block_set_i(8,12,11, "room", 7)
     set_pos(11,12,11, "landlord_office_room")                   -- 8
     set_pos(14,9,11, "landlord_office_room")                    -- 9
     set_pos(14,6,11, "landlord_office_room")                    -- 10
