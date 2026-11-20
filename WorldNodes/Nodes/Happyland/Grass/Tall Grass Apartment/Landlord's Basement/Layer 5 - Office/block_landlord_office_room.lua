@@ -39,27 +39,60 @@ function p.__main()
         set_pos(8,6,15, "landlord_office_room_treasure")
         set_pos(8,6,14, "e")
         block_set_i(8,6,15, "room", 2)
-    elseif room == 3 then
-        -- plugged; cubicle
+
+    elseif room == 3 then -- lattice
+        set_default_block("r_dark_gray")
+        create_rect("landlord_office_air", 0,1,1, 14,14,14)
+        -- vertical pillars
+        for x = 1,13,2 do
+        for y = 1,13,2 do
+            if randi(1,2) == 1 then
+                for z = 1,14 do
+                    set_pos(x,y,z, "r_concrete")
+                end
+            end
+        end end
+
+        -- horizontal pillars
+        for x = 1,13,2 do
+        for y = 1,13,2 do
+            if randi(1,2) == 1 then
+                for z = 1,14 do
+                    set_pos(x,z,y, "r_concrete")
+                end
+            end
+        end end
+
+        set_pos(7,7,7, "landlord_office_room_treasure")
+        block_set_i(7,7,7, "room", 3)
+
     elseif room == 4 then
         -- plugged; large map room
     elseif room == 5 then
         -- plugged; black and dark gray speckled
-    elseif room == 6 then
-        -- Start Hooks
-    elseif room == 7 then -- rug caves 3
+    elseif room == 6 then -- plugged; cubicle
+    elseif room == 7 then -- rug caves 5
         set_default_block("r_concrete_x")
         create_rect("happy_rug_caves_5", 1,1,1, 14,15,14)
         create_rect("e", 1,1,1, 14,1,14)
         create_rect("e", 6,1,6, 9,15,9)
         set_pos(7,1,7, "landlord_office_room_treasure")
         block_set_i(7,1,7, "room", 7)
-    elseif room == 8 then
+    elseif room == 8 then 
         -- Electric Fence maze (short)
-    elseif room == 9 then
-        -- lattices
-    elseif room == 10 then
-        -- normal room lol
+    elseif room == 9 then -- start hooks
+        set_default_block("r_green_deco")
+        create_rect("happy_air", 1,1,1, 15,14,14)
+        create_rect("r_green", 1,1,1, 1,14,14)
+        create_rect("happy_start_hooks", 2,1,1, 2,14,14)
+        set_pos(2,7,1, "landlord_office_room_treasure")
+        block_set_i(2,7,1, "room", 9)
+    elseif room == 10 then -- normal room lol
+        set_default_block("r_concrete")
+        create_sprinkles(0,0,0, 15,15,15, 0.2, "r_dark_gray")
+        create_rect("landlord_office_air", 0,1,1, 14,14,14)
+        set_pos(7,7,7, "landlord_office_room_treasure")
+        block_set_i(7,7,7, "room", 10)
     end
 end
 

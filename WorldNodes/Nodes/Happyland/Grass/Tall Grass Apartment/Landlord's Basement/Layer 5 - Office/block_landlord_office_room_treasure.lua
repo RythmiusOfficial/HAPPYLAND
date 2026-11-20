@@ -22,7 +22,9 @@ function p.__main()
         add_bent_s(7,7,7, "bent_base_txt", msg)
         add_bent(7,7,5, "bent_gold_once_200")
     elseif room == 3 then
-        -- plugged; cubicle
+        msg = "Hey wattup bro 3"
+        add_bent_s(7,7,7, "bent_base_txt", msg)
+        add_bent(7,7,5, "bent_gold_once_200")
     elseif room == 4 then
         -- plugged; large map room
     elseif room == 5 then
@@ -36,9 +38,13 @@ function p.__main()
     elseif room == 8 then
         -- Electric Fence maze (short)
     elseif room == 9 then
-        -- lattices
+        msg = "Hey wattup bro 9"
+        add_bent_s(7,7,7, "bent_base_txt", msg)
+        add_bent(7,7,5, "bent_gold_once_200")
     elseif room == 10 then
-        -- normal room lol
+        msg = "Hey wattup bro 10"
+        add_bent_s(7,7,7, "bent_base_txt", msg)
+        add_bent(7,7,5, "bent_gold_once_200")
     end
 end
 
